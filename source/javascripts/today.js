@@ -21,6 +21,7 @@ jQuery(function() {
       render: function($container, $newContent) {
         $container.removeClass('is-exiting');
         $container.html($newContent);
+        jQuery('html, body').animate({ scrollTop: 0 }, 0);
       }
     }
   };

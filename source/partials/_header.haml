@@ -1,2 +1,11 @@
 %header
-  = link_to image_tag( '/images/logo.svg'), '/', :id => 'logo'
+  .row.center-v
+    %ul
+      %li
+        %a(href='/') Work
+      %li
+        %a(href='/profile') Profile
+      %li
+        %a Verbose
+    %a#logo(href='/')
+      %img(src='/images/logo.svg')

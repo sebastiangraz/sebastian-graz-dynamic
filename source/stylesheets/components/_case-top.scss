@@ -1,0 +1,47 @@
+.case-top {
+  background-color: #FFF7EA;
+  top:-$header-height;
+  padding-top: calc($header-height + 2rem);
+  position: relative;
+  padding-bottom: 4rem;
+  .row {
+    align-items: center;;
+  }
+  h1 {
+    width: 45%;
+    margin: 0;
+    sup {
+  		font-size: 0.75rem;
+      margin-left: 0.25rem;
+      top: -0.5rem;
+      position: relative;
+    }
+  }
+  .case-meta {
+    display: flex;
+    width: 55%;
+  }
+  .case-role, .case-tags {
+      p {
+        opacity: 0.3;
+        margin: 0;
+      }
+      padding: 0;
+      margin: 0;
+      lost-column: 1/2;
+      li {
+        list-style: none;
+        float: left;
+        margin-right: 8px;
+
+        p {
+          display: inline-block;
+          margin: 0;
+          opacity: 1;
+          &:after {
+            content: ',';
+          }
+        }
+      }
+  }
+}

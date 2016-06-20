@@ -1,5 +1,7 @@
 = partial 'partials/head'
 #main
-  = partial 'partials/header'
-  .row
-    = yield
+  %div.scene{:class => page_classes}
+    = partial 'partials/header'
+    .row
+      .scene_element.scene_element--fadeinup
+        = yield

@@ -1,39 +1,120 @@
-@charset "utf-8";
-@import "normalize";
+@import 'global/variables.scss';
+@import 'global/normalize.scss';
+@import 'global/_animations.scss';
+@import 'global/_type.scss';
 
-// @font-face {
-//   font-family: 'NeueHaasUnica';
-//   src:  url('/fonts/NeueHaasUnicaW1G-Regular.woff2') format('woff2'),
-//         url('/fonts/NeueHaasUnicaW1G-Regular.woff') format('woff');
-// }
+@import 'components/_case-top.scss';
+
+
 
 body {
-  font-family: 'NeueHaasUnica', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  margin-top:68px;
+	margin: $header-height 0 0 0;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 .row {
-  max-width: 1440px;
-  width: 90%;
   margin: 0 auto;
+  width: 92%;
+}
+
+header {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+
+	.row {
+		height: $header-height;
+		justify-content: space-between;
+	}
+	h4 {
+		display: inline-block;
+	}
+	#logo {
+		display: inline-block;
+    max-width: 32px;
+	}
+	ul {
+		padding: 0;
+		li {
+			float: left;
+			list-style: none;
+			a {
+				margin-left: 40px;
+			}
+			&:first-child {
+				a {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.profile-section {
+	border-top: 1px solid rgba(0,0,0,0.1);
+	padding-top:3.5rem;
+	h4 {
+		margin: 0;
+		float: left;
+		width: 240px;
+	}
+	&-section {
+		margin-bottom: 4rem;
+	}
+	ul {
+		column-count: 2;
+		column-gap: 2rem;
+		padding-left: 2rem;
+		li {
+		  display: inline-block;
+	    word-break: break-word;
+		  list-style: none;
+		  width: 100%;
+			margin: 0 0 0.75rem 0;
+			p {
+				margin: 0;
+			}
+		}
+	}
+}
+
+a.cta {
+	display: inline-block;
+	&:hover {
+		border-color: #000;
+	}
+	&:after {
+    content:'\2192';
+		margin-left: 0.5rem;
+	}
+}
+
+.center-v {
+	display: flex;
+	align-items: center;
+}
+.case-title {
+	text-align: center;
 }
 
 .article-row {
   display: flex;
   margin-bottom: 48px;
+	align-items: center;
   & > * {
     flex: 1;
+		flex-basis: 50%;
   }
 }
 .article-text, .article-image {
   padding: 5vw;
-  margin: 0 24px;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  margin: 0 1.5rem;
 }
-
 .article-text {
   width: 100%;
   float: left;
@@ -42,41 +123,98 @@ body {
 .article-image {
   overflow: hidden;
   background: #eee;
-  img {
+  &:after {
+		content: '';
+		height: 100%;
+		width: 100%;
+		display: block;
+		background: #000;
+	}
+	&--nopadding {
+		padding: 0;
     box-shadow: 10px 30px 80px -9px rgba(0,0,0,0.3);
-  }
+	}
 }
 
-// .half {
-//   width: calc(50% - 24px);
-//   &:first-child {
-//     margin-right: 48px;
-//   }
-//   img {
-//     box-shadow: 10px 30px 80px -9px rgba(0,0,0,0.3);
-//   }
-// }
-
-img {
-  width: 100%;
+.intro-case {
+	padding: 3rem 0;
+	overflow: hidden;
+	position: relative;
+	top:-$header-height;
 }
 
 .intro {
-  max-width: 800px;
-  margin-bottom: 120px;
+	padding: 3rem 0;
+	overflow: hidden;
+	position: relative;
+	&-text {
+			margin: 0 auto;
+			padding: 0 1.5rem;
+	}
+	&.bio {
+
+	}
 }
 
-#logo {
-  height: 68px;
-  display: block;
-  width: 64px;
+.intro-image--poetry {
+	position: absolute;
+	    top: -$header-height;
+	    transform: translate(50%);
+	    z-index: -1;
+			img {
+				max-height: 540px;
+				object-fit: contain;
+			}
 }
 
-header {
-  top: 16px;
-  position: relative;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.case {
+	margin-bottom: 2rem;
+	color: #000;
+	h3{
+		margin: 0rem;
+		top: 16px;
+		position: relative;
+	}
+}
+
+sup {
+  font-size: 0.75rem;
+	margin-left:0.25rem;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.scene {
+	.scene_element {
+		  animation-duration: .25s;
+		  transition-timing-function: ease-in;
+			animation-fill-mode: both;
+			&--fadein {
+				  animation-name: fadeIn;
+			}
+			&--fadeinup {
+				animation-name: fadeInUp;
+			}
+			&--fadeinupReverse {
+				animation-name: fadeInUpReverse;
+			}
+			&--fadeInUpDelay {
+				animation-name: fadeInUpDelay;
+			}
+			&--fadeInDown {
+				animation-name: fadeInDown;
+			}
+			&--fadeInDownDelay {
+				animation-name: fadeInDownDelay;
+			  animation-duration: .4s;
+			}
+		}
+		&.is-exiting {
+			.scene_element {
+				  animation-direction: alternate-reverse;
+			}
+		}
 }

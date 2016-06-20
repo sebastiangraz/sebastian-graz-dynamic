@@ -3,5 +3,10 @@ title: Welcome to Middleman
 ---
 
 #main
-  - blog('case').articles[0...5].each do |article|
-    %a{:href => article.url}= article.title
+  %div.scene{:class => page_classes}
+  .scene_element.scene_element--fadeinup
+    .intro.bio
+      %h3 My name is Sebastian Graz. I am a designer and a front-end developer based in London &#9748;
+      %a.cta(href='profile') Read full profile
+    - blog('case').articles[0...5].each do |article|
+      %a{:href => article.url}= article.title
