@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import "normalize";
+
+// @font-face {
+//   font-family: 'NeueHaasUnica';
+//   src:  url('/fonts/NeueHaasUnicaW1G-Regular.woff2') format('woff2'),
+//         url('/fonts/NeueHaasUnicaW1G-Regular.woff') format('woff');
+// }
+
+body {
+  font-family: 'NeueHaasUnica', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  margin-top:68px;
+}
+
+.row {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.article-row {
+  display: flex;
+  margin-bottom: 48px;
+  & > * {
+    flex: 1;
+  }
+}
+.article-text, .article-image {
+  padding: 5vw;
+  margin: 0 24px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-text {
+  width: 100%;
+  float: left;
+}
+
+.article-image {
+  overflow: hidden;
+  background: #eee;
+  img {
+    box-shadow: 10px 30px 80px -9px rgba(0,0,0,0.3);
+  }
+}
+
+// .half {
+//   width: calc(50% - 24px);
+//   &:first-child {
+//     margin-right: 48px;
+//   }
+//   img {
+//     box-shadow: 10px 30px 80px -9px rgba(0,0,0,0.3);
+//   }
+// }
+
+img {
+  width: 100%;
+}
+
+.intro {
+  max-width: 800px;
+  margin-bottom: 120px;
+}
+
+#logo {
+  height: 68px;
+  display: block;
+  width: 64px;
+}
+
+header {
+  top: 16px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
