@@ -44,6 +44,7 @@ activate :blog do |blog|
   blog.name = 'case'
   blog.prefix = 'case'
   blog.layout = 'case-layout'
+  blog.permalink = '{title}'
 end
 
 # https://github.com/fredjean/middleman-s3_sync
