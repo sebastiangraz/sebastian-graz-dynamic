@@ -1,2 +1,2 @@
-require('today');
+require('smoothstate-init');
 require('smoothstate');

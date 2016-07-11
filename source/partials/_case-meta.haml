@@ -1,5 +1,8 @@
 .case-top
   .row
-    %h1= locals[:h1]
+    %h1
+      = locals[:h1]
+      %sup= locals[:year]
     %ul
       %li= locals[:tags]
+      %li= locals[:roles]
