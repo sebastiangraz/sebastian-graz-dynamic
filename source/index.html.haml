@@ -2,25 +2,23 @@
 title: Welcome to Middleman
 ---
 
-#main
-  %div.scene{:class => page_classes}
-    .scene_element.scene_element--fadeinup
-      .intro.bio
-        %h3 My name is Sebastian Graz. I am a designer and a front-end developer based in London &#9748;
-        %a.cta(href='/profile') Read full profile
-      -#
-      -# - blog('case').articles[0...5].each do |article|
-      -#   %a{:href => article.url}= article.title
-      -#   %img{:src => article.data.image}
+%div{:class => page_classes}
+  .intro.bio
+    %h3 My name is Sebastian Graz. I am a designer and a front-end developer based in London &#9748;
+    %a.cta(href='/profile') Read full profile
+  -#
+  -# - blog('case').articles[0...5].each do |article|
+  -#   %a{:href => article.url}= article.title
+  -#   %img{:src => article.data.image}
 
 
-  .scene_element.scene_element--fadeInUpDelay
-    %h4.case-title Selected works
-    .cases
-      - blog('case').articles[0...5].each do |article|
-        %a.case{:href => article.url}
-          %img{:src => article.data.image}
-          %h3
-            = article.title
-            %sup 2016
-          %p Poetry portal web project
+
+%h4.case-title Selected works
+.cases
+  - blog('case').articles[0...5].each do |article|
+    %a.case{:href => article.url}
+      %img{:src => article.data.image}
+      %h3
+        = article.title
+        %sup 2016
+      %p Poetry portal web project

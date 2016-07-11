@@ -1,9 +1,9 @@
 = partial 'partials/head'
-#main
-  %div.scene{:class => page_classes}
+#main.scene
+  %div{:class => page_classes}
     = partial 'partials/header'
     .back
       .row
         %a{:href => "/"} back
-    .scene_element.scene_element--fadeinup
+    .scene_element.scene_element--fadein
       = yield
