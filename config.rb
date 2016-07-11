@@ -44,7 +44,7 @@ activate :blog do |blog|
   blog.name = 'case'
   blog.prefix = 'case'
   blog.layout = 'case-layout'
-  blog.permalink = '{title}'
+  blog.permalink = ':title.html'
 end
 
 
