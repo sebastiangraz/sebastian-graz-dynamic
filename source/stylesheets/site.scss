@@ -83,6 +83,11 @@ header {
 		}
 	}
 }
+.back {
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+}
 
 a.cta {
 	display: inline-block;
@@ -196,7 +201,7 @@ img {
 
 .scene {
 	.scene_element {
-		  animation-duration: .25s;
+		  animation-duration: .5s;
 		  transition-timing-function: ease-in;
 			animation-fill-mode: both;
 			&--fadein {

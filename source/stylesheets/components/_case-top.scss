@@ -1,7 +1,7 @@
 .case-top {
   background-color: #FFF7EA;
   top:-$header-height;
-  padding-top: calc($header-height + 2rem);
+  padding-top: calc(#{$header-height} + 2rem);
   position: relative;
   padding-bottom: 4rem;
   .row {

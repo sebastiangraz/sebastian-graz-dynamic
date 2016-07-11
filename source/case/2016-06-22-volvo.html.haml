@@ -2,10 +2,14 @@
 title: Volvo
 date: 2016-06-22 20:07 UTC
 tags:
+- rocks
+- wheel
+- 30 inch wooden rims
 image: images/volvo/volvo.png
 ---
-%h3 Volvo
 
-%p= current_page.data.image
 
-= partial(:'partials/_image', :locals => {:name=>"Sylvia Piace", :image=>"/images/delhaize/delhaize.png"})
+= partial(:'partials/_case-meta', :locals => {:tags=> current_page.data.tags, :h1=> current_page.title })
+
+.row
+  = partial(:'partials/_image', :locals => {:name=>"Sylvia Piace", :image=>"/images/delhaize/delhaize.png"})
