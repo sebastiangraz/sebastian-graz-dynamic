@@ -47,6 +47,9 @@ activate :blog do |blog|
   blog.permalink = '{title}'
 end
 
+
+
+
 # https://github.com/fredjean/middleman-s3_sync
 # activate :s3_sync do |s3|
 #   s3.bucket = "your-bucket-name"

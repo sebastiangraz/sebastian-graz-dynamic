@@ -11,6 +11,10 @@ var autoprefixer = require('gulp-autoprefixer')
 var path         = require('path')
 var cssnano      = require('gulp-cssnano')
 
+var postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    lost = require('lost');
+
 var paths = {
   src: path.join(config.root.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}'),
   dest: path.join(config.root.dest, config.tasks.css.dest)
@@ -19,9 +23,11 @@ var paths = {
 var cssTask = function () {
   return gulp.src(paths.src)
     .pipe(gulpif(!global.production, sourcemaps.init()))
+    .pipe(postcss([
+      lost()
+    ]))
     .pipe(sass(config.tasks.css.sass))
     .on('error', handleErrors)
-    .pipe(autoprefixer(config.tasks.css.autoprefixer))
     .pipe(gulpif(global.production, cssnano({autoprefixer: false})))
     .pipe(gulpif(!global.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.dest))
