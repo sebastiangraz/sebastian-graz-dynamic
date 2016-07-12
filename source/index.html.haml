@@ -1,5 +1,5 @@
 ---
-title: Welcome to Middleman
+title: Sebastian Graz
 ---
 
 %div{:class => page_classes}
@@ -15,7 +15,7 @@ title: Welcome to Middleman
 
 %h4.case-title Selected works
 .cases
-  - blog('case').articles[0...5].each do |article|
+  - blog('case').articles[0...5].reverse.each do |article|
     %a.case{:href => article.url}
       %img{:src => article.data.image}
       %h3

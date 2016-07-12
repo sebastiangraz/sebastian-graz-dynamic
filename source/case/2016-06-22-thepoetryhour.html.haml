@@ -1,0 +1,24 @@
+---
+title: The Poetry Hour
+date: 2016-06-22 20:07 UTC
+year: 2016
+color: '#00f'
+tags:
+- rocks
+- wheel
+- 30 inch wooden rims
+role:
+- web designer
+- art direction
+- front end
+image: images/thepoetryhour/poetry.png
+---
+
+= partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
+
+
+#my
+  %p A Box
+
+.row
+  = partial(:'partials/_image', :locals => {:name=>"Sylvia Piace", :image=>"/images/delhaize/delhaize.png"})

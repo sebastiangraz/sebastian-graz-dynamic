@@ -15,6 +15,12 @@ page "/404.html", directory_index: false
 #   activate :pry
 # end
 
+helpers do
+  def nav_active(path)
+    current_page.path == path ? {:class => "active"} : {}
+  end
+end
+
 configure :build do
   activate :minify_html do |html|
     html.remove_quotes = false
