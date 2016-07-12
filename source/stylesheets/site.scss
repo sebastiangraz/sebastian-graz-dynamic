@@ -280,13 +280,13 @@ img {
 		  animation-duration: .2s;
 		  transition-timing-function: ease-in;
 			animation-fill-mode: both;
-			&--fadein {
+			&--fadeIn {
 				  animation-name: fadeIn;
 			}
-			&--fadeinup {
+			&--fadeInUp {
 				animation-name: fadeInUp;
 			}
-			&--fadeinupReverse {
+			&--fadeInUpReverse {
 				animation-name: fadeInUpReverse;
 			}
 			&--fadeInUpDelay {

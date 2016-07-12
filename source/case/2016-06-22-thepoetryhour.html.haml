@@ -21,8 +21,11 @@ image: images/thepoetryhour/poetry.png
 .row
   .hero-computer
 
-  %h1 Revive Poetry
-  %h3 Mission briefing. Create a poetry platform for a wider audience
+  %h3 Revive Poetry
+  %h4 Mission briefing. Create a poetry platform for a wider audience
+  %p= lorem.paragraphs 1
+
+  %img{:src=> lorem.image('800x600', :text => 'Image')}
 
 .row
   = partial(:'partials/_image', :locals => {:name=>"Sylvia Piace", :image=>"/images/delhaize/delhaize.png"})
