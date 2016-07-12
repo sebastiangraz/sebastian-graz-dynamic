@@ -4,5 +4,8 @@
       = locals[:h1]
       %sup= locals[:year]
     %ul
-      %li= locals[:tags]
-      %li= locals[:roles]
+      - current_page.data.tags.each do |f|
+        %li= f
+    %ul
+      - current_page.data.role.each do |f|
+        %li= f
