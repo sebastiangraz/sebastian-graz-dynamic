@@ -6,6 +6,11 @@
 @import 'components/_case-top.scss';
 
 
+#animate2 {
+	transition: background-color 1s;
+	background-color: #f00;
+}
+
 
 body {
 	margin: $header-height 0 0 0;

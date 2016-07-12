@@ -1,10 +1,21 @@
-global.jQuery = require('jquery');
-// var moment = require('moment');
-
-jQuery(function() {
+jQuery(function($) {
   'use strict';
+
+  function scrollmagic() {
+    var controller = new ScrollMagic.Controller();
+    // create a scene
+    new ScrollMagic.Scene({
+            duration: 100,    // the scene should last for a scroll distance of 100px
+            offset: 50        // start this scene after scrolling for 50px
+        })
+        .setPin("#my") // pins the element for the the scene's duration
+        .addTo(controller); // assign the scene to the controller
+  };
+
+  scrollmagic()
+
   var $page, options, smoothState;
-  $page = jQuery('#main');
+  $page = $('#main');
   options = {
     debug: true,
     prefetch: true,
@@ -21,8 +32,12 @@ jQuery(function() {
       render: function($container, $newContent) {
         $container.removeClass('is-exiting');
         $container.html($newContent);
-        jQuery('html, body').animate({ scrollTop: 0 }, 0);
+        $('html, body').animate({ scrollTop: 0 }, 0);
       }
+    },
+    onAfter: function($container, $newContent) {
+      console.log('animations finished')
+      // scrollmagic();
     }
   };
   smoothState = $page.smoothState(options).data('smoothState');
