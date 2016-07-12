@@ -18,9 +18,11 @@ image: images/thepoetryhour/poetry.png
 
 = partial(:'partials/_case-meta', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
 
+.row
+  .hero-computer
 
-#my
-  %p A Box
+  %h1 Revive Poetry
+  %h3 Mission briefing. Create a poetry platform for a wider audience
 
 .row
   = partial(:'partials/_image', :locals => {:name=>"Sylvia Piace", :image=>"/images/delhaize/delhaize.png"})

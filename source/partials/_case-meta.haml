@@ -3,9 +3,16 @@
     %h1
       = locals[:h1]
       %sup= locals[:year]
-    %ul
-      - current_page.data.tags.each do |f|
-        %li= f
-    %ul
-      - current_page.data.role.each do |f|
-        %li= f
+    .case-meta
+      .case-tags
+        %ul
+          %p Tags
+          - current_page.data.tags.each do |f|
+            %li
+              %p= f
+      .case-role
+        %ul
+          %p Roles
+          - current_page.data.role.each do |f|
+            %li
+              %p= f
