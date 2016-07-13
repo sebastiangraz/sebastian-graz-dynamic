@@ -1,30 +1,9 @@
-@keyframes fadeInUpReverse {
+@keyframes fadeInZoom {
 0% {
   opacity: 0;
-  transform: translate3d(96px, 0, 0); }
-100% {
-  opacity: 1;
-  transform: none;
-	}
 }
-
-@keyframes fadeInUp {
-0% {
-  opacity: 0;
-  transform: translate3d(-24px, 0, 0); }
 100% {
   opacity: 1;
-  transform: none;
-	}
-}
-
-@keyframes fadeInUpDelay {
-0% {
-  opacity: 0;
-  transform: translate3d(-32px, 0, 0); }
-100% {
-  opacity: 1;
-  transform: none;
 	}
 }
 

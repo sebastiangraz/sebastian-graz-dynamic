@@ -283,21 +283,15 @@ img {
 			&--fadeIn {
 				  animation-name: fadeIn;
 			}
-			&--fadeInUp {
-				animation-name: fadeInUp;
-			}
-			&--fadeInUpReverse {
-				animation-name: fadeInUpReverse;
-			}
-			&--fadeInUpDelay {
-				animation-name: fadeInUpDelay;
+			&--fadeInZoom {
+				  animation-name: fadeInZoom;
 			}
 			&--fadeInDown {
 				animation-name: fadeInDown;
 			}
 			&--fadeInDownDelay {
 				animation-name: fadeInDownDelay;
-			  animation-duration: .4s;
+			  animation-duration: .5s;
 			}
 		}
 		&.is-exiting {
