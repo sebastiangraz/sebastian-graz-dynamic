@@ -280,6 +280,7 @@ img {
 		  animation-duration: .2s;
 		  transition-timing-function: ease-in;
 			animation-fill-mode: both;
+		  will-change: transform; 	// Safari jankiness fix
 			&--fadeIn {
 				  animation-name: fadeIn;
 			}
