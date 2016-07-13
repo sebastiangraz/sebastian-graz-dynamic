@@ -214,6 +214,8 @@ a.cta {
   padding-top: calc(#{$header-height} + 2rem);
   position: relative;
   padding-bottom: 4rem;
+	display: inline-block;
+	width: 100%;
   .row {
     align-items: center;;
   }
