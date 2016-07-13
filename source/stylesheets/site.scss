@@ -1,5 +1,5 @@
-@import 'global/variables.scss';
-@import 'global/normalize.scss';
+@import 'global/_variables.scss';
+@import 'global/_normalize.scss';
 @import 'global/_animations.scss';
 @import 'global/_type.scss';
 
@@ -177,9 +177,12 @@ a.cta {
 			margin: 0 auto;
 			padding: 0 1.5rem;
 	}
-	&.bio {
-			lost-column: 2/3
-	}
+}
+
+
+
+.ingress {
+	lost-column: 2/3;
 }
 
 .intro-image--poetry {
@@ -192,6 +195,57 @@ a.cta {
 				object-fit: contain;
 			}
 }
+
+.grid.half {
+	lost-center: $max-width;
+	& > * {
+		lost-waffle: 1/2;
+	}
+}
+
+.grid {
+	margin-bottom: 2rem;
+}
+
+.sq {
+	padding-bottom: 100%;
+	position: relative;
+}
+
+.case-section {
+	lost-center: $max-width;
+	padding: 5%;
+	align-items: center;
+	.case-section-image {
+		lost-waffle: 8/12;
+	}
+	.case-section-copy {
+		padding-left: 2rem;
+		lost-waffle: 4/12;
+	}
+	h3 {
+		margin: 0;
+	}
+}
+
+.case-content {
+	  position: absolute;
+		height: 100%;
+		width: 100%;
+    padding: 10%;
+}
+
+.case-image {
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		img {
+			object-fit: contain;
+			height: 100%;
+		}
+}
+
+
 
 
 .cases {
@@ -263,6 +317,7 @@ a.cta {
 
 .hero-computer {
 	border-radius: 2px;
+	display: block;
 	background: #eee;
 	height: 2rem;
 }
@@ -282,7 +337,7 @@ img {
 		  animation-duration: .2s;
 		  transition-timing-function: ease-in;
 			animation-fill-mode: both;
-		  will-change: transform; 	// Safari jankiness fix
+		  // will-change: transform; 	// Safari jankiness fix // Janky issue with scrollMagic
 			&--fadeIn {
 				  animation-name: fadeIn;
 			}

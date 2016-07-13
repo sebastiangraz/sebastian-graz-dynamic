@@ -2,7 +2,7 @@
 title: Volvo
 date: 2016-07-12 20:20 UTC
 year: 2016
-color: '#f00'
+color: '#EEF6FF'
 tags:
 - rocks
 - wheel
@@ -15,3 +15,5 @@ image: images/volvo/volvo.png
 ---
 
 = partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
+.row
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=>"/images/thepoetryhour/mobile-homepage.png", :imageSecond=>"/images/thepoetryhour/mobile-homepage.png", :captionFirst=>"Caption first", :captionSecond=>"Caption second", :color=> current_page.data.color})
