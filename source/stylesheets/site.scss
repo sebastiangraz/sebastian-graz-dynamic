@@ -5,6 +5,8 @@
 
 @import 'components/_case-top.scss';
 
+@lost flexbox flex;
+
 
 #animate2 {
 	transition: background-color 1s;
@@ -210,6 +212,7 @@ a.cta {
 .sq {
 	padding-bottom: 100%;
 	position: relative;
+	overflow: hidden;
 }
 
 .case-section {
@@ -233,6 +236,25 @@ a.cta {
 		height: 100%;
 		width: 100%;
     padding: 10%;
+		display: flex;
+    justify-content: center;
+}
+
+.shadow {
+		position: relative;
+    height: 100%;
+		&::after {
+	    content: '';
+	    height: 100%;
+	    width: 100%;
+	    background: rgb(0, 0, 0);
+	    position: absolute;
+	    z-index: 0;
+	    top: 21px;
+	    -webkit-filter: blur(20px);
+	    left: 20px;
+	    mix-blend-mode: soft-light;
+		}
 }
 
 .case-image {
@@ -240,8 +262,11 @@ a.cta {
 		position: relative;
 		text-align: center;
 		img {
-			object-fit: contain;
-			height: 100%;
+	    object-fit: contain;
+	    height: 100%;
+	    width: auto;
+			z-index: 1;
+			position: relative;
 		}
 }
 
@@ -316,10 +341,6 @@ a.cta {
 }
 
 .hero-computer {
-	border-radius: 2px;
-	display: block;
-	background: #eee;
-	height: 2rem;
 }
 
 sup {

@@ -25,7 +25,8 @@ configure :build do
   activate :minify_html do |html|
     html.remove_quotes = false
     html.remove_intertag_spaces = true
-  end
+  activate :relative_assets
+end
 
   activate :external_pipeline,
     name: :gulp,

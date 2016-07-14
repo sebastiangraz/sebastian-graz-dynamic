@@ -67,9 +67,9 @@ var app = {};
           // create a scene
           new ScrollMagic.Scene({
                   duration: 200,    // the scene should last for a scroll distance of 100px
-                  offset: 50        // start this scene after scrolling for 50px
+                  offset: 400        // start this scene after scrolling for 50px
               })
-              .setPin(".hero-computer") // pins the element for the the scene's duration
+              .setPin(".computer-bottom") // pins the element for the the scene's duration
               .addTo(controller); // assign the scene to the controller
         }
     };

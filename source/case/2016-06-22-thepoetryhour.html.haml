@@ -20,7 +20,10 @@ image: images/thepoetryhour/poetry.png
 
 .row
   .hero-computer
-
+    .computer-screen
+      %img(src='/images/screen.png')
+    .computer-bottom
+      %img(src='/images/bottom.png')
   .intro.ingress
     %div
       %h3 Revive Poetry
@@ -31,4 +34,5 @@ image: images/thepoetryhour/poetry.png
 
 .row
   = partial(:'partials/grid-system/_image-full', :locals => {:image=> lorem.image('800x600'), :caption=> 'For a font to be truly beautiful you need to display it in its native size. Or just display it for the', :captionTitle=>"Title", :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>"/images/thepoetryhour/mobile-homepage.png", :captionFirst=>"Caption first", :captionSecond=>"Caption second", :color=> current_page.data.color})
   = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>"/images/thepoetryhour/mobile-homepage.png", :captionFirst=>"Caption first", :captionSecond=>"Caption second", :color=> current_page.data.color})
