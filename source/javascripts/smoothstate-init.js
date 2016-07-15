@@ -62,15 +62,15 @@ var app = {};
             this.smoothState = $page.smoothState(options).data('smoothState');
         },
         initMagicScroll: function () {
-          console.log('magicScroll Executed');
-          var controller = new ScrollMagic.Controller();
-          // create a scene
-          new ScrollMagic.Scene({
-                  duration: 200,    // the scene should last for a scroll distance of 100px
-                  offset: 400        // start this scene after scrolling for 50px
-              })
-              .setPin(".computer-bottom") // pins the element for the the scene's duration
-              .addTo(controller); // assign the scene to the controller
+          // console.log('magicScroll Executed');
+          // var controller = new ScrollMagic.Controller();
+          // // create a scene
+          // new ScrollMagic.Scene({
+          //         duration: 200,    // the scene should last for a scroll distance of 100px
+          //         offset: 400        // start this scene after scrolling for 50px
+          //     })
+          //     .setPin(".computer-bottom") // pins the element for the the scene's duration
+          //     .addTo(controller); // assign the scene to the controller
         }
     };
 
@@ -78,15 +78,12 @@ var app = {};
     $doc.ready(function() {
         console.log('Initial Document Ready');
         app.initSmoothState();
+        app.initMagicScroll();
         $.readyFn.execute();
     });
 
     /** [4] */
     $.fn.ready = $.readyFn.register;
-
-    $(function() {
-      app.initMagicScroll();
-    });
 
 })(jQuery);
 

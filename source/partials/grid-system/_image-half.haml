@@ -2,12 +2,10 @@
   .grid-item.case-image
     .sq{ :style => 'background-color:' + locals[:color] }
       .case-content
-        .shadow
-          %image{:src => "#{locals[:imageFirst]}"}
+        %image{:src => "#{locals[:imageFirst]}"}
     %p= locals[:captionFirst]
   .grid-item.case-image
     .sq{ :style => 'background-color:' + locals[:color] }
       .case-content
-        .shadow
-          %image{:src => "#{locals[:imageSecond]}"}
+        %image{:src => "#{locals[:imageSecond]}"}
     %p= locals[:captionSecond]

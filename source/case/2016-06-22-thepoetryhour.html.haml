@@ -2,7 +2,7 @@
 title: The Poetry Hour
 date: 2016-06-22 20:07 UTC
 year: 2016
-color: '#f4ede2'
+color: '#FFF7EA'
 tags:
 - 'Minimalism'
 - 'Client'
@@ -10,7 +10,7 @@ tags:
 role:
 - 'Front End'
 - 'Art Direction'
-- 'UX'
+- 'User Experience'
 image: images/thepoetryhour/poetry.png
 ---
 
@@ -18,17 +18,21 @@ image: images/thepoetryhour/poetry.png
 
 = partial(:'partials/_case-meta', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
 
+.hero-devices
+  .row
+    .hero-phone
+      %img(src='/images/thepoetryhour/mobile-homepage.png')
+    .hero-computer
+      %img(src='/images/macbook.png')
+
+
 .row
-  .hero-computer
-    .computer-screen
-      %img(src='/images/screen.png')
-    .computer-bottom
-      %img(src='/images/bottom.png')
   .intro.ingress
     %div
       %h3 Revive Poetry
       %h4 Mission briefing. Create a poetry platform for a wider audience
       %p= lorem.paragraphs 1
+
 
 
 

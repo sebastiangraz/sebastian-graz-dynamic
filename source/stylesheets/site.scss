@@ -5,15 +5,6 @@
 
 @import 'components/_case-top.scss';
 
-@lost flexbox flex;
-
-
-#animate2 {
-	transition: background-color 1s;
-	background-color: #f00;
-}
-
-
 body {
 	margin: $header-height 0 0 0;
 }
@@ -21,6 +12,26 @@ body {
 * {
 	box-sizing: border-box;
 }
+
+.hero-devices {
+	overflow: hidden;
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	transform: translateY(-10%);
+	.row {
+		lost-center: $max-width;
+	}
+	  .hero-computer {
+			lost-column : 9/12;
+    	transform: translateX(25%);
+		}
+	  .hero-phone {
+			lost-column : 3/12;
+    	transform: translateX(25%);
+		}
+}
+
 
 .row {
 	max-width: $max-width;
@@ -96,11 +107,6 @@ header {
 		}
 	}
 }
-.back {
-	width: 100%;
-	position: fixed;
-	z-index: 1;
-}
 
 a.cta {
 	display: inline-block;
@@ -113,62 +119,12 @@ a.cta {
 	}
 }
 
-.back {
-	a {
-			&:before {
-		    content:'\2190';
-				margin-right: 0.5rem;
-			}
-		}
-}
-
 .center-v {
 	display: flex;
 	align-items: center;
 }
-.case-title {
+.ct {
 	text-align: center;
-}
-
-.article-row {
-  display: flex;
-  margin-bottom: 48px;
-	align-items: center;
-  & > * {
-    flex: 1;
-		flex-basis: 50%;
-  }
-}
-.article-text, .article-image {
-  padding: 5vw;
-  margin: 0 1.5rem;
-}
-.article-text {
-  width: 100%;
-  float: left;
-}
-
-.article-image {
-  overflow: hidden;
-  background: #eee;
-  &:after {
-		content: '';
-		height: 100%;
-		width: 100%;
-		display: block;
-		background: #000;
-	}
-	&--nopadding {
-		padding: 0;
-    box-shadow: 10px 30px 80px -9px rgba(0,0,0,0.3);
-	}
-}
-
-.intro-case {
-	padding: 3rem 0;
-	overflow: hidden;
-	position: relative;
-	top:-$header-height;
 }
 
 .intro {
@@ -181,21 +137,8 @@ a.cta {
 	}
 }
 
-
-
 .ingress {
 	lost-column: 2/3;
-}
-
-.intro-image--poetry {
-	position: absolute;
-	    top: -$header-height;
-	    transform: translate(50%);
-	    z-index: -1;
-			img {
-				max-height: 540px;
-				object-fit: contain;
-			}
 }
 
 .grid.half {
@@ -207,12 +150,6 @@ a.cta {
 
 .grid {
 	margin-bottom: 2rem;
-}
-
-.sq {
-	padding-bottom: 100%;
-	position: relative;
-	overflow: hidden;
 }
 
 .case-section {
@@ -231,54 +168,30 @@ a.cta {
 	}
 }
 
-.case-content {
-	  position: absolute;
-		height: 100%;
-		width: 100%;
-    padding: 10%;
-		display: flex;
-    justify-content: center;
-}
-
-.shadow {
-		position: relative;
-    height: 100%;
-		&::after {
-	    content: '';
-	    height: 100%;
-	    width: 100%;
-	    background: rgb(0, 0, 0);
-	    position: absolute;
-	    z-index: 0;
-	    top: 21px;
-	    -webkit-filter: blur(20px);
-	    left: 20px;
-	    mix-blend-mode: soft-light;
-		}
-}
-
 .case-image {
-		overflow: hidden;
-		position: relative;
-		text-align: center;
-		img {
-	    object-fit: contain;
-	    height: 100%;
-	    width: auto;
-			z-index: 1;
-			position: relative;
-		}
+	position: relative;
+	text-align: center;
+	img {
+		object-fit: contain;
+		height: 100%;
+	}
 }
-
-
-
+.sq {
+	padding-bottom: 100%;
+	position: relative;
+}
+.case-content {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	padding: 10%;
+}
 
 .cases {
 	lost-center: $max-width;
 	.case {
 		lost-column: 1/2;
 		margin-bottom: 2rem;
-		color: #000;
 		h3{
 			margin: 0rem;
 			top: 16px;
@@ -288,13 +201,16 @@ a.cta {
 }
 
 .case-top {
-  background-color: #FFF7EA;
-  top:-$header-height;
-  padding-top: calc(#{$header-height} + 2rem);
   position: relative;
-  padding-bottom: 4rem;
 	display: inline-block;
 	width: 100%;
+	.case-meta {
+		lost-center: $max-width;
+	}
+	.case-top-content {
+		  background-color: #FFF7EA;
+			padding: 10%;
+	}
   .row {
     align-items: center;;
   }
@@ -308,9 +224,7 @@ a.cta {
 	    display: inline-block;
     }
   }
-  .case-meta {
-  	lost-center: $max-width;
-  }
+
   .case-role, .case-tags {
       p {
 				font-size: 0.75rem;
@@ -340,9 +254,6 @@ a.cta {
   }
 }
 
-.hero-computer {
-}
-
 sup {
   font-size: 0.75rem;
 	margin-left:0.25rem;
@@ -351,31 +262,4 @@ sup {
 img {
 	width: 100%;
 	display: block;
-}
-
-.scene {
-	.scene_element {
-		  animation-duration: .2s;
-		  transition-timing-function: ease-in;
-			animation-fill-mode: both;
-		  // will-change: transform; 	// Safari jankiness fix // Janky issue with scrollMagic
-			&--fadeIn {
-				  animation-name: fadeIn;
-			}
-			&--fadeInZoom {
-				  animation-name: fadeInZoom;
-			}
-			&--fadeInDown {
-				animation-name: fadeInDown;
-			}
-			&--fadeInDownDelay {
-				animation-name: fadeInDownDelay;
-			  animation-duration: .5s;
-			}
-		}
-		&.is-exiting {
-			.scene_element {
-				  animation-direction: alternate-reverse;
-			}
-		}
 }

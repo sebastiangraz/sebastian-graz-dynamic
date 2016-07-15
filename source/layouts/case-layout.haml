@@ -2,8 +2,5 @@
 #main.scene
   %div{:class => page_classes}
     = partial 'partials/header'
-    .back.scene_element.scene_element--fadeIn
-      .row
-        %a{:href => "/"} back
     .scene_element.scene_element--fadeInZoom
       = yield
