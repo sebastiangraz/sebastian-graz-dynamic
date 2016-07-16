@@ -15,7 +15,10 @@
 	z-index: 1;
 	position: relative;
 	width: 100%;
-	transform: translateY(-15%);
+	transform: translateY(-25%);
+	@include mq(sm) {
+		transform: translateY(-15%);
+	}
   .hero-computer {
 		width: 90vw;
 		@include mq(md) {
@@ -41,23 +44,38 @@
   margin: 0 auto;
   width: 92%;
 }
-
+.profile {
+	lost-center: $max-width;
+}
 .profile-section {
 	border-top: 1px solid rgba(0,0,0,0.1);
-	padding:3rem 0;
+	padding:1rem 0;
+	@include mq(sm) {
+		lost-column: 1/2;
+	}
+	@include mq(md) {
+		padding:3rem 0;
+		lost-column: 1/1;
+	}
 	h4 {
 		margin: 0;
-		float: left;
-		width: 240px;
+		@include mq(md) {
+			float: left;
+			width: 240px;
+		}
 	}
 	&-section {
 		margin-bottom: 4rem;
 	}
 	ul {
-		column-count: 2;
-		column-gap: 2rem;
-		padding-left: 2rem;
-		margin: 0;
+		margin: 1rem 0 0 0 ;
+		padding: 0;
+		@include mq(md) {
+			column-count: 2;
+			column-gap: 2rem;
+			padding-left: 2rem;
+			margin: 0;
+		}
 		li {
 		  display: inline-block;
 	    word-break: break-word;
