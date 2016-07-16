@@ -144,12 +144,12 @@ a.cta {
 .grid.half {
 	lost-center: $max-width;
 	& > * {
-		lost-waffle: 1/2;
+		margin-bottom: 2rem;
+		lost-column: 1/1;
+		@include mq(md) {
+			lost-column: 1/2;
+		}
 	}
-}
-
-.grid {
-	margin-bottom: 2rem;
 }
 
 .cases img, .hero-devices img{
@@ -164,11 +164,17 @@ a.cta {
 	lost-center: $max-width;
 	padding: 5%;
 	.case-section-image {
-		lost-waffle: 8/12;
+		@include mq(md) {
+			lost-column: 8/12;
+		}
 	}
 	.case-section-copy {
-		padding-left: 2rem;
-		lost-waffle: 4/12;
+		margin-bottom: 2rem;
+		padding-left: 0;
+		@include mq(md) {
+			lost-column: 4/12;
+			margin-bottom: 0rem;
+		}
 	}
 	h3 {
 		margin: 0;
@@ -214,16 +220,21 @@ a.cta {
 
 .next-prev {
 	margin-bottom: 5rem;
-	display: flex;
-	justify-content: space-between;
+	@include mq(sm) {
+		display: flex;
+		justify-content: space-between;
+	}
 	.next, .prev {
 		flex: 1;
-		padding: 2rem;
+		padding: 10%;
 		p {
 			margin: 0;
 		}
 		h3 {
 			margin:0;
+		}
+		@include mq(sm) {
+			padding: 2rem;
 		}
 	}
 }
