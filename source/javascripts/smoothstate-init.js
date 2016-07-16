@@ -36,7 +36,7 @@ var app = {};
                     prefetch: true,
                     cacheLength: 2,
                     onStart: {
-                        duration: 500,
+                        duration: 400,
                         render: function($container) {
                             // Add your CSS animation reversing class
                             $container.addClass('is-exiting');
@@ -71,6 +71,24 @@ var app = {};
           //     })
           //     .setPin(".computer-bottom") // pins the element for the the scene's duration
           //     .addTo(controller); // assign the scene to the controller
+        },
+        initImagesLoaded: function () {
+          $('.hero-devices').imagesLoaded()
+          .always( function( instance ) {
+            console.log('all images loaded');
+            console.log()
+          })
+          .done( function( instance, image ) {
+            console.log('all images successfully loaded');
+            $('img').addClass('image-loaded');
+          })
+          .fail( function() {
+            console.log('all images loaded, at least one is broken');
+          })
+          .progress( function( instance, image ) {
+            var result = image.isLoaded ? 'loaded' : 'broken';
+            console.log( 'image is ' + result + ' for ' + image.img.src );
+          });
         }
     };
 
@@ -79,11 +97,16 @@ var app = {};
         console.log('Initial Document Ready');
         app.initSmoothState();
         app.initMagicScroll();
+        app.initImagesLoaded();
         $.readyFn.execute();
     });
 
     /** [4] */
     $.fn.ready = $.readyFn.register;
+
+    $(function() {
+      app.initImagesLoaded();
+    });
 
 })(jQuery);
 

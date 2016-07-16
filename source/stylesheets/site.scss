@@ -5,6 +5,8 @@
 
 @import 'components/_case-top.scss';
 
+@lost flexbox flex;
+
 body {
 	margin: $header-height 0 0 0;
 }
@@ -157,10 +159,17 @@ a.cta {
 	margin-bottom: 2rem;
 }
 
+.cases img, .hero-devices img{
+	opacity: 0;
+	transition: all .2s ease-in;
+	&.image-loaded {
+			opacity: 1;
+	}
+}
+
 .case-section {
 	lost-center: $max-width;
 	padding: 5%;
-	align-items: center;
 	.case-section-image {
 		lost-waffle: 8/12;
 	}

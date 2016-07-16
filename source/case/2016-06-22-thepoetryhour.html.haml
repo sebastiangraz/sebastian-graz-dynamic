@@ -29,14 +29,17 @@ image: images/thepoetryhour/poetry.png
 .row
   .intro.ingress-centered
     %div
-      %h3 Revive Poetry
-      %h4 Mission briefing. Create a poetry platform for a wider audience
-      %p= lorem.paragraphs 1
+      %h3 Poetry in a digital world gets another chance
+      %h4 Brief: Create a poetry platform for a wider audience
+      %p
+        Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
 
 
 
 
 .row
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> lorem.image('800x600'), :caption=> 'For a font to be truly beautiful you need to display it in its native size. Or just display it for the', :captionTitle=>"Title", :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
+
+
   %h3 Mobile
-  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>"/images/thepoetryhour/mobile-homepage.png", :captionFirst=>"Caption first", :captionSecond=>"Caption second", :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
