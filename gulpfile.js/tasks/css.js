@@ -23,10 +23,10 @@ var paths = {
 var cssTask = function () {
   return gulp.src(paths.src)
     .pipe(gulpif(!global.production, sourcemaps.init()))
+    .pipe(sass(config.tasks.css.sass))
     .pipe(postcss([
       lost()
     ]))
-    .pipe(sass(config.tasks.css.sass))
     .on('error', handleErrors)
     .pipe(gulpif(global.production, cssnano({autoprefixer: false})))
     .pipe(gulpif(!global.production, sourcemaps.write()))

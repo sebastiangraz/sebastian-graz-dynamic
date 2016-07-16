@@ -1,7 +1,9 @@
 @import 'global/_variables.scss';
 @import 'global/_normalize.scss';
 @import 'global/_animations.scss';
+@import 'global/_mq.scss';
 @import 'global/_type.scss';
+
 
 @import 'components/_case-top.scss';
 
@@ -214,60 +216,7 @@ a.cta {
 	}
 }
 
-.case-top {
-  position: relative;
-	display: inline-block;
-	margin-bottom: 2rem;
-	width: 100%;
-	.case-meta {
-		lost-center: $max-width;
-	}
-	.case-top-content {
-		  background-color: #FFF7EA;
-			padding: 10%;
-	}
-  .row {
-    align-items: center;;
-  }
-  h1 {
-    margin: 0;
-    sup {
-	    font-size: 0.75rem;
-	    margin-left: -0.5rem;
-	    top: -1.5rem;
-	    position: relative;
-	    display: inline-block;
-    }
-  }
 
-  .case-role, .case-tags {
-      p {
-				font-size: 0.75rem;
-        margin: 0;
-      }
-      padding: 0;
-      margin: 0;
-      lost-column: 1/2;
-      ul {
-        padding: 0;
-      }
-      li {
-        list-style: none;
-        float: left;
-        margin-right: 8px;
-
-        p {
-					font-size: 1rem;
-          display: inline-block;
-          margin: 0;
-          opacity: 1;
-          &:after {
-            content: ',';
-          }
-        }
-      }
-  }
-}
 
 .next-prev {
 	margin-bottom: 5rem;
