@@ -19,15 +19,15 @@ image: images/thepoetryhour/poetry.png
 = partial(:'partials/_case-meta', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
 
 .hero-devices
-  .row
-    .hero-phone
-      %img(src='/images/thepoetryhour/mobile-homepage.png')
+  .hero-device-wrapper.row
     .hero-computer
       %img(src='/images/macbook.png')
+      .hero-phone
+        %img(src='/images/thepoetryhour/mobile-homepage.png')
 
 
 .row
-  .intro.ingress
+  .intro.ingress-centered
     %div
       %h3 Revive Poetry
       %h4 Mission briefing. Create a poetry platform for a wider audience
@@ -38,5 +38,5 @@ image: images/thepoetryhour/poetry.png
 
 .row
   = partial(:'partials/grid-system/_image-full', :locals => {:image=> lorem.image('800x600'), :caption=> 'For a font to be truly beautiful you need to display it in its native size. Or just display it for the', :captionTitle=>"Title", :color=> current_page.data.color})
-  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>"/images/thepoetryhour/mobile-homepage.png", :captionFirst=>"Caption first", :captionSecond=>"Caption second", :color=> current_page.data.color})
+  %h3 Mobile
   = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>"/images/thepoetryhour/mobile-homepage.png", :captionFirst=>"Caption first", :captionSecond=>"Caption second", :color=> current_page.data.color})

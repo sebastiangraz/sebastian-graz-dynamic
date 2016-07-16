@@ -18,18 +18,18 @@ body {
 	z-index: 1;
 	position: relative;
 	width: 100%;
-	transform: translateY(-10%);
-	.row {
-		lost-center: $max-width;
+	transform: translateY(-15%);
+  .hero-computer {
+		width: 90vw;
+  	transform: translateX(24%);
 	}
-	  .hero-computer {
-			lost-column : 9/12;
-    	transform: translateX(25%);
-		}
-	  .hero-phone {
-			lost-column : 3/12;
-    	transform: translateX(25%);
-		}
+  .hero-phone {
+    position: absolute;
+    width: 20%;
+    transform: translateY(20%) translateX(-100%);
+    top: 0px;
+		left: 0px;
+	}
 }
 
 
@@ -82,7 +82,7 @@ header {
 
 .profile-section {
 	border-top: 1px solid rgba(0,0,0,0.1);
-	padding-top:3.5rem;
+	padding:3rem 0;
 	h4 {
 		margin: 0;
 		float: left;
@@ -95,6 +95,7 @@ header {
 		column-count: 2;
 		column-gap: 2rem;
 		padding-left: 2rem;
+		margin: 0;
 		li {
 		  display: inline-block;
 	    word-break: break-word;
@@ -139,6 +140,10 @@ a.cta {
 
 .ingress {
 	lost-column: 2/3;
+}
+.ingress-centered{
+	lost-column: 6/12;
+	lost-move: 3/12;
 }
 
 .grid.half {
@@ -203,6 +208,7 @@ a.cta {
 .case-top {
   position: relative;
 	display: inline-block;
+	margin-bottom: 2rem;
 	width: 100%;
 	.case-meta {
 		lost-center: $max-width;
@@ -252,6 +258,22 @@ a.cta {
         }
       }
   }
+}
+
+.next-prev {
+	margin-bottom: 5rem;
+	display: flex;
+	justify-content: space-between;
+	.next, .prev {
+		flex: 1;
+		padding: 2rem;
+		p {
+			margin: 0;
+		}
+		h3 {
+			margin:0;
+		}
+	}
 }
 
 sup {
