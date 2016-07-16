@@ -7,7 +7,6 @@ var browserSync  = require('browser-sync')
 var sass         = require('gulp-sass')
 var sourcemaps   = require('gulp-sourcemaps')
 var handleErrors = require('../lib/handleErrors')
-var autoprefixer = require('gulp-autoprefixer')
 var path         = require('path')
 var cssnano      = require('gulp-cssnano')
 
@@ -25,6 +24,7 @@ var cssTask = function () {
     .pipe(gulpif(!global.production, sourcemaps.init()))
     .pipe(sass(config.tasks.css.sass))
     .pipe(postcss([
+      autoprefixer({ browsers: ['last 2 versions'] }),
       lost()
     ]))
     .on('error', handleErrors)

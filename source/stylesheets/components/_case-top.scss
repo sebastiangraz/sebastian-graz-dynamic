@@ -23,15 +23,13 @@
 	    display: inline-block;
     }
   }
-
   .case-role, .case-tags {
+      padding: 0;
+      margin: 0;
       p {
 				font-size: 0.75rem;
         margin: 0;
       }
-      padding: 0;
-      margin: 0;
-      lost-column: 1/2;
       ul {
         padding: 0;
       }
@@ -50,5 +48,9 @@
           }
         }
       }
+    @include mq(md) {
+      lost-column:1/2;
+    }
+
   }
 }

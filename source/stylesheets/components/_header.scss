@@ -1,0 +1,40 @@
+header {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+
+	.row {
+		height: $header-height;
+		justify-content: space-between;
+	}
+	h4 {
+		display: inline-block;
+	}
+	#logo {
+		display: inline-block;
+    max-width: 32px;
+	}
+	ul {
+		padding: 0;
+		li {
+
+			float: left;
+			list-style: none;
+			&.active {
+				a {
+					color: #000;
+				}
+			}
+			a {
+				margin-left: 40px;
+			}
+			&:first-child {
+				a {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

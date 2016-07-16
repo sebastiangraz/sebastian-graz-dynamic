@@ -6,16 +6,9 @@
 
 
 @import 'components/_case-top.scss';
+@import 'components/_header.scss';
 
 @lost flexbox flex;
-
-body {
-	margin: $header-height 0 0 0;
-}
-
-* {
-	box-sizing: border-box;
-}
 
 .hero-devices {
 	overflow: hidden;
@@ -25,7 +18,9 @@ body {
 	transform: translateY(-15%);
   .hero-computer {
 		width: 90vw;
-  	transform: translateX(24%);
+		@include mq(md) {
+  		transform: translateX(24%);
+		}
 	}
   .hero-phone {
     position: absolute;
@@ -33,6 +28,10 @@ body {
     transform: translateY(20%) translateX(-100%);
     top: 0px;
 		left: 0px;
+		display:none;
+		@include mq(md) {
+			display: block;
+		}
 	}
 }
 
@@ -41,47 +40,6 @@ body {
 	max-width: $max-width;
   margin: 0 auto;
   width: 92%;
-}
-
-header {
-	position: fixed;
-	top:0;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-
-	.row {
-		height: $header-height;
-		justify-content: space-between;
-	}
-	h4 {
-		display: inline-block;
-	}
-	#logo {
-		display: inline-block;
-    max-width: 32px;
-	}
-	ul {
-		padding: 0;
-		li {
-
-			float: left;
-			list-style: none;
-			&.active {
-				a {
-					color: #000;
-				}
-			}
-			a {
-				margin-left: 40px;
-			}
-			&:first-child {
-				a {
-					margin-left: 0;
-				}
-			}
-		}
-	}
 }
 
 .profile-section {
@@ -133,21 +91,36 @@ a.cta {
 }
 
 .intro {
-	padding: 3rem 0;
+	padding: 1.5rem 0;
 	overflow: hidden;
 	position: relative;
 	&-text {
 			margin: 0 auto;
 			padding: 0 1.5rem;
 	}
+	@include mq(md) {
+		padding: 3rem 0;
+	}
 }
 
 .ingress {
-	lost-column: 2/3;
+	h3 {
+		font-size: 1.5rem;
+		margin-top:0;
+	}
+	lost-column: 1/1;
+	@include mq(md) {
+		lost-column: 2/3;
+		h3 {
+		  font-size: 1.75rem;
+		}
+	}
 }
 .ingress-centered{
-	lost-column: 6/12;
-	lost-move: 3/12;
+	@include mq(md) {
+		lost-column: 6/12;
+		lost-move: 3/12;
+	}
 }
 
 .grid.half {
@@ -206,12 +179,15 @@ a.cta {
 .cases {
 	lost-center: $max-width;
 	.case {
-		lost-column: 1/2;
+		lost-column: 1/1;
 		margin-bottom: 2rem;
 		h3{
 			margin: 0rem;
 			top: 16px;
 			position: relative;
+		}
+		@include mq(md) {
+			lost-column: 1/2;
 		}
 	}
 }
@@ -237,9 +213,18 @@ a.cta {
 sup {
   font-size: 0.75rem;
 	margin-left:0.25rem;
+	font-family: 'NeueHaasUnica-regular';
 }
 
 img {
 	width: 100%;
 	display: block;
+}
+
+body {
+	margin: $header-height 0 0 0;
+}
+
+* {
+	box-sizing: border-box;
 }
