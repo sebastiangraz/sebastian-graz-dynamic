@@ -1,0 +1,7 @@
+= partial 'partials/head'
+#main.scene
+  %div{:class => page_classes}
+    = partial 'partials/header'
+    .scene_element.scene_element--fadeInDownDelay
+      .row.blog
+        = yield

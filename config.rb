@@ -54,6 +54,15 @@ activate :blog do |blog|
   blog.permalink = ':title.html'
 end
 
+activate :blog do |blog|
+  blog.name = 'verbose'
+  blog.prefix = 'verbose'
+  blog.layout = 'verbose-layout'
+  blog.permalink = ':title.html'
+end
+
+
+
 
 
 

@@ -44,8 +44,13 @@
   margin: 0 auto;
   width: 92%;
 }
-.profile {
-	lost-center: $max-width;
+
+.row.blog {
+	max-width: $max-width / 2;
+}
+
+.profile-sections {
+	lost-center:$max-width;
 }
 .profile-section {
 	border-top: 1px solid rgba(0,0,0,0.1);
