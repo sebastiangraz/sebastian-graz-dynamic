@@ -1,7 +1,7 @@
 .intro.ingress.scene_element.scene_element--fadeInDownDelay
   %h3 I will blog here
 
-  - blog('verbose').articles[0...5].reverse.each do |article|
+  - blog('verbose').articles[0...5].each do |article|
     %a.case{:href => article.url}
       %h3
         = article.title
