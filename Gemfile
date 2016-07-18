@@ -4,6 +4,8 @@ gem "middleman", "~> 4.0"
 gem "middleman-minify-html", "~> 3.4"
 gem 'middleman-blog'
 
+gem 'ffi', git: 'git://github.com/ffi/ffi.git', branch: :elcapt
+
 # https://rubygems.org/gems/sassc
 gem "sassc", "~> 1.8"
 

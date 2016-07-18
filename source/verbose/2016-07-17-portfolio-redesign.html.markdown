@@ -8,15 +8,11 @@ tags:
 
 ### Age of static websites
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum odio elit, nec mattis arcu pharetra vitae. Quisque consequat diam vel lectus consequat iaculis nec eget metus. Curabitur varius sem sit amet massa iaculis ullamcorper. Etiam feugiat, nibh nec fermentum eleifend, dui urna efficitur arcu, consequat tristique lacus purus porttitor nisl. Sed mattis lacus a ante venenatis malesuada. Vestibulum vehicula neque velit, in gravida tellus tempor vitae. Suspendisse porta, ipsum sed ornare tempus, mauris ex accumsan tortor, faucibus pellentesque odio urna non massa.
+When I started the redesign of my portfolio I had troubles finding documented cases for technology stacks when developing a new website. Whats the current best practice in terms of development for creating a top-tier portfolio?
 
-Mauris in quam placerat, egestas justo vitae, blandit risus. Proin gravida elementum erat, at aliquet eros auctor nec. Praesent velit nisi, convallis a metus quis, porttitor lacinia dui. Curabitur velit lectus, faucibus ut dictum sit amet, aliquet in sapien. Duis consectetur sapien libero, vel venenatis metus feugiat vehicula. Ut tempor elit in elit accumsan dapibus id sed metus.
+As a fairly new developer it would have been immensely useful to have that information at hand when I started. Unfortunately Google did no yield any worthwhile results at that time.
 
-Fusce ultrices neque at est semper, ac feugiat dui aliquam. Vestibulum et gravida urna, nec sagittis diam. Cras a dictum turpis. Donec ac suscipit massa. Integer sed vehicula magna. Sed nec porttitor eros, vel tempus massa. Maecenas nec iaculis ipsum, eu molestie nisl. Vestibulum posuere purus turpis, pulvinar lacinia neque gravida ac. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pulvinar dui sit amet felis mattis ultricies. In sed dui at velit facilisis porttitor ut non lorem. Nulla dignissim ornare nulla nec hendrerit. Integer in pretium ligula. Aliquam in leo at ligula hendrerit consectetur. Integer orci libero, venenatis eu felis cursus, interdum lobortis tellus. Quisque mauris tellus, imperdiet eget consequat ut, congue nec turpis.
-
-Duis consequat congue leo in viverra. Praesent suscipit, lectus ac ullamcorper congue, arcu mi dictum ex, in sodales elit erat at ex. Praesent vel rutrum justo. Nulla scelerisque commodo magna in pellentesque. Donec egestas metus risus, non malesuada orci pulvinar sed.
+That said I'm going to fully disclose how this website is built. 
 
 ---
 

@@ -38,9 +38,27 @@ image: images/thepoetryhour/poetry.png
 
 
 .row
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
-
-
-  %h3 Mobile
-  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
-  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+  .case-module
+    %h3 Process
+    %h4 Early prototypes
+    %p Test
+    %h4 Design
+    %p Test
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
+    %h4 Development
+    %p Test
+  .case-module
+    %h3 Product
+    %p Test
+    %h4 Meme creator
+    %p Test
+    %h4 Search
+    %p Test
+    %h4 Mobile
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+  .case-module
+    %h3 Post
+    %p Test
+    %h4 Improvements
+    %p Test
