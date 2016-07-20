@@ -1,7 +1,7 @@
 ---
 title: Volvo
 date: 2016-07-12 20:20 UTC
-year: 2016
+year: 2014
 color: '#EEF6FF'
 tags:
 - rocks
@@ -15,5 +15,14 @@ image: images/volvo/volvo.png
 ---
 
 = partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
+
+.hero-devices
+  .hero-device-wrapper.row
+    .hero-computer
+      %img(src='/images/macbook.png')
+      .hero-phone
+        %img(src='/images/thepoetryhour/mobile-homepage.png')
+
 .row
-  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=>"/images/thepoetryhour/mobile-homepage.png", :imageSecond=>"/images/thepoetryhour/mobile-homepage.png", :captionFirst=>"Caption first", :captionSecond=>"Caption second", :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'-45', :S1=>'1', :X2=>'-50%', :Y2=>'50%', :R2=>'45', :S2=>'2',  :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'45', :S1=>'1', :X2=>'0%', :Y2=>'-50%', :R2=>'0', :S2=>'2', :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})

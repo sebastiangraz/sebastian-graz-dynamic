@@ -3,8 +3,13 @@ header {
 	top:0;
 	left: 0;
 	width: 100%;
-	z-index: 1;
-
+	height: $header-height;
+	background: #fff;
+	z-index: 2;
+	transition: all ease-out .2s;
+	&.is-hidden {
+  	transform: translate3d(0, -$header-height, 0);
+	}
 	.row {
 		height: $header-height;
 		justify-content: space-between;
@@ -15,6 +20,10 @@ header {
 	#logo {
 		display: inline-block;
     max-width: 32px;
+		&.is-loading {
+	    -webkit-animation: logoIsLoading 2s ease-out;
+	    -webkit-animation-iteration-count: infinite;
+		}
 	}
 	ul {
 		padding: 0;

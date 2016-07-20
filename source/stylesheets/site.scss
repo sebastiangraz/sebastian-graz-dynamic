@@ -202,7 +202,14 @@ a.cta {
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	overflow: hidden;
 	padding: 10%;
+}
+
+.case-module {
+	margin-top: 5rem;
+	padding-top: 5rem;
+	border-top: 1px solid #dadada;
 }
 
 .cases {
@@ -220,7 +227,6 @@ a.cta {
 		}
 	}
 }
-
 
 
 .next-prev {

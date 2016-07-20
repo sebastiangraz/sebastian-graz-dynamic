@@ -37,28 +37,25 @@ image: images/thepoetryhour/poetry.png
 
 
 
-.row
-  .case-module
+
+.case-module
+  .row
     %h3 Process
+    %p.ingress
+      = lorem.paragraphs 2
     %h4 Early prototypes
-    %p Test
-    %h4 Design
-    %p Test
-    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
-    %h4 Development
-    %p Test
-  .case-module
+    = partial(:'partials/_image', :locals => {:image=> lorem.image('1024x800', :text => 'early sketch'), :caption=> 'Test'})
+.case-module
+  .row
     %h3 Product
-    %p Test
-    %h4 Meme creator
-    %p Test
-    %h4 Search
-    %p Test
-    %h4 Mobile
-    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
-    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> lorem.image('800x800'), :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
-  .case-module
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Meme creator', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Search', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'-45', :S1=>'1', :X2=>'-50%', :Y2=>'50%', :R2=>'45', :S2=>'2',  :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'45', :S1=>'1', :X2=>'0%', :Y2=>'-50%', :R2=>'0', :S2=>'2', :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+.case-module
+  .row
     %h3 Post
-    %p Test
     %h4 Improvements
-    %p Test
+    %p
+      = lorem.paragraphs 2

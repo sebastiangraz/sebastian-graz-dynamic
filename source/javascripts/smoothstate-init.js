@@ -73,7 +73,7 @@ var app = {};
           //     .addTo(controller); // assign the scene to the controller
         },
         initImagesLoaded: function () {
-          $('.hero-devices').imagesLoaded()
+          $('#main').imagesLoaded()
           .always( function( instance ) {
             console.log('all images loaded');
             console.log()
@@ -81,6 +81,8 @@ var app = {};
           .done( function( instance, image ) {
             console.log('all images successfully loaded');
             $('img').addClass('image-loaded');
+                        var $logo = $('#logo');
+                        $logo.removeClass('is-loading');
           })
           .fail( function() {
             console.log('all images loaded, at least one is broken');
@@ -88,6 +90,8 @@ var app = {};
           .progress( function( instance, image ) {
             var result = image.isLoaded ? 'loaded' : 'broken';
             console.log( 'image is ' + result + ' for ' + image.img.src );
+            var $logo = $('#logo');
+            $logo.addClass('is-loading');
           });
         }
     };

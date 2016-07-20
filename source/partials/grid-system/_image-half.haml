@@ -1,11 +1,11 @@
 .grid.half
   .grid-item.case-image
-    .sq{ :style => 'background-color:' + locals[:color] }
+    .sq{ :style => 'background-color:' + locals[:color]}
       .case-content
-        %image{:src => "#{locals[:imageFirst]}"}
+        %image{:src => locals[:imageFirst], :style => 'transform:translateX(' + locals[:X1] + ')' + ' translateY(' + locals[:Y1] + ')' + ' rotate(' + locals[:R1] + 'deg' + ')' + ' scale(' + locals[:S1] + ')' }
     %p= locals[:captionFirst]
   .grid-item.case-image
     .sq{ :style => 'background-color:' + locals[:color] }
       .case-content
-        %image{:src => "#{locals[:imageSecond]}"}
+        %image{:src => locals[:imageSecond], :style => 'transform:translateX(' + locals[:X2] + ')' + ' translateY(' + locals[:Y2] + ')' + ' rotate(' + locals[:R2] + 'deg' + ')' + ' scale(' + locals[:S2] + ')' }
     %p= locals[:captionSecond]
