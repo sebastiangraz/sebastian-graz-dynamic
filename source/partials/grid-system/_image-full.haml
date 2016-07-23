@@ -1,6 +1,6 @@
 .grid.case-section{ :style => 'background-color:' + locals[:color] }
   .case-section-copy
     %h3= locals[:captionTitle]
-    %p= locals[:caption]
+    %p.follow= locals[:caption]
   .case-section-image
     %image{:src => "#{locals[:image]}"}
