@@ -1,8 +1,10 @@
 ---
 title: Husqvarna
+description: Chainsaws, gardening and forestry
 date: 2016-07-12 20:15 UTC
 year: 2016
 color: '#ECF3E4'
+fontcolor: '#000'
 tags:
 - rocks
 - wheel
@@ -14,4 +16,4 @@ role:
 image: images/husqvarna/husqvarna.png
 ---
 
-= partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
+= partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color, :fontcolor=> current_page.data.fontcolor })

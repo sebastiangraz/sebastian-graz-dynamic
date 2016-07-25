@@ -21,4 +21,7 @@ title: Sebastian Graz
       %img{:src => article.data.image}
       %h3
         = article.title
-        %sup 2016
+        %sup
+          = article.data.year
+      %p.small
+        = article.data.description

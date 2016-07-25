@@ -52,6 +52,13 @@
             content: ',';
           }
         }
+        &:only-of-type {
+          p {
+            &:after {
+              content: '';
+            }
+          }
+        }
       }
     @include mq(md) {
       lost-column:1/2;

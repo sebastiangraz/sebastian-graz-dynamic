@@ -15,9 +15,10 @@
 	z-index: 1;
 	position: relative;
 	width: 100%;
-	transform: translateY(-25%);
+	transition: 200ms ease-out transform;
+	transform: translateY(-28%);
 	@include mq(sm) {
-		transform: translateY(-15%);
+		transform: translateY(-16%);
 	}
   .hero-computer {
 		width: 90vw;
@@ -131,9 +132,9 @@ a.cta {
 		font-size: 1.5rem;
 		margin-top:0;
 	}
-	lost-column: 1/1;
+	lost-column: 1/1 0;
 	@include mq(md) {
-		lost-column: 2/3;
+		lost-column: 2/3 0;
 		h3 {
 		  font-size: 1.75rem;
 		}
@@ -168,6 +169,7 @@ a.cta {
 .case-section {
 	lost-center: $max-width;
 	padding: 5%;
+	margin-bottom: 2rem;
 	.case-section-image {
 		@include mq(md) {
 			lost-column: 8/12;
@@ -207,9 +209,16 @@ a.cta {
 }
 
 .case-module {
-	margin-top: 5rem;
-	padding-top: 5rem;
+	margin-top: 1rem;
+	padding-top: 1rem;
 	border-top: 1px solid #dadada;
+	@include mq(md) {
+		margin-top: 2rem;
+		padding-top: 2rem;
+	}
+	h3 {
+		margin-top:0;
+	}
 }
 
 .cases {
@@ -228,12 +237,21 @@ a.cta {
 	}
 }
 
-
+.case-text {
+	margin: 2rem 0;
+	padding: 0 2rem;
+	lost-column: 1/1 0;
+	@include mq(md) {
+		lost-column: 2/3 0;
+	}
+}
 .next-prev {
 	margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
 	@include mq(sm) {
-		display: flex;
 		justify-content: space-between;
+	  flex-direction: row;
 	}
 	.next, .prev {
 		flex: 1;
@@ -246,6 +264,9 @@ a.cta {
 		}
 		@include mq(sm) {
 			padding: 2rem;
+		}
+		&:hover {
+			opacity: 0.7;
 		}
 	}
 }

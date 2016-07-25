@@ -1,8 +1,10 @@
 ---
 title: The Poetry Hour
+description: Poetry gets another chance
 date: 2016-06-22 20:07 UTC
 year: 2016
 color: '#FFF7EA'
+fontcolor: '#000'
 tags:
 - 'Minimalism'
 - 'Client'
@@ -16,7 +18,7 @@ image: images/thepoetryhour/poetry.png
 
 
 
-= partial(:'partials/_case-meta', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
+= partial(:'partials/_case-meta', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color, :fontcolor=> current_page.data.fontcolor })
 
 .hero-devices
   .hero-device-wrapper.row
@@ -33,21 +35,20 @@ image: images/thepoetryhour/poetry.png
       %h4 Brief: Create a poetry platform for a wider audience
       %p
         Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
-
-
-
-
-
 .case-module
   .row
-    %h3 Process
-    %p.ingress
-      = lorem.paragraphs 2
-    %h4 Early prototypes
-    = partial(:'partials/_image', :locals => {:image=> lorem.image('1024x800', :text => 'early sketch'), :caption=> 'Test'})
+    .case-text
+      %h3 Process
+      %p
+        = lorem.paragraphs 2
+    = partial(:'partials/_image', :locals => {:image=> lorem.image('1024x600', :text => 'early sketch'), :caption=> 'Early Prototypes'})
 .case-module
   .row
-    %h3 Product
+    %h3.case-text Product
+  .image-sans-row
+    = partial(:'partials/_image', :locals => {:image=> 'https://rm-content.s3.amazonaws.com/54fdf5843f7907fd4dcf89ce/561405/upload-4ff14120-452b-11e6-a3a6-a34578f6081e.jpg', :caption=> ''})
+  .row
+    %p.case-text One could say this is a nice caption
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Meme creator', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Search', :color=> current_page.data.color})
@@ -55,7 +56,8 @@ image: images/thepoetryhour/poetry.png
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'45', :S1=>'1', :X2=>'0%', :Y2=>'-50%', :R2=>'0', :S2=>'2', :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
 .case-module
   .row
-    %h3 Post
-    %h4 Improvements
-    %p
-      = lorem.paragraphs 2
+    .case-text
+      %h3 Post
+      %h4 Improvements
+      %p
+        = lorem.paragraphs 2

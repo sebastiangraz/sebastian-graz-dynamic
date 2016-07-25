@@ -8,13 +8,13 @@
         .next-prev
           - prev_article = current_article.previous_article
           - if prev_article
-            .prev{:style => 'background-color:' + prev_article.data.color}
+            %a.prev{:style => 'background-color:' + prev_article.data.color + '; ' + 'color:' + prev_article.data.fontcolor, :rel => "prev", :href => prev_article.url }
               %p Previous case
               %h3
-                %a{ :rel => "prev", :href => prev_article.url }= prev_article.title
+                = prev_article.title
           - next_article = current_article.next_article
           - if next_article
-            .next{:style => 'background-color:' + next_article.data.color}
+            %a.next{:style => 'background-color:' + next_article.data.color + '; ' + 'color:' + next_article.data.fontcolor, :rel => "next", :href => next_article.url}
               %p Next case
               %h3
-                %a{ :rel => "next", :href => next_article.url }= next_article.title
+                = next_article.title

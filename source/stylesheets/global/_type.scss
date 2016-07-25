@@ -14,8 +14,13 @@
 body, html {
 	font-family: 'NeueHaasUnica-regular', sans-serif;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   line-height: 1.7;
   font-weight: normal;
+  font-size: 16px;
+	@include mq(md) {
+		  font-size: 18px;
+	}
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -44,11 +49,18 @@ p {
 	font-size: 1rem;
 }
 
+.small {
+  font-size: 0.75rem;
+}
+
 a {
 	color: $color;
   text-decoration: none;
   cursor: pointer;
   &:hover {
     color: #000;
+  }
+  &:active,&:focus {
+    outline: none;
   }
 }

@@ -1,8 +1,8 @@
 .intro.ingress.scene_element.scene_element--fadeInDownDelay
-  %h3 I will blog here
-
   - blog('verbose').articles[0...5].each do |article|
-    %a.case{:href => article.url}
+    %case{:href => article.url}
       %h3
         = article.title
-        %sup 2016
+      %p= article.date.strftime('%Y-%m-%d')
+      %p= article.summary(500)
+      %a= link_to 'Read more &rarr;', article.url

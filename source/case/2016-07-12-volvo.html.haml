@@ -1,11 +1,12 @@
 ---
 title: Volvo
+description: Art direction for a Volvo pitch
 date: 2016-07-12 20:20 UTC
 year: 2014
 color: '#EEF6FF'
+fontcolor: '#000'
 tags:
 - rocks
-- wheel
 - 30 inch wooden rims
 role:
 - web designer
@@ -14,7 +15,7 @@ role:
 image: images/volvo/volvo.png
 ---
 
-= partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color })
+= partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color, :fontcolor=> current_page.data.fontcolor })
 
 .hero-devices
   .hero-device-wrapper.row
