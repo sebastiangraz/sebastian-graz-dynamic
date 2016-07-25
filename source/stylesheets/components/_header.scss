@@ -4,12 +4,8 @@ header {
 	left: 0;
 	width: 100%;
 	height: $header-height;
-	background: #fff;
+	background:#fff;
 	z-index: 2;
-	transition: all ease-out .2s;
-	&.is-hidden {
-  	transform: translate3d(0, -$header-height, 0);
-	}
 	.row {
 		height: $header-height;
 		justify-content: space-between;
@@ -37,7 +33,10 @@ header {
 				}
 			}
 			a {
-				margin-left: 40px;
+				margin-left: 24px;
+				@include mq(sm) {
+					margin-left: 40px;
+				}
 			}
 			&:first-child {
 				a {

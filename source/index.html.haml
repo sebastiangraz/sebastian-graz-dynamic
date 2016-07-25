@@ -18,7 +18,7 @@ title: Sebastian Graz
 .cases
   - blog('case').articles[0...5].reverse.each do |article|
     %a.case{:href => article.url}
-      %img{:src => article.data.image}
+      %img.loadme{:src => article.data.image}
       %h3
         = article.title
         %sup

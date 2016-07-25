@@ -23,32 +23,32 @@ image: images/thepoetryhour/poetry.png
 .hero-devices
   .hero-device-wrapper.row
     .hero-computer
-      %img(src='/images/macbook.png')
+      %img.loadme(src='/images/macbook.png')
       .hero-phone
-        %img(src='/images/thepoetryhour/mobile-homepage.png')
+        %img.loadme(src='/images/thepoetryhour/mobile-homepage.png')
 
 
 .row
-  .intro.ingress-centered
-    %div
-      %h3 Poetry in a digital world gets another chance
-      %h4 Brief: Create a poetry platform for a wider audience
-      %p
-        Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
+  .tw
+    %h3 Poetry in a digital world gets another chance
+    %h4 Brief: Create a poetry platform for a wider audience
+    %p
+      = lorem.paragraphs 1
 .case-module
   .row
-    .case-text
-      %h3 Process
+    .tw
+      %h3 Idea
       %p
-        = lorem.paragraphs 2
+        Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
+
     = partial(:'partials/_image', :locals => {:image=> lorem.image('1024x600', :text => 'early sketch'), :caption=> 'Early Prototypes'})
 .case-module
   .row
-    %h3.case-text Product
+    %h3.tw Wireframing
   .image-sans-row
     = partial(:'partials/_image', :locals => {:image=> 'https://rm-content.s3.amazonaws.com/54fdf5843f7907fd4dcf89ce/561405/upload-4ff14120-452b-11e6-a3a6-a34578f6081e.jpg', :caption=> ''})
   .row
-    %p.case-text One could say this is a nice caption
+    %p.tw One could say this is a nice caption
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Meme creator', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Search', :color=> current_page.data.color})
@@ -56,7 +56,7 @@ image: images/thepoetryhour/poetry.png
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'45', :S1=>'1', :X2=>'0%', :Y2=>'-50%', :R2=>'0', :S2=>'2', :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
 .case-module
   .row
-    .case-text
+    .tw
       %h3 Post
       %h4 Improvements
       %p

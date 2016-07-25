@@ -43,7 +43,6 @@
 		  animation-duration: .4s;
 			animation-fill-mode: both;
 			animation-timing-function: linear;
-		  // will-change: transform; 	// Safari jankiness fix // Janky issue with scrollMagic
 			&--fadeIn {
 				  animation-name: fadeIn;
 			}

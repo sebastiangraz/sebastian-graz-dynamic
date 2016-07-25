@@ -140,10 +140,21 @@ a.cta {
 		}
 	}
 }
+
+.tw {
+	lost-center: $max-width / 2;
+	flex-direction: column;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+  padding: 0 1rem;
+	p {
+		margin: 0 0 1rem 0;
+	}
+}
+
 .ingress-centered{
 	@include mq(md) {
-		lost-column: 6/12;
-		lost-move: 3/12;
+		lost-column: 8/12;
 	}
 }
 
@@ -158,7 +169,7 @@ a.cta {
 	}
 }
 
-.cases img, .hero-devices img{
+.cases img.loadme, .hero-devices img.loadme{
 	opacity: 0;
 	transition: all .2s ease-in;
 	&.image-loaded {
@@ -171,20 +182,7 @@ a.cta {
 	padding: 5%;
 	margin-bottom: 2rem;
 	.case-section-image {
-		@include mq(md) {
-			lost-column: 8/12;
-		}
-	}
-	.case-section-copy {
-		margin-bottom: 2rem;
-		padding-left: 0;
-		@include mq(md) {
-			lost-column: 4/12;
-			margin-bottom: 0rem;
-		}
-	}
-	h3 {
-		margin: 0;
+		width: 100%;
 	}
 }
 
@@ -216,15 +214,12 @@ a.cta {
 		margin-top: 2rem;
 		padding-top: 2rem;
 	}
-	h3 {
-		margin-top:0;
-	}
 }
 
 .cases {
 	lost-center: $max-width;
 	.case {
-		lost-column: 1/1;
+		lost-column: 1/1 1;
 		margin-bottom: 2rem;
 		h3{
 			margin: 0rem;
@@ -232,19 +227,12 @@ a.cta {
 			position: relative;
 		}
 		@include mq(md) {
-			lost-column: 1/2;
+			lost-column: 1/2 2;
 		}
 	}
 }
 
-.case-text {
-	margin: 2rem 0;
-	padding: 0 2rem;
-	lost-column: 1/1 0;
-	@include mq(md) {
-		lost-column: 2/3 0;
-	}
-}
+
 .next-prev {
 	margin-bottom: 5rem;
   display: flex;
@@ -270,11 +258,12 @@ a.cta {
 		}
 	}
 }
-
+svg {
+	width: 100%;
+}
 sup {
   font-size: 0.75rem;
 	margin-left:0.25rem;
-	font-family: 'NeueHaasUnica-regular';
 }
 
 img {

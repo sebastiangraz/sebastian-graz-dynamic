@@ -69,9 +69,11 @@ var app = {};
           })
           .done( function( instance, image ) {
             console.log('all images successfully loaded');
-            $('img').addClass('image-loaded');
-                        var $logo = $('#logo');
-                        $logo.removeClass('is-loading');
+            $('img.loadme').each( function(){
+              $(this).addClass('image-loaded');
+            });
+            var $logo = $('#logo');
+            $logo.removeClass('is-loading');
           })
           .fail( function() {
             console.log('all images loaded, at least one is broken');
