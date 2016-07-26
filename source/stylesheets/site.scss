@@ -123,7 +123,7 @@ a.cta {
 			padding: 0 1.5rem;
 	}
 	@include mq(md) {
-		padding: 3rem 0;
+		padding: 6rem 0;
 	}
 }
 
@@ -144,8 +144,8 @@ a.cta {
 .tw {
 	lost-center: $max-width / 2;
 	flex-direction: column;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+	margin-top: 3rem;
+	margin-bottom: 6rem;
   padding: 0 1rem;
 	p {
 		margin: 0 0 1rem 0;
@@ -207,13 +207,6 @@ a.cta {
 }
 
 .case-module {
-	margin-top: 1rem;
-	padding-top: 1rem;
-	border-top: 1px solid #dadada;
-	@include mq(md) {
-		margin-top: 2rem;
-		padding-top: 2rem;
-	}
 }
 
 .cases {
