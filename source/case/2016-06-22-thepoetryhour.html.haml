@@ -32,16 +32,39 @@ image: images/thepoetryhour/poetry.png
     %h4 Brief: Create a poetry platform for a wider audience
     %p
       Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
-.case-module
-  .row
-    = partial(:'partials/_image', :locals => {:image=> 'https://rm-content.s3.amazonaws.com/54fdf5843f7907fd4dcf89ce/561405/upload-4ff14120-452b-11e6-a3a6-a34578f6081e.jpg'})
-    .tw
-      %h3 Wireframing
-      %p
-        = lorem.paragraphs 1
-  .row
-    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
-    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Meme creator', :color=> current_page.data.color})
-    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Search', :color=> current_page.data.color})
-    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'-45', :S1=>'1', :X2=>'-50%', :Y2=>'50%', :R2=>'45', :S2=>'2',  :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
-    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'45', :S1=>'1', :X2=>'0%', :Y2=>'-50%', :R2=>'0', :S2=>'2', :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+.row
+  = partial(:'partials/_image', :locals => {:image=> 'https://rm-content.s3.amazonaws.com/54fdf5843f7907fd4dcf89ce/561405/upload-4ff14120-452b-11e6-a3a6-a34578f6081e.jpg'})
+  .tw
+    %h3 Wireframing
+    %p
+      = lorem.paragraphs 1
+.row
+  = partial(:'partials/_image', :locals => {:image=> 'https://rm-content.s3.amazonaws.com/54fdf5843f7907fd4dcf89ce/561405/upload-4ff14120-452b-11e6-a3a6-a34578f6081e.jpg'})
+  .tw
+    %h3 Branding
+    %p
+      The colour palette was chosen with the idea of bringing out the content, hence the colours are not very vibrant nor attention-seeking.
+.row
+  = partial(:'partials/_image', :locals => {:image=> 'https://rm-content.s3.amazonaws.com/54fdf5843f7907fd4dcf89ce/561405/upload-4ff14120-452b-11e6-a3a6-a34578f6081e.jpg'})
+  .tw
+    %h3 Design
+    %p
+      Design was based on the many prototypes that were made prior to the design phase.
+.row
+  = partial(:'partials/_image', :locals => {:image=> 'https://rm-content.s3.amazonaws.com/54fdf5843f7907fd4dcf89ce/561405/upload-4ff14120-452b-11e6-a3a6-a34578f6081e.jpg'})
+  .tw
+    %h3 Development
+    %p
+      On the development side my responsibility was the front-end code. HTML structure, SCSS architecture, responsiveness, minor Angular interactions among others
+.row
+  = partial(:'partials/_image', :locals => {:image=> 'https://rm-content.s3.amazonaws.com/54fdf5843f7907fd4dcf89ce/561405/upload-4ff14120-452b-11e6-a3a6-a34578f6081e.jpg'})
+  .tw
+    %h3 Post
+    %p
+      = lorem.paragraphs 1
+.row
+  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Meme creator', :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Search', :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'-45', :S1=>'1', :X2=>'-50%', :Y2=>'50%', :R2=>'45', :S2=>'2',  :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'45', :S1=>'1', :X2=>'0%', :Y2=>'-50%', :R2=>'0', :S2=>'2', :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
