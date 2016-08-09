@@ -209,23 +209,25 @@ a.cta {
 .case-module {
 }
 .cases {
+	margin-bottom: 8rem;
+	display: flex;
+	flex-wrap: wrap;
 	.case {
 		float: left;
 		width: 50%;
 		padding: 0 16px;
 		margin-bottom: 3rem;
 		color: #000;
-		&:nth-child(4n+1), &:nth-child(4n) {
-			margin-left:10%;
-			width: 40%;
+		h4 {
+			margin-top: 0.5rem;
+			margin-bottom: 0.25rem;
+	    font-family: 'NeueHaasUnica-medium', sans-serif;
 		}
-		&:nth-child(4n) {
-			margin-right:10%;
-			margin-left: 0;
+		p {
+			margin-top: 0;
 		}
-		h3 {
-			margin-bottom: 0;
-		}
+	}
+	.case-bg {
 	}
 }
 // .cases {
@@ -274,7 +276,7 @@ svg {
 	width: 100%;
 }
 sup {
-	font-family: 'NeueHaasUnica-regular', sans-serif;
+	font-family: 'NeueHaasUnica-medium', sans-serif;
   font-size: 0.75rem;
 }
 

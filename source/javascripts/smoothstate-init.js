@@ -101,10 +101,10 @@ var app = {};
           });
         },
         packery: function () {
-          var Packery = require('packery');
-          var pckry = new Packery( '.cases', {
-              originLeft: true
-          });
+          // var Packery = require('packery');
+          // var pckry = new Packery( '.cases', {
+          //     originLeft: true
+          // });
         }
     };
 

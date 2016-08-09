@@ -18,8 +18,9 @@ title: Sebastian Graz
 .cases
   - blog('case').articles[0...5].reverse.each do |article|
     %a.case{:href => article.url}
-      %img.loadme{:src => article.data.image}
-      %h3
+      .case-bg{:style => 'background-color:' + article.data.color}
+        %img{:src => article.data.image} 
+      %h4
         = article.title
-        %sup
-          = article.data.year
+      %p.small
+        = article.data.description
