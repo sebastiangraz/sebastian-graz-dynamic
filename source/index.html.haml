@@ -17,9 +17,9 @@ title: Sebastian Graz
 %h4.ct Selected works
 .cases
   - blog('case').articles[0...5].reverse.each do |article|
-    %a.case{:href => article.url}
+    %a.case{:href => article.url, :class => article.title.delete(' ').downcase}
       .case-bg{:style => 'background-color:' + article.data.color}
-        %img{:src => article.data.image} 
+        %img{:src => article.data.image}
       %h4
         = article.title
       %p.small
