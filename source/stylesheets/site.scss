@@ -208,22 +208,41 @@ a.cta {
 
 .case-module {
 }
-
 .cases {
-	lost-center: $max-width;
 	.case {
-		lost-column: 1/1 1;
-		margin-bottom: 2rem;
-		h3{
-			margin: 0rem;
-			top: 16px;
-			position: relative;
+		float: left;
+		width: 50%;
+		padding: 0 16px;
+		margin-bottom: 3rem;
+		color: #000;
+		&:nth-child(4n+1), &:nth-child(4n) {
+			margin-left:10%;
+			width: 40%;
 		}
-		@include mq(md) {
-			lost-column: 1/2 2;
+		&:nth-child(4n) {
+			margin-right:10%;
+			margin-left: 0;
+		}
+		h3 {
+			margin-bottom: 0;
 		}
 	}
 }
+// .cases {
+// 	lost-center: $max-width;
+// 	.case {
+// 		lost-column: 1/1 1;
+// 		margin-bottom: 2rem;
+// 		h3{
+// 			margin: 0rem;
+// 			top: 16px;
+// 			position: relative;
+// 		}
+// 		@include mq(md) {
+// 			lost-column: 1/2 2;
+// 		}
+// 	}
+// }
 
 
 .next-prev {
@@ -255,8 +274,8 @@ svg {
 	width: 100%;
 }
 sup {
+	font-family: 'NeueHaasUnica-regular', sans-serif;
   font-size: 0.75rem;
-	margin-left:0.25rem;
 }
 
 img {
