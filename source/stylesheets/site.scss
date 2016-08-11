@@ -212,18 +212,20 @@ a.cta {
 	margin-bottom: 8rem;
 	lost-center: $max-width;
 	.case {
-		float: left;
-		lost-column: 3/12 0;
-		margin-bottom: 3rem;
-		color: #000;
-		&.thepoetryhour {
-			lost-column: 6/12 0;
-		}
-		&.volvo {
-			lost-column: 3/12 1;
-		}
-		&.logotypes {
-			lost-column: 5/12;
+		lost-column: 12/12;
+		@include mq(sm) {
+				lost-column: 3/12 0;
+				margin-bottom: 3rem;
+				color: #000;
+				&.thepoetryhour {
+					lost-column: 6/12 0;
+				}
+				&.volvo {
+					lost-column: 3/12 1;
+				}
+				&.logotypes {
+					lost-column: 5/12;
+				}
 		}
 		h4 {
 			margin-top: 0.5rem;
