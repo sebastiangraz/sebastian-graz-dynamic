@@ -18,10 +18,14 @@ image: images/volvo/case-volvo.png
 = partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color, :fontcolor=> current_page.data.fontcolor })
 .row
   .tw
-    %h3 Poetry in a digital world gets another chance
-    %h4 Brief: Create a poetry platform for a wider audience
-    %p
-      = lorem.paragraphs 1
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/homepage.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Search', :color=> current_page.data.color})
+    :markdown
+      ### Volvo heading towards adulthood
+
+      #### We had the blueprint
+      The core values for Volvo Cars is simplicity, functionality and durability. Volvos Scandinavian heritage is an integral part of the brand and we wanted to create a website which mirrors all these values through an modern and aesthetic web experience.
+
+      Volvos own mission is to be the world’s most progressive and desired luxury car brand. So we created a concept design that puts Volvo Cars in that position.
+
+  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/homepage.jpg', :caption=> '      The website, fully responsive is packed with bits of configurators that the user can interact with, such as changing the paint, rims, interior upholstery, entertainment systems, and engine specifications on the go as the user is scrolling down the module-based design. The modular design allows Volvo to create a story around their cars and guide the user to create their car of their dreams ambiently.', :captionTitle=>'Car configurator', :color=> current_page.data.color})
   = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'-45', :S1=>'1', :X2=>'-50%', :Y2=>'50%', :R2=>'45', :S2=>'2',  :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
   = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'45', :S1=>'1', :X2=>'0%', :Y2=>'-50%', :R2=>'0', :S2=>'2', :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})

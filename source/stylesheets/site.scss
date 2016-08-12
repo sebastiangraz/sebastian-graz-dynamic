@@ -213,9 +213,9 @@ a.cta {
 	lost-center: $max-width;
 	.case {
 		lost-column: 12/12;
+		margin-bottom: 3rem;
 		@include mq(sm) {
 				lost-column: 3/12 0;
-				margin-bottom: 3rem;
 				color: #000;
 				&.thepoetryhour {
 					lost-column: 6/12 0;
@@ -225,6 +225,11 @@ a.cta {
 				}
 				&.logotypes {
 					lost-column: 5/12;
+				}
+				&.husqvarna {
+					.case-bg {
+						padding-bottom: 156%;
+					}
 				}
 		}
 		h4 {
@@ -237,6 +242,15 @@ a.cta {
 		}
 	}
 	.case-bg {
+				padding-bottom: 80%;
+				position: relative;
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					object-fit: contain;
+					height: 100%;
+				}
 	}
 }
 // .cases {
