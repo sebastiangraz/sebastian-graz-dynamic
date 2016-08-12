@@ -74,7 +74,6 @@ var app = {};
             });
             var $logo = $('#logo');
             $logo.removeClass('is-loading');
-            app.packery();
           })
           .fail( function() {
             console.log('all images loaded, at least one is broken');
@@ -97,14 +96,12 @@ var app = {};
                 transition: 'none',
                 transform: transform
               });
+              $('.case img').css({
+                transition: 'none',
+                transform: transform
+              });
             }
           });
-        },
-        packery: function () {
-          // var Packery = require('packery');
-          // var pckry = new Packery( '.cases', {
-          //     originLeft: true
-          // });
         }
     };
 
@@ -114,7 +111,6 @@ var app = {};
         app.initSmoothState();
         app.initImagesLoaded();
         app.parallax();
-        app.packery();
         $.readyFn.execute();
     });
 
@@ -124,7 +120,6 @@ var app = {};
     $(function() {
       app.initImagesLoaded();
       app.parallax();
-      app.packery();
     });
 
 })(jQuery);
