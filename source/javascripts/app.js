@@ -96,10 +96,6 @@ var app = {};
                 transition: 'none',
                 transform: transform
               });
-              $('.case img').css({
-                transition: 'none',
-                transform: transform
-              });
             }
           });
         }
