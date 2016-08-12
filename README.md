@@ -32,7 +32,7 @@ To start new Middleman site using this template, do the following:
 
         # With Gulp
         $ bundle exec middleman server -e gulp
-        
+
         # Without Gulp
         $ bundle exec middleman server
 
@@ -58,3 +58,11 @@ The following repos were very helpful in setting up this template.
 - [https://youtu.be/-io8EeB3GHI](https://youtu.be/-io8EeB3GHI)
 - [https://github.com/middleman/middleman/issues/1817](https://github.com/middleman/middleman/issues/1817)
 - [https://forum.middlemanapp.com/t/gulp-and-middleman-4/2012](https://forum.middlemanapp.com/t/gulp-and-middleman-4/2012)
+
+
+### Code snippets
+          = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/thepoetryhour/mobile-homepage.png', :X1=>'0%', :Y1=>'0%', :R1=>'-45', :S1=>'1', :X2=>'-50%', :Y2=>'50%', :R2=>'45', :S2=>'2',  :imageSecond=>'/images/thepoetryhour/mobile-homepage.png', :captionFirst=>'Caption first', :captionSecond=>'Caption second', :color=> current_page.data.color})
+
+          = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
+
+          = partial(:'partials/_case-meta', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color, :fontcolor=> current_page.data.fontcolor })
