@@ -9,6 +9,7 @@ gem 'middleman-blog'
 # https://rubygems.org/gems/sassc
 gem "sassc", "~> 1.8"
 gem "nokogiri"
+gem 'middleman-google-analytics', '~> 2.1'
 # See http://bourbon.io/ for installation instructions
 # gem "bourbon", "~> 4.2"
 # gem "neat", "~> 1.7"

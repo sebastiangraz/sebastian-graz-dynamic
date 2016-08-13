@@ -66,3 +66,5 @@ The following repos were very helpful in setting up this template.
           = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
 
           = partial(:'partials/_case-meta', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color, :fontcolor=> current_page.data.fontcolor })
+
+          = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Search', :color=> current_page.data.color})

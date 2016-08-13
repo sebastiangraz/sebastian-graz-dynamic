@@ -56,6 +56,7 @@
 .profile-section {
 	border-top: 1px solid rgba(0,0,0,0.1);
 	padding:1rem 0;
+	width: 100%;
 	@include mq(sm) {
 		lost-column: 1/2;
 	}

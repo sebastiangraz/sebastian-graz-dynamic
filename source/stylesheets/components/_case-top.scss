@@ -52,10 +52,13 @@
             content: ',';
           }
         }
-        &:only-of-type {
+        &:last-child {
           p {
             &:after {
               content: '';
+            }
+            &:before {
+              content: ' and ';
             }
           }
         }
