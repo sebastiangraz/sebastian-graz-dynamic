@@ -36,6 +36,16 @@ image: images/thepoetryhour/case-poetry.png
       Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
 .row
   = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Landing Page', :color=> current_page.data.color})
+.row-full
+  .row
+    .tw
+      :markdown
+        ### Meme creator
+
+        The user can create their own Memes through the website with the ability to customise the font, text colour, font size, and text position. The website does some minor hand holding in terms of Meme image aesthetics to ensure the Memes look pleasant. For instance the user may only choose colours that suit the average colour of the image that the user has chosen.
+  = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/isometric-thepoetryhour.jpg'})
+
+.row
   = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/meme-creator.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Meme creator', :color=> current_page.data.color})
   = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Poem page', :color=> current_page.data.color})
   = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/search.jpg', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :captionTitle=>'Search', :color=> current_page.data.color})
