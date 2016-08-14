@@ -29,7 +29,7 @@
   .hero-phone {
     position: absolute;
     width: 20%;
-    transform: translateY(50%) translateX(-100%);
+    transform: translateY(45%) translateX(-100%);
     top: 0px;
 		left: 0px;
 		display:none;
@@ -55,9 +55,13 @@
     margin-top: -8rem;
     position: relative;
 		@include mq(lg) {
-			top: 22rem;
+			top: 18rem;
 	    margin-top: -16rem;
 		}
+		// @include mq(lg) {
+		// 	top: 24rem;
+	  //   margin-top: -20rem;
+		// }
 	}
 	img {
 		margin-bottom: 5rem;
@@ -159,6 +163,7 @@ a.cta {
 .tw {
 	lost-center: $max-width / 2;
 	flex-direction: column;
+	width: 100%;
 	margin-top: 3rem;
 	margin-bottom: 6rem;
   padding: 0 1rem;
