@@ -25,6 +25,20 @@ image: images/volvo/case-volvo.png
       The core values for Volvo Cars is simplicity, functionality and durability. Volvos Scandinavian heritage is an integral part of the brand and we wanted to create a website which mirrors all these values through an modern and aesthetic web experience.
 
       Volvos own mission is to be the world’s most progressive and desired luxury car brand. So we created a concept design that puts Volvo Cars in that position.
+  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Home
 
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/homepage.jpg', :captionTitle=>'Home page', :caption=> 'A simple grid of Volvos range of cars presented in a aesthetic and digestable way', :color=> current_page.data.color})
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/volvo-configurator.jpg', :captionTitle=>'Car configurator', :caption=> 'The website, fully responsive is packed with bits of configurators that the user can interact with, such as changing the paint, rims, interior upholstery, entertainment systems, and engine specifications on the go as the user is scrolling down the module-based design. The modular design allows Volvo to create a story around their cars and guide the user to create their car of their dreams, without thinking too much.', :color=> current_page.data.color})
+        A simple grid of Volvos range of cars presented in a aesthetic and digestable way
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/homepage.jpg'})
+  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Car configurator
+
+        The website, fully responsive is packed with bits of configurators that the user can interact with, such as changing the paint, rims, interior upholstery, entertainment systems, and engine specifications on the go as the user is scrolling down the module-based design.
+
+        The modular design allows Volvo to create a story around their cars and guide the user to create their car of their dreams, without thinking too much.
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/volvo-configurator.jpg'})
+    
