@@ -35,7 +35,16 @@ image: images/thepoetryhour/case-poetry.png
 
       Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
 .row
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg', :captionTitle=>'Landing Page', :caption=> 'The home page serves as a exploration tool, with curated content controlled by the custom CMS. In here the user will have many entry points depending on the user persona', :color=> current_page.data.color})
+  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Home
+
+        The idea is to engage a younger audience as well as people with little or no prior interest in poetry. A poem excerpt on top of an image is easier to digest initially - rather than being presented with a whole complex poem.
+
+        The Meme would also act as a mini advert for the poetry site seeded through social media and when seen outside the context of the website to bring in extra traffic to the website.
+        Each created Meme is shareable through social media and when seen out of context of The Poetry Hour website will drive additional traffic to the site
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg'})
 .row-full
   .row
     .tw
@@ -46,8 +55,41 @@ image: images/thepoetryhour/case-poetry.png
   = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/isometric-thepoetryhour.jpg'})
 
 .row
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/meme-creator.jpg', :captionTitle=>'Meme creator', :caption=> 'The idea is to engage a younger audience as well as people with little or no prior interest in poetry. A poem excerpt on top of an image is easier to digest initially - rather than being presented with a whole complex poem. The Meme would also act as a mini advert for the poetry site seeded through social media and when seen outside the context of the website to bring in extra traffic to the website. Each created Meme is shareable through social media and when seen out of context of The Poetry Hour website will drive additional traffic to the site ', :color=> current_page.data.color})
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg', :captionTitle=>'Poem page', :caption=> 'The poem page was designed to achieve two things: reading poetry and creating memes. The challenge was to please two types of users who had two different goals. The solution was to let the users have the ability to create a Meme with just one click of the button.', :color=> current_page.data.color})
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/search.jpg', :captionTitle=>'Search', :caption=> 'The search function on the website was created with all the different content types in mind. When searching the user is presented with all the results at first, but is then able to further filter the different content types to find their desired term faster. ', :color=> current_page.data.color})
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/narrators.jpg', :captionTitle=>'Narrators', :caption=> 'Another big part of the website is the famed narrators. Celebrities and artists read their favourite poems out loud recorded on video or audio. Some of the celebrities include Rooger Moore, Ralph Fiennes, Charles Dance, Kelly Reilly and many more. The narrators section is obviously a big selling point for the brand so the narrations and videos are seamlessly integrated into each respective poem page, with just one click. ', :color=> current_page.data.color})
-  = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/styleguide.jpg', :captionTitle=>'Style guide', :caption=> 'As a sole designer on the project I had free reins on the process. I quickly decided that there was no need for pixel perfect designs for every page and breakpoint because the website did not have many pages to begin with. But also because I felt comfortable designing in the browser, which in my mind is the true canvas for web design rather than static images. This way I was able to design from a MVP methodology, meaning I started small and functional and built it up from there. With close collaboration with the full-stack developers we quickly had a website that worked in no time. Over time the design evolved from review with the client as well as internally in a iterative fashion. It was satisfying watching the project grow for each day. ', :color=> current_page.data.color})
+  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Meme creator
+
+        The idea is to engage a younger audience as well as people with little or no prior interest in poetry. A poem excerpt on top of an image is easier to digest initially - rather than being presented with a whole complex poem.
+
+        The Meme would also act as a mini advert for the poetry site seeded through social media and when seen outside the context of the website to bring in extra traffic to the website.
+        Each created Meme is shareable through social media and when seen out of context of The Poetry Hour website will drive additional traffic to the site
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/meme-creator.jpg'})
+  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Poem page
+
+        The poem page was designed to achieve two things: reading poetry and creating memes. The challenge was to please two types of users who had two different goals. The solution was to let the users have the ability to create a Meme with just one click of the button.
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
+  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Search
+
+        The search function on the website was created with all the different content types in mind. When searching the user is presented with all the results at first, but is then able to further filter the different content types to find their desired term faster.
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/search.jpg'})
+  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Narrators
+
+        Another big part of the website is the famed narrators. Celebrities and artists read their favourite poems out loud recorded on video or audio. Some of the celebrities include Rooger Moore, Ralph Fiennes, Charles Dance, Kelly Reilly and many more. The narrators section is obviously a big selling point for the brand so the narrations and videos are seamlessly integrated into each respective poem page, with just one click.
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/narrators.jpg'})
+  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Styleguide
+
+        As a sole designer on the project I had free reins on the process. I quickly decided that there was no need for pixel perfect designs for every page and breakpoint because the website did not have many pages to begin with. But also because I felt comfortable designing in the browser, which in my mind is the true canvas for web design rather than static images. This way I was able to design from a MVP methodology, meaning I started small and functional and built it up from there. With close collaboration with the full-stack developers we quickly had a website that worked in no time. Over time the design evolved from review with the client as well as internally in a iterative fashion. It was satisfying watching the project grow for each day.
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/styleguide.jpg'})
