@@ -65,12 +65,18 @@
 		}
 }
 
-@keyframes logoIsLoading {
-  from, 50%, to {
-    opacity: 1;
-  }
+@keyframes dash {
+	0% {
+	    stroke-dasharray: 330;
+	    stroke-dashoffset: 40;
+	}
 
-  25%, 75% {
-    opacity: 0;
-  }
+	50% {
+	    stroke-dasharray: 16;
+	    stroke-dashoffset: 0;
+	}
+	100% {
+	    stroke-dasharray: 330;
+	    stroke-dashoffset: 40;
+	}
 }
