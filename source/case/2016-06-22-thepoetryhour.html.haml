@@ -35,7 +35,7 @@ image: images/thepoetryhour/case-poetry.png
 
       Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
 .row
-  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Home
@@ -52,10 +52,11 @@ image: images/thepoetryhour/case-poetry.png
         ### Meme creator
 
         The user can create their own Memes through the website with the ability to customise the font, text colour, font size, and text position. The website does some minor hand holding in terms of Meme image aesthetics to ensure the Memes look pleasant. For instance the user may only choose colours that suit the average colour of the image that the user has chosen.
-  = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/isometric-thepoetryhour.jpg'})
+  .image-pull-left
+    = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/isometric-thepoetryhour.jpg'})
 
 .row
-  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Meme creator
@@ -65,28 +66,30 @@ image: images/thepoetryhour/case-poetry.png
         The Meme would also act as a mini advert for the poetry site seeded through social media and when seen outside the context of the website to bring in extra traffic to the website.
         Each created Meme is shareable through social media and when seen out of context of The Poetry Hour website will drive additional traffic to the site
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/meme-creator.jpg'})
-  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Poem page
 
         The poem page was designed to achieve two things: reading poetry and creating memes. The challenge was to please two types of users who had two different goals. The solution was to let the users have the ability to create a Meme with just one click of the button.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
-  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Search
 
         The search function on the website was created with all the different content types in mind. When searching the user is presented with all the results at first, but is then able to further filter the different content types to find their desired term faster.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/search.jpg'})
-  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Narrators
 
-        Another big part of the website is the famed narrators. Celebrities and artists read their favourite poems out loud recorded on video or audio. Some of the celebrities include Rooger Moore, Ralph Fiennes, Charles Dance, Kelly Reilly and many more. The narrators section is obviously a big selling point for the brand so the narrations and videos are seamlessly integrated into each respective poem page, with just one click.
+        Another big part of the website is the famed narrators. Celebrities and artists read their favourite poems out loud recorded on video or audio.
+
+        Some of the celebrities include Rooger Moore, Ralph Fiennes, Charles Dance, Kelly Reilly and many more. The narrators section is obviously a big selling point for the brand so the narrations and videos are seamlessly integrated into each respective poem page, with just one click.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/narrators.jpg'})
-  .grid.case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Styleguide

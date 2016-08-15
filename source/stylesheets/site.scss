@@ -51,20 +51,36 @@
 }
 .row-full {
 	.tw {
-		top: 9rem;
+    top: 10rem;
     margin-top: -8rem;
     position: relative;
+		@include mq(md) {
+			top: 14rem;
+			margin-top: -13rem;
+		}
 		@include mq(lg) {
-			top: 18rem;
-	    margin-top: -16rem;
+		  top: 18rem;
+		  margin-top: -14rem;
 		}
 		// @include mq(lg) {
 		// 	top: 24rem;
 	  //   margin-top: -20rem;
 		// }
 	}
-	img {
-		margin-bottom: 5rem;
+	.image-pull-left {
+		position: relative;
+		z-index: -1;
+		.image-component {
+	    width: 100%;
+	    margin: 0 auto 5rem;
+			img {
+				max-width: $max-width;
+				margin: 0 auto;
+				@include mq(md) {
+					transform: translateX(-16%);
+				}
+			}
+		}
 	}
 }
 

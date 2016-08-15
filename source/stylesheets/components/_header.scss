@@ -16,9 +16,28 @@ header {
 	#logo {
 		display: inline-block;
     max-width: 32px;
+		margin-right: 300px;
 		&.is-loading {
-	    -webkit-animation: logoIsLoading 2s ease-out;
-	    -webkit-animation-iteration-count: infinite;
+			path {
+			  stroke-dasharray: 400;
+			  stroke-dashoffset: 0;
+			  animation: dash 4s linear infinite;
+			}
+		}
+		@keyframes dash {
+			0% {
+			    stroke-dasharray: 300;
+			    stroke-dashoffset: 40;
+			}
+
+			50% {
+			    stroke-dasharray: 16;
+			    stroke-dashoffset: 0;
+			}
+			100% {
+			    stroke-dasharray: 300;
+			    stroke-dashoffset: 40;
+			}
 		}
 	}
 	ul {
