@@ -1,5 +1,7 @@
 %header
   .row.center-v
+    %a#logo(href='/')
+      = partial 'partials/logo'
     %ul
       %li{ nav_active('index.html') }
         %a{:href => "/"} Work
@@ -7,5 +9,3 @@
         %a{:href => "/profile"} Profile
       %li{ nav_active('verbose.html') }
         %a{:href => "/verbose"} Verbose
-    %a#logo(href='/')
-      = partial 'partials/logo'

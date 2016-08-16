@@ -2,7 +2,6 @@
 #main.scene
   %div{:class => page_classes}
     = partial 'partials/header'
-    .row
-      .scene_element.scene_element--fadeInZoom
-        = yield
+    .scene_element.scene_element--fadeInZoom
+      = yield
 = partial 'partials/footer'

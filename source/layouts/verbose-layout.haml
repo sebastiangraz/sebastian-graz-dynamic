@@ -3,9 +3,9 @@
   %div{:class => page_classes}
     = partial 'partials/header'
     .scene_element.scene_element--fadeInDownDelay
-      .row.intro
-        %a.back{ :href=> '/verbose' }
-          &larr; Back
-        %h3
-          = current_page.data.title
-        = yield
+      %a.back{ :href=> '/verbose' }
+        &larr; Back
+      %h3
+        = current_page.data.title
+      = yield
+= partial 'partials/footer'

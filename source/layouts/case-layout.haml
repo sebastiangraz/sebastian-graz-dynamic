@@ -5,16 +5,5 @@
     .scene_element.scene_element--fadeInZoom
       = yield
       .row
-        .next-prev
-          - prev_article = current_article.previous_article
-          - if prev_article
-            %a.prev{:style => 'background-color:' + prev_article.data.color + '; ' + 'color:' + prev_article.data.fontcolor, :rel => "prev", :href => prev_article.url }
-              %p Previous case
-              %h3
-                = prev_article.title
-          - next_article = current_article.next_article
-          - if next_article
-            %a.next{:style => 'background-color:' + next_article.data.color + '; ' + 'color:' + next_article.data.fontcolor, :rel => "next", :href => next_article.url}
-              %p Next case
-              %h3
-                = next_article.title
+        = partial 'partials/next-prev'
+= partial 'partials/footer'
