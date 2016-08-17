@@ -9,6 +9,17 @@
 	}
 }
 
+@keyframes caseEnter {
+0% {
+  opacity: 0;
+  transform: scale(0.8);
+ }
+100% {
+  opacity: 1;
+  transform: none;
+	}
+}
+
 @keyframes fadeInDown {
 0% {
   opacity: 0;
@@ -40,7 +51,7 @@
 
 .scene {
 	.scene_element {
-		  animation-duration: .4s;
+		  animation-duration: .5s;
 			animation-fill-mode: both;
 			animation-timing-function: linear;
 			&--fadeIn {
@@ -49,13 +60,17 @@
 			&--fadeInZoom {
 				  animation-name: fadeInZoom;
 			}
+      &--caseEnter {
+         animation-duration: 1s;
+          animation-name: caseEnter;
+          animation-timing-function: cubic-bezier(.03,.82,.34,.99);
+      }
 			&--fadeInDown {
 				animation-name: fadeInDown;
 			}
 			&--fadeInDownDelay {
 				animation-name: fadeInDownDelay;
-				animation-timing-function: linear;
-				animation-timing-function: cubic-bezier(.11,.8,.41,.89);
+				animation-timing-function: cubic-bezier(.03,.82,.34,.99);
 			}
 		}
 		&.is-exiting {

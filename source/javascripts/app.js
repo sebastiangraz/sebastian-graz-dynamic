@@ -36,7 +36,7 @@ var app = {};
                     prefetch: true,
                     cacheLength: 2,
                     onStart: {
-                        duration: 400,
+                        duration: 500,
                         render: function($container) {
                             // Add your CSS animation reversing class
                             $container.addClass('is-exiting');
