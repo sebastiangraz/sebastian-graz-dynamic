@@ -4,7 +4,6 @@
 @import 'global/_mq.scss';
 @import 'global/_type.scss';
 
-
 @import 'components/_case-top.scss';
 @import 'components/_header.scss';
 
@@ -39,7 +38,6 @@
 	}
 }
 
-
 .row {
 	max-width: $max-width;
   margin: 0 auto;
@@ -48,7 +46,11 @@
 
 .row.blog {
 	max-width: $max-width / 2;
+	.blog-case {
+		margin-bottom: 5rem;
+	}
 }
+
 .row-full {
 	.tw {
     top: 10rem;

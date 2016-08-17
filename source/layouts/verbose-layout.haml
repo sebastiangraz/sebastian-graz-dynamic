@@ -3,9 +3,13 @@
   %div{:class => page_classes}
     = partial 'partials/header'
     .scene_element.scene_element--fadeInDownDelay
-      %a.back{ :href=> '/verbose' }
-        &larr; Back
-      %h3
-        = current_page.data.title
-      = yield
+      .row.blog
+        .intro
+          %h3
+            = current_page.data.title
+            - time = current_page.date
+            %sup= time.strftime("%b #{time.day.ordinalize}")
+          %a.back{ :href=> '/verbose' }
+            &larr; Back
+        = yield
 = partial 'partials/footer'

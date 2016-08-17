@@ -1,15 +1,19 @@
 ---
 title: Verbose
 ---
+
 .row.blog
   .scene_element.scene_element--fadeInDownDelay
-    .intro.ingress
+    .intro
       %h3 Verbose is a section where I will blog about design and development
     .blog-cases
       - blog('verbose').articles[0...5].each do |article|
-        .blog-case{:href => article.url}
+        .blog-case
           %h3
-            = article.title
-          %p= article.date.strftime('%Y-%m-%d')
+            %a{:href => article.url}
+              = article.title
+            - time = article.date
+            %sup= time.strftime("%b #{time.day.ordinalize}")
+
           %p= article.summary(500)
           %a= link_to 'Read more &rarr;', article.url
