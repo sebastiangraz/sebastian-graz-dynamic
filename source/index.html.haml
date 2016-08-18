@@ -19,7 +19,7 @@ title: Jorgen Haraldur
     - blog('case').articles[0...5].reverse.each do |article|
       %a.case{:href => article.url, :class => article.title.delete(' ').downcase}
         .case-bg{:style => 'background-color:' + article.data.color}
-          %img.loadme.scene_element.scene_element--caseEnter{:src => article.data.image}
+          %img.loadme{:src => article.data.image}
         %h4
           = article.title
         %p.small

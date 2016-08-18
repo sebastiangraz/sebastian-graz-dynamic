@@ -211,13 +211,24 @@ a.cta {
 	}
 }
 
-.cases img.loadme, .hero-devices img.loadme{
+.cases img.loadme{
+	transition: 1s cubic-bezier(.03,.82,.34,.99) all;
 	opacity: 0;
-	transition: all .2s ease-in;
+	transform: scale(0.88);
 	&.image-loaded {
-			opacity: 1;
+		opacity: 1;
+	  transform: none;
 	}
 }
+
+.hero-devices img.loadme {
+	transition: 1s cubic-bezier(.03,.82,.34,.99) all;
+	opacity: 0;
+	&.image-loaded {
+		opacity: 1;
+	}
+}
+
 
 .case-section {
 	lost-center: $max-width;
