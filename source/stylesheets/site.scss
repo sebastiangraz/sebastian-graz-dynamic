@@ -88,6 +88,21 @@
 			}
 		}
 	}
+	.image-pull-right {
+		position: relative;
+		z-index: -1;
+		.image-component {
+			width: 100%;
+			margin: 0 auto 5rem;
+			img {
+				max-width: $max-width;
+				margin: 0 auto;
+				@include mq(md) {
+					transform: translateX(16%);
+				}
+			}
+		}
+	}
 }
 
 .profile-sections {
@@ -265,9 +280,9 @@ a.cta {
 	.case {
 		lost-column: 12/12;
 		margin-bottom: 3rem;
+		color: #000;
 		@include mq(sm) {
 				lost-column: 3/12 0;
-				color: #000;
 				&.thepoetryhour {
 					lost-column: 6/12 0;
 				}
@@ -290,6 +305,11 @@ a.cta {
 		}
 		p {
 			margin-top: 0;
+		}
+		&:hover {
+			img {
+				opacity: 0.6;
+			}
 		}
 	}
 	.case-bg {

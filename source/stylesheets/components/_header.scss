@@ -15,7 +15,14 @@ header {
 	}
 	#logo {
 		display: inline-block;
-    max-width: 32px;
+    max-width: 24px;
+		height: 100%;
+		@include mq(sm) {
+    	max-width: 32px;
+		}
+		svg {
+			height: 100%;
+		}
 		path {
 			stroke-width: 3px;
 		}

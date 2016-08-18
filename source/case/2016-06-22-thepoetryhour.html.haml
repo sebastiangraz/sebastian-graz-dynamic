@@ -73,6 +73,17 @@ image: images/thepoetryhour/case-poetry.png
 
         The poem page was designed to achieve two things: reading poetry and creating memes. The challenge was to please two types of users who had two different goals. The solution was to let the users have the ability to create a Meme with just one click of the button.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
+
+.row-full
+  .row
+    .tw
+      :markdown
+        ### Search
+
+        The search function on the website was created with all the different content types in mind. When searching the user is presented with all the results at first, but is then able to further filter the different content types to find their desired term faster.
+  .image-pull-right
+    = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/ipad-search.jpg'})
+.row
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
