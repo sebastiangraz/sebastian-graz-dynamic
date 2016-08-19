@@ -6,7 +6,6 @@ var changed     = require('gulp-changed')
 var gulp        = require('gulp')
 var imagemin    = require('gulp-imagemin')
 var path        = require('path')
-var tinypng = require('gulp-tinypng-compress');
 
 var paths = {
   src: path.join(config.root.src, config.tasks.images.src, '/**/*.{' + config.tasks.images.extensions + '}'),

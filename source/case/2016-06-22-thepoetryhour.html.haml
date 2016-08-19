@@ -73,17 +73,7 @@ image: images/thepoetryhour/case-poetry.png
 
         The poem page was designed to achieve two things: reading poetry and creating memes. The challenge was to please two types of users who had two different goals. The solution was to let the users have the ability to create a Meme with just one click of the button.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
-
-.row-full
-  .row
-    .tw
-      :markdown
-        ### Search
-
-        The search function on the website was created with all the different content types in mind. When searching the user is presented with all the results at first, but is then able to further filter the different content types to find their desired term faster.
-  .image-pull-right
-    = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/ipad-search.jpg'})
-.row
+    
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
@@ -107,6 +97,13 @@ image: images/thepoetryhour/case-poetry.png
 
         As a sole designer on the project I had free reins on the process. I quickly decided that there was no need for pixel perfect designs for every page and breakpoint because the website did not have many pages to begin with. But also because I felt comfortable designing in the browser, which in my mind is the true canvas for web design rather than static images. This way I was able to design from a MVP methodology, meaning I started small and functional and built it up from there. With close collaboration with the full-stack developers we quickly had a website that worked in no time. Over time the design evolved from review with the client as well as internally in a iterative fashion. It was satisfying watching the project grow for each day.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/styleguide.jpg'})
+  .case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Iconography
+
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/iconography.png'})
+
   .case-section
     .tw
       :markdown
