@@ -43,6 +43,8 @@
 		  animation-duration: .5s;
 			animation-fill-mode: both;
 			animation-timing-function: linear;
+      -webkit-animation-fill-mode: both; //fixes safari flicker
+      animation-fill-mode: both; //fixes safari flicker
 			&--fadeIn {
 				  animation-name: fadeIn;
 			}
