@@ -57,8 +57,8 @@
 
 .row-full {
 	.tw {
-    top: 10rem;
-    margin-top: -8rem;
+    top: 4rem;
+    margin-top: -3rem;
     position: relative;
 		@include mq(md) {
 			top: 14rem;
@@ -201,8 +201,12 @@ a.cta {
 	lost-center: $max-width / 2;
 	flex-direction: column;
 	width: 100%;
-	margin-top: 3rem;
-	margin-bottom: 6rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	@include mq(md) {
+		margin-top: 3rem;
+		margin-bottom: 6rem;
+	}
   padding: 0 1rem;
 	p {
 		margin: 0 0 1rem 0;

@@ -104,9 +104,6 @@ var app = {};
     /** [3] */
     $doc.ready(function() {
         console.log('Initial Document Ready');
-        app.initSmoothState();
-        app.initImagesLoaded();
-        app.parallax();
         $.readyFn.execute();
     });
 
@@ -114,6 +111,7 @@ var app = {};
     $.fn.ready = $.readyFn.register;
 
     $(function() {
+      app.initSmoothState();
       app.initImagesLoaded();
       app.parallax();
     });
