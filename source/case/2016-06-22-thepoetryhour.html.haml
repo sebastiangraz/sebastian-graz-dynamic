@@ -17,7 +17,6 @@ image: images/thepoetryhour/case-poetry.png
 ---
 
 
-
 = partial(:'partials/_case-meta', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color, :fontcolor=> current_page.data.fontcolor })
 
 .hero-devices
@@ -26,6 +25,11 @@ image: images/thepoetryhour/case-poetry.png
       %img.loadme(src='/images/thepoetryhour/macbook-poetry.png')
       .hero-phone
         %img.loadme(src='/images/thepoetryhour/mobile-search.png')
+
+-# %video{:width => 720, :height => 480, :controls => false, :loop => true, :autoplay => true}
+-#   %source{:src => "/videos/video.mp4", :type => 'video/mp4'}
+
+
 .row
   .tw
     :markdown
@@ -73,7 +77,7 @@ image: images/thepoetryhour/case-poetry.png
 
         The poem page was designed to achieve two things: reading poetry and creating memes. The challenge was to please two types of users who had two different goals. The solution was to let the users have the ability to create a Meme with just one click of the button.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
-    
+
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
@@ -101,6 +105,10 @@ image: images/thepoetryhour/case-poetry.png
     .tw
       :markdown
         ### Iconography
+
+        The icography set for poetry was created to be as legible as possible from a size of 16x16 pixels and sometimes smaller.
+        That meant that each icon had to be thoughtfully crafted on a 16x16 pixel grid to avoid rendering issues on lower-resolution screens
+
 
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/iconography.png'})
 

@@ -51,11 +51,14 @@
 			&--fadeInZoom {
 				  animation-name: fadeInZoom;
 			}
-			&--fadeInDown {
-				animation-name: fadeInDown;
+			&--fadeInDownDelayDelay {
+        animation-duration: .7s;
+				animation-name: fadeInDownDelay;
+				animation-timing-function: cubic-bezier(.03,.82,.34,.99);
 			}
 			&--fadeInDownDelay {
 				animation-name: fadeInDownDelay;
+        animation-duration: .5s;
 				animation-timing-function: cubic-bezier(.03,.82,.34,.99);
 			}
 		}
