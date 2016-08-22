@@ -235,20 +235,30 @@ a.cta {
 }
 
 .cases .loadme{
-	transition: 1s cubic-bezier(.03,.82,.34,.99) all;
-	opacity: 0;
-	transform: scale(0.88);
+	img {
+		transition: 1s cubic-bezier(.03,.82,.34,.99) all;
+		opacity: 0;
+		transform: scale(0.88);
+	}
 	&.image-loaded {
-		opacity: 1;
-	  transform: none;
+		img {
+			opacity: 1;
+			transform: none;
+		}
 	}
 }
 
 .case-section-image.loadme {
-	transition: 1s cubic-bezier(.03,.82,.34,.99) all;
-	opacity: 0;
+	background: rgba(0,0,0,0.06);
+	img {
+		transition: 1s cubic-bezier(.03,.82,.34,.99) all;
+		opacity: 0;
+	}
 	&.image-loaded {
-		opacity: 1;
+		background: transparent;
+		img {
+			opacity: 1;
+		}
 	}
 }
 
@@ -259,7 +269,6 @@ a.cta {
 	margin-bottom: 2rem;
 	.case-section-image {
 		width: 100%;
-		background: rgba(0,0,0,0.06);
 	}
 }
 
