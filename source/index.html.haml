@@ -5,7 +5,7 @@ title: Sebastian Grąz
   %div.scene_element.scene_element--fadeInDownDelay{:class => page_classes}
     .intro.ingress
       %h3
-        My name is Sebastian Grąz. I'm an interaction designer and a front-end developer based in London &#9748;
+        My name is Sebastian Graz. I'm an interaction designer and a front-end developer based in London &#9748;
       %a.cta(href='/profile') Read full profile
     -#
     -# - blog('case').articles[0...5].each do |article|
@@ -18,8 +18,8 @@ title: Sebastian Grąz
   .cases
     - blog('case').articles[0...5].reverse.each do |article|
       %a.case{:href => article.url, :class => article.title.delete(' ').downcase}
-        .case-bg{:style => 'background-color:' + article.data.color}
-          %img.loadme{:src => article.data.image}
+        .case-bg.loadme{:style => 'background-color:' + article.data.color}
+          %img{:src => article.data.image}
         %h4
           = article.title
         %p.small

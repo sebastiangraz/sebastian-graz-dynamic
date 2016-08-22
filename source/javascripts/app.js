@@ -69,9 +69,9 @@ var app = {};
           })
           .done( function( instance, image ) {
             console.log('all images successfully loaded');
-            $('img.loadme').each( function(){
-              $(this).addClass('image-loaded');
-            });
+            // $('img.loadme').each( function(){
+            //   $(this).addClass('image-loaded');
+            // });
             var $logo = $('#logo');
             $logo.removeClass('is-loading');
           })
@@ -81,6 +81,7 @@ var app = {};
           .progress( function( instance, image ) {
             var result = image.isLoaded ? 'loaded' : 'broken';
             console.log( 'image is ' + result + ' for ' + image.img.src );
+            $(image.img).parent().addClass('image-loaded');
             var $logo = $('#logo');
             $logo.addClass('is-loading');
           });
