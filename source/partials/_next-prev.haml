@@ -1,14 +1,12 @@
-.next-prev
-  -# - prev_article = current_article.previous_article
-  -# - if prev_article
-  -#   %a.prev{:style => 'background-color:' + prev_article.data.color + '; ' + 'color:' + prev_article.data.fontcolor, :rel => "prev", :href => prev_article.url }
-  -#     %p Previous case
-  -#     %h3
-  -#       = prev_article.title
-  - next_article = current_article.next_article
-  - if next_article
-    %a.next{:style => 'background-color:' + next_article.data.color + '; ' + 'color:' + next_article.data.fontcolor, :rel => "next", :href => next_article.url}
-      .row
-        %p Next case
-        %h3
-          = next_article.title
+.case-array.ct{:style => 'background-color:' + current_article.data.color}
+  :markdown
+    ### Discover more cases
+  .case-array-content.row
+    - blog('case').articles[0...4].delete_if{|item| item == current_article}.reverse.each do |article|
+      %a.case-array-content-item{:href => article.url, :'data-color' => article.data.color}
+        .loadme
+          %img{:src => article.data.image}
+        %h4
+          = article.title
+        %p.small
+          = article.data.description

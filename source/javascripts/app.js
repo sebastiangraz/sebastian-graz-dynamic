@@ -99,12 +99,24 @@ var app = {};
               });
             }
           });
+        },
+        caseArray: function () {
+          $(".case-array-content-item").on({
+            mouseenter: function () {
+              var color = $(this).data('color');
+              var caseArray = $(this).parents('.case-array')
+              $(caseArray).css({
+                'background-color': color
+              })
+            }
+          });
         }
     };
 
     /** [3] */
     $doc.ready(function() {
         console.log('Initial Document Ready');
+        app.initSmoothState();
         $.readyFn.execute();
     });
 
@@ -112,9 +124,9 @@ var app = {};
     $.fn.ready = $.readyFn.register;
 
     $(function() {
-      app.initSmoothState();
       app.initImagesLoaded();
       app.parallax();
+      app.caseArray();
     });
 
 })(jQuery);

@@ -16,7 +16,7 @@ title: Sebastian Grąz
 
   %h4.ct Selected works
   .cases
-    - blog('case').articles[0...5].reverse.each do |article|
+    - blog('case').articles.reverse.each do |article|
       %a.case{:href => article.url, :class => article.title.delete(' ').downcase}
         .case-bg.loadme{:style => 'background-color:' + article.data.color}
           %img{:src => article.data.image}
