@@ -34,7 +34,7 @@ var app = {};
                 options = {
                     debug: true,
                     prefetch: true,
-                    cacheLength: 0,
+                    cacheLength: 4,
                     onStart: {
                         duration: 500,
                         render: function($container) {
