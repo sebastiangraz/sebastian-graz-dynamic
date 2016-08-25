@@ -218,12 +218,6 @@ a.cta {
 	}
 }
 
-.ingress-centered{
-	@include mq(md) {
-		lost-column: 8/12;
-	}
-}
-
 .grid.half {
 	lost-center: $max-width;
 	& > * {
