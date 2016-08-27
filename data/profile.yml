@@ -1,0 +1,62 @@
+clients:
+  - Volvo Cars/Trucks/Penta
+  - Husqvarna
+  - MC Saatchi
+  - Tena
+  - SKF
+  - Maersk
+  - Majblomman
+  - Delhaize
+  - Positive Luxury
+awards:
+  - SiteInspire - Featured Portfolio
+    - 2014
+  - CSS Awards - Featured Portfolio
+    - 2014
+  - DESIGN MADE IN GERMANY - Featured Portfolio
+    - 2015
+  - Mindsparklemag - Featured Portfolio
+    - 2014
+  - FWA - Maersk - Site of the Day
+    - 2013
+experiences:
+  - This Place
+    - 2014-2016
+  - DigitasLBi
+    - 2011-2014
+  - University West Bachelor in Media
+    - 2009-2011
+skills:
+  - Concept & Strategy
+  - User Testing
+  - Front-end development
+  - Design production/direction
+  - Wireframing & Prototyping
+  - Video Production
+  - 3D Production
+  - Typeface design
+  - Editorial design
+  - Branding
+  - Managing design teams
+designtools:
+  - Photoshop
+  - Illustrator
+  - Indesign
+  - After Effects
+  - Adobe XD
+  - Sketch
+  - Cinema 4D
+  - Framer
+devtools:
+  - HTML/HAML/JADE
+  - CSS/SCSS/PostCSS
+  - Javascript JQuery
+  - Git
+  - Ruby on Rails
+  - Middleman
+  - Wordpress
+  - PHP
+languages:
+  - English - Professional proficiency
+  - Swedish - Native proficiency
+  - Polish - Professional proficiency
