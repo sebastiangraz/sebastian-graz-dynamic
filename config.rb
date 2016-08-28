@@ -3,7 +3,7 @@ activate :directory_indexes
 set :css_dir, "stylesheets"
 set :js_dir, "javascripts"
 set :images_dir, "images"
-set :relative_links, true
+set :relative_links, false #should be true
 set :haml, { ugly: true, format: :html5 }
 
 page "/*.xml", layout: false
@@ -25,7 +25,7 @@ configure :build do
   activate :minify_html do |html|
     html.remove_quotes = false
     html.remove_intertag_spaces = true
-  activate :relative_assets
+  # activate :relative_assets
 end
 
   activate :external_pipeline,
