@@ -243,6 +243,22 @@ a.cta {
 	}
 }
 
+.is-broken {
+	&:after {
+    content: 'Image broken 🙈';
+    display: block;
+		text-align: center;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+	}
+	img {
+		visibility: hidden;
+	}
+}
+
 .case-section-image.loadme {
 	background: rgba(0,0,0,0.06);
 	img {

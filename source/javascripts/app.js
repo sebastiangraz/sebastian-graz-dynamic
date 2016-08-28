@@ -65,7 +65,6 @@ var app = {};
           $('#main').imagesLoaded()
           .always( function( instance ) {
             console.log('all images loaded');
-            console.log()
           })
           .done( function( instance, image ) {
             console.log('all images successfully loaded');
@@ -76,10 +75,16 @@ var app = {};
             $logo.removeClass('is-loading');
           })
           .fail( function() {
+            var $logo = $('#logo');
             console.log('all images loaded, at least one is broken');
+            $logo.removeClass('is-loading');
           })
           .progress( function( instance, image ) {
             var result = image.isLoaded ? 'loaded' : 'broken';
+
+            //Add .is-broken class if image is broke
+            image.img.parentNode.className += image.isLoaded ? '' : ' is-broken';
+
             console.log( 'image is ' + result + ' for ' + image.img.src );
             $(image.img).parent().addClass('image-loaded');
             var $logo = $('#logo');
