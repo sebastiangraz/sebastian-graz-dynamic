@@ -46,10 +46,7 @@ image: '/images/thepoetryhour/case-poetry.png'
       :markdown
         ### Home
 
-        The idea is to engage a younger audience as well as people with little or no prior interest in poetry. A poem excerpt on top of an image is easier to digest initially - rather than being presented with a whole complex poem.
-
-        The Meme would also act as a mini advert for the poetry site seeded through social media and when seen outside the context of the website to bring in extra traffic to the website.
-        Each created Meme is shareable through social media and when seen out of context of The Poetry Hour website will drive additional traffic to the site
+        The home page is adorned with a content slider, featuring a random poetry verse matched with Memes that correspond with the verse displayed. It's a smart way to show what the website is about at a glance. Read poetry or explore memes.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg'})
 .row-full
   .row
@@ -77,7 +74,7 @@ image: '/images/thepoetryhour/case-poetry.png'
       :markdown
         ### Poem page
 
-        The poem page was designed to achieve two things: reading poetry and creating memes. The challenge was to please two types of users who had two different goals. The solution was to let the users have the ability to create a Meme with just one click of the button.
+        The poem page was designed to achieve two things: reading poetry and creating Memes. The user may create a Meme by either selecting the text, or be guided into creating a meme by clicking the create Meme button, which will automatically select the first verse.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
 
   .case-section{ :style => 'background-color:' + current_page.data.color }
@@ -101,7 +98,7 @@ image: '/images/thepoetryhour/case-poetry.png'
       :markdown
         ### Styleguide
 
-        As a sole designer on the project I had free reins on the process. I quickly decided that there was no need for pixel perfect designs for every page and breakpoint because the website did not have many pages to begin with. But also because I felt comfortable designing in the browser, which in my mind is the true canvas for web design rather than static images. This way I was able to design from a MVP methodology, meaning I started small and functional and built it up from there. With close collaboration with the full-stack developers we quickly had a website that worked in no time. Over time the design evolved from review with the client as well as internally in a iterative fashion. It was satisfying watching the project grow for each day.
+        As a sole designer on the project I had free reins on the process. I quickly decided that there was no need for pixel perfect designs for every page and breakpoint because the website did not have many pages to begin with. But also because I felt comfortable designing in the browser, which in my mind is the true canvas for web design rather than static images. This way I was able to design from a MVP methodology, meaning I started small and functional and built it up from there. With close collaboration with the full-stack developers we quickly had a website that worked in no time. Over time the design evolved from review with the client as well as internally in a iterative fashion.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/styleguide.jpg'})
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
@@ -119,12 +116,10 @@ image: '/images/thepoetryhour/case-poetry.png'
       :markdown
         ### Closing thoughts
 
-        The many responsibilities I had for this project made the project very fun and challenging. Having an significant role in each design department made me a happy camper.
+        The many responsibilities I had for this project made the project very fun and challenging. Having an significant role in each area of the design process made me a happy camper.
 
         In retrospect.
 
         Statistics show that users are less likely to be invested in an app for longer periods of time, therefore a website experience is even more important than previously. If I was to redo the whole project from scratch I would mainly focus on improving the mobile experience, before the desktop experience. Rather than trying to squeeze down desktop content into a mobile view. For instance the Meme Creator works fine on all breakpoints but on mobile the experience could have been improved significantly.
-
-        In terms of design I feel like the website lacks branded personality. All though the current design does the job fine, I feel like there is some space for improving the brand had I had more time during the design phase.
 
         Development wise I feel that the website is running on the latest and greatest (albeit technology widely known and documented). I learned quite a bit in terms of creating production-ready CSS structure for big websites. Reusability, modularity object-oriented are all synonyms I strived for when creating the structure and Im happy to say that I’m satisfied with what I have accomplished.

@@ -32,12 +32,13 @@ image: '/images/volvo/case-volvo.png'
       The core values for Volvo Cars is simplicity, functionality and durability. Volvos Scandinavian heritage is an integral part of the brand and we wanted to create a website which mirrors all these values through an modern and aesthetic web experience.
 
       Volvos own mission is to be the world’s most progressive and desired luxury car brand. So we created a concept design that puts Volvo Cars in that position.
+
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Home
 
-        A simple grid of Volvos range of cars presented in a aesthetic and digestable way
+        A simple grid of Volvos range of cars presented in a aesthetic way
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/homepage.jpg'})
 
   .case-section{ :style => 'background-color:' + current_page.data.color }
@@ -56,3 +57,10 @@ image: '/images/volvo/case-volvo.png'
 
         The modular design allows Volvo to create a story around their cars and guide the user to create their car of their dreams, without thinking too much.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/volvo-configurator.jpg'})
+  .case-section
+    .tw
+      :markdown
+        ### Closing thoughts
+        The pitch-work we did for Volvo never made it through concept stage, but it started a lot of conversations on what a car brand's web experience could be – we certainly learned a lot during the creation of this design, certainly about pushing boundaries and creating something exciting and bold.
+
+        Even if these synonyms should rarely be associated with a car brand whose main catalyst is safety, it was a fun excercise regardless.
