@@ -17,6 +17,7 @@
 	width: 100%;
 	@include mq(md) {
 		transform: translateY(-16%);
+		margin-bottom: -12%;
 	}
   .hero-computer {
 		width: 100%;
