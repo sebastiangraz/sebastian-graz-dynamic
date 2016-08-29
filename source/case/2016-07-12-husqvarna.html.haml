@@ -6,13 +6,11 @@ year: 2016
 color: '#ECF3E4'
 fontcolor: '#000'
 tags:
-- rocks
-- wheel
-- 30 inch wooden rims
+- Pitch
+- Web design
+- Iconography
 role:
-- web designer
-- art direction
-- front end
+- Lead designer
 image: '/images/husqvarna/husqvarna.png'
 ---
 
@@ -21,7 +19,7 @@ image: '/images/husqvarna/husqvarna.png'
 .row
   .tw
     :markdown
-      ### A 327 years old company wants a new website
+      ### A 327 year old company wants a new website
 
       #### Husqvarna is one of the oldest companies in Sweden still in business. The company started as a gunsmith company appointed by the Swedish king in 1689 ( you can tell by the logotype as it symbolises the sight over the barrel ) and since then has been doing sewing machines, kitchen appliances, bicycles, motorbikes and now more recently outdoor equipment.
 
@@ -30,6 +28,14 @@ image: '/images/husqvarna/husqvarna.png'
       As the project kicked off I started focusing on improving the design from their current website at the time. I introduced a sensible typography hierarchy, reduced the usage of colours, the usage iconography, better font sizes for legibility, increasing whitespace for easier readability, and breathing space for the content. The very constant feedback loop from the rest of the creative team created an very agile design environment - enabling to visualise concepts and ideas very quickly. This was a classic case of hovering art-directors, except in this case everyone involved in the project was hovering. At the end of the pitch phase we had visualised a homepage with different states, a product detail page, a product listing page and a design style guide on how to use the new design.
 
       We won the client.
+
+.row
+  .case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Homepage
+
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/husqvarna/homepage.jpg'})
 .row
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
@@ -39,7 +45,21 @@ image: '/images/husqvarna/husqvarna.png'
         The product details page focuses on bringing out contextual stories with the product involved. The user can watch a promotional video of a forestry worker using the Husqvarna chain saw, read reviews, see related products and also at the end of the page there is a call to action to find a dealer.
 
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/husqvarna/product-page.jpg'})
+.row
+  .case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Product listing page
 
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/husqvarna/product-listing-page.jpg'})
+
+.row
+  .case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Iconography
+
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/husqvarna/iconography.png'})
 .row
   .case-section
     .tw

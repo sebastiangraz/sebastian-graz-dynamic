@@ -6,12 +6,10 @@ year: 2014
 color: '#ecf0f5'
 fontcolor: '#000'
 tags:
-- rocks
-- 30 inch wooden rims
+- Pitch
+- Web design
 role:
-- web designer
-- art direction
-- front end
+- Lead designer
 image: '/images/volvo/case-volvo.png'
 ---
 
@@ -32,6 +30,14 @@ image: '/images/volvo/case-volvo.png'
 
         A simple grid of Volvos range of cars presented in a aesthetic and digestable way
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/homepage.jpg'})
+
+  .case-section{ :style => 'background-color:' + current_page.data.color }
+    .tw
+      :markdown
+        ### Iconography
+
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/iconography.png'})
+
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
