@@ -19,19 +19,19 @@
 		transform: translateY(-16%);
 		margin-bottom: -12%;
 	}
-  .hero-computer {
+	.hero-computer {
 		width: 100%;
 		max-width: 90rem;
 		@include mq(md) {
 			width: 100vw;
-  		transform: translateX(24%);
+			transform: translateX(24%);
 		}
 	}
-  .hero-phone {
-    position: absolute;
-    width: 20%;
-    transform: translateY(45%) translateX(-100%);
-    top: 0px;
+	.hero-phone {
+		position: absolute;
+		width: 20%;
+		transform: translateY(45%) translateX(-100%);
+		top: 0px;
 		left: 0px;
 		display:none;
 		@include mq(md) {
@@ -42,8 +42,8 @@
 
 .row {
 	max-width: $max-width;
-  margin: 0 auto;
-  width: 92%;
+	margin: 0 auto;
+	width: 92%;
 }
 
 .row.blog {
@@ -52,39 +52,39 @@
 		margin-bottom: 5rem;
 	}
 	img {
-	width: 100%;
-  margin: 0;
+		width: 100%;
+		margin: 0;
 		@include mq(md) {
 			width: calc(100% + 6rem);
-		  margin: 4rem 0rem 4rem -3rem;
+			margin: 4rem 0rem 4rem -3rem;
 		}
 	}
 }
 
 .row-full {
 	.tw {
-    top: 4rem;
-    margin-top: -3rem;
-    position: relative;
+		top: 4rem;
+		margin-top: -3rem;
+		position: relative;
 		@include mq(md) {
 			top: 14rem;
 			margin-top: -13rem;
 		}
 		@include mq(lg) {
-		  top: 18rem;
-		  margin-top: -14rem;
+			top: 18rem;
+			margin-top: -14rem;
 		}
 		// @include mq(lg) {
 		// 	top: 24rem;
-	  //   margin-top: -20rem;
+		//   margin-top: -20rem;
 		// }
 	}
 	.image-pull-left {
 		position: relative;
 		z-index: -1;
 		.case-section-image {
-	    width: 100%;
-	    margin: 0 auto 5rem;
+			width: 100%;
+			margin: 0 auto 5rem;
 			img {
 				max-width: $max-width;
 				margin: 0 auto;
@@ -145,10 +145,10 @@
 			margin: 0;
 		}
 		li {
-		  display: inline-block;
-	    word-break: break-word;
-		  list-style: none;
-		  width: 100%;
+			display: inline-block;
+			word-break: break-word;
+			list-style: none;
+			width: 100%;
 			margin: 0 0 0.75rem 0;
 			p {
 				margin: 0;
@@ -163,7 +163,7 @@ a.cta {
 		border-color: #000;
 	}
 	&:after {
-    content:'\2192';
+		content:'\2192';
 		margin-left: 0.5rem;
 	}
 }
@@ -181,8 +181,8 @@ a.cta {
 	overflow: hidden;
 	position: relative;
 	&-text {
-			margin: 0 auto;
-			padding: 0 1.5rem;
+		margin: 0 auto;
+		padding: 0 1.5rem;
 	}
 	@include mq(md) {
 		padding: 6rem 0;
@@ -198,7 +198,7 @@ a.cta {
 	@include mq(md) {
 		lost-column: 2/3 0;
 		h3 {
-		  font-size: 1.75rem;
+			font-size: 1.75rem;
 		}
 	}
 }
@@ -213,7 +213,7 @@ a.cta {
 		margin-top: 3rem;
 		margin-bottom: 6rem;
 	}
-  padding: 0 1rem;
+	padding: 0 1rem;
 	p {
 		margin: 0 0 1rem 0;
 	}
@@ -246,14 +246,14 @@ a.cta {
 
 .is-broken {
 	&:after {
-    content: 'Image broken 🙈';
-    display: block;
+		content: 'Image broken 🙈';
+		display: block;
 		text-align: center;
-    width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+		width: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
 	}
 	img {
 		visibility: hidden;
@@ -273,7 +273,6 @@ a.cta {
 		}
 	}
 }
-
 
 .case-section {
 	lost-center: $max-width;
@@ -312,26 +311,26 @@ a.cta {
 		margin-bottom: 3rem;
 		color: #000;
 		@include mq(sm) {
-				lost-column: 3/12 0;
-				&.thepoetryhour {
-					lost-column: 6/12 0;
+			lost-column: 3/12 0;
+			&.thepoetryhour {
+				lost-column: 6/12 0;
+			}
+			&.volvo {
+				lost-column: 3/12 1;
+			}
+			&.logotypes {
+				lost-column: 5/12;
+			}
+			&.husqvarna {
+				.case-bg {
+					padding-bottom: 160%;
 				}
-				&.volvo {
-					lost-column: 3/12 1;
-				}
-				&.logotypes {
-					lost-column: 5/12;
-				}
-				&.husqvarna {
-					.case-bg {
-						padding-bottom: 160%;
-					}
-				}
+			}
 		}
 		h4 {
-			margin-top: 0.5rem;
+			margin-top: 1rem;
 			margin-bottom: 0.25rem;
-	    font-family: 'NeueHaasUnica-medium', sans-serif;
+			font-family: 'NeueHaasUnica-medium', sans-serif;
 		}
 		p {
 			margin-top: 0;
@@ -341,36 +340,27 @@ a.cta {
 				opacity: 0.7;
 			}
 		}
+		&:focus {
+			img {
+				opacity: 0.4;
+			}
+		}
 	}
 	.case-bg {
-				padding-bottom: 80%;
-				position: relative;
-				img {
-					position: absolute;
-					top: 0;
-					left: 0;
-					object-fit: contain;
-					height: 100%;
-				}
+		padding-bottom: 80%;
+		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: contain;
+			height: 100%;
+		}
 	}
 }
-// .cases {
-// 	lost-center: $max-width;
-// 	.case {
-// 		lost-column: 1/1 1;
-// 		margin-bottom: 2rem;
-// 		h3{
-// 			margin: 0rem;
-// 			top: 16px;
-// 			position: relative;
-// 		}
-// 		@include mq(md) {
-// 			lost-column: 1/2 2;
-// 		}
-// 	}
-// }
 
 .case-array {
+	padding: 2rem 0;
 	transition: 2s cubic-bezier(.03,.82,.34,.99) all;
 	display: inline-block;
 	width: 100%;
@@ -378,12 +368,18 @@ a.cta {
 		margin-top: 2rem;
 		margin-bottom: 0;
 	}
+	h4 {
+		margin-bottom: 0;
+	}
+	p.small {
+		margin-top: 0;
+	}
 }
 .case-array-content {
 	lost-center: $max-width;
 	padding: 2rem 0;
 	@include mq(md) {
-	  justify-content: center;
+		justify-content: center;
 	}
 	&-item {
 		lost-column: 1/2;
@@ -398,12 +394,14 @@ a.cta {
 		}
 	}
 }
+
 svg {
 	width: 100%;
 }
+
 sup {
 	font-family: 'NeueHaasUnica-medium', sans-serif;
-  font-size: 0.75rem;
+	font-size: 0.75rem;
 	color: rgba(0,0,0,0.4);
 }
 

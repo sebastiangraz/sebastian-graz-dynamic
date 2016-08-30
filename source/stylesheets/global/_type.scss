@@ -14,7 +14,6 @@
 body, html {
 	font-family: 'NeueHaasUnica-regular', sans-serif;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   line-height: 1.6;
   font-weight: normal;
   font-size: 14px;
@@ -23,7 +22,7 @@ body, html {
 	}
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4 {
   font-weight: normal;
   font-family: 'NeueHaasUnica-light', sans-serif;
 }
@@ -59,7 +58,7 @@ p {
 }
 
 .small {
-  font-size: 0.75rem;
+  font-size: 12px;
 }
 
 a {
@@ -71,5 +70,6 @@ a {
   }
   &:active,&:focus {
     outline: none;
+    color: #000;
   }
 }
