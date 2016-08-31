@@ -46,7 +46,7 @@ image: '/images/thepoetryhour/case-poetry.png'
       :markdown
         ### Home
 
-        The home page is adorned with a content slider, featuring a random poetry verse matched with Memes that correspond with the verse displayed. It's a smart way to show what the website is about at a glance. Read poetry or explore memes.
+        The home page is adorned with a content slider, featuring a random poetry verse matched with Memes that correspond with the verse displayed. It's a smart way to show what the website is about at a glance. Reading poetry or explore memes.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg'})
 .row-full
   .row
@@ -64,10 +64,9 @@ image: '/images/thepoetryhour/case-poetry.png'
       :markdown
         ### Meme creator
 
-        The idea is to engage a younger audience as well as people with little or no prior interest in poetry. A poem excerpt on top of an image is easier to digest initially - rather than being presented with a whole complex poem.
+        The idea is to engage a younger audience as well as people with little or no prior interest in poetry. A poem verse or excerpt on top of an image is easier to digest initially - rather than being presented with a whole usually complex poem.
 
-        The Meme would also act as a mini advert for the poetry site seeded through social media and when seen outside the context of the website to bring in extra traffic to the website.
-        Each created Meme is shareable through social media and when seen out of context of The Poetry Hour website will drive additional traffic to the site
+        The Meme would also act as a mini advert for The Poetry Hour. Seeded through social media and when seen outside the context of the website the link associated with the Meme would bring in extra traffic.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/meme-creator.jpg'})
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
@@ -91,26 +90,25 @@ image: '/images/thepoetryhour/case-poetry.png'
 
         Another big part of the website is the famed narrators. Celebrities and artists read their favourite poems out loud recorded on video or audio.
 
-        Some of the celebrities include Rooger Moore, Ralph Fiennes, Charles Dance, Kelly Reilly and many more. The narrators section is obviously a big selling point for the brand so the narrations and videos are seamlessly integrated into each respective poem page, with just one click.
+        Some of the celebrities include Roger Moore, Ralph Fiennes, Charles Dance, Kelly Reilly and many more.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/narrators.jpg'})
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Styleguide
 
-        As a sole designer on the project I had free reins on the process. I quickly decided that there was no need for pixel perfect designs for every page and breakpoint because the website did not have many pages to begin with. But also because I felt comfortable designing in the browser, which in my mind is the true canvas for web design rather than static images. This way I was able to design from a MVP methodology, meaning I started small and functional and built it up from there. With close collaboration with the full-stack developers we quickly had a website that worked in no time. Over time the design evolved from review with the client as well as internally in a iterative fashion.
+        As a sole designer on the project I had free reins on the process. I quickly decided that there was no need for pixel perfect designs for every page and breakpoint because the website did not have many pages to begin with. But also because I felt comfortable designing in the browser, which in my mind is the true canvas for web design rather than static images.
+
+        So I created a live style guide inside the browser, where I laid out all the re-usable components to get a nice overview of the design direction of the website, but also to help the consistency throughout the website.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/styleguide.jpg'})
   .case-section{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
         ### Iconography
 
-        The iconography set for poetry was created to be as legible as possible from a size of 16x16 pixels and sometimes smaller.
-        That meant that each icon had to be thoughtfully crafted on a 16x16 pixel grid to avoid rendering issues on lower-resolution screens
-
+        The iconography set for poetry was created to be as legible as possible from a size of 16x16 pixels and sometimes smaller. That meant that each icon had to be thoughtfully crafted on a 16x16 pixel grid to avoid rendering issues on lower-resolution screens
 
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/iconography.png'})
-
   .case-section
     .tw
       :markdown
@@ -118,8 +116,6 @@ image: '/images/thepoetryhour/case-poetry.png'
 
         The many responsibilities I had for this project made the project very fun and challenging. Having an significant role in each area of the design process made me a happy camper.
 
-        In retrospect.
+        I learned a lot about site generation with Angular, deployment of live sites, page speed optimising, CSS structures for large websites, designing in the browser, accessibility in web to name a few areas.
 
-        Statistics show that users are less likely to be invested in an app for longer periods of time, therefore a website experience is even more important than previously. If I was to redo the whole project from scratch I would mainly focus on improving the mobile experience, before the desktop experience. Rather than trying to squeeze down desktop content into a mobile view. For instance the Meme Creator works fine on all breakpoints but on mobile the experience could have been improved significantly.
-
-        Development wise I feel that the website is running on the latest and greatest (albeit technology widely known and documented). I learned quite a bit in terms of creating production-ready CSS structure for big websites. Re-usability, modularity object-oriented are all synonyms I strived for when creating the structure and Im happy to say that I’m satisfied with what I have accomplished.
+        In retrospect feel like there was a big chunk missing from the User Testing side of things. We did test the journeys internally and we installed a video broadcasting service that streamed videos from our users browser to see how they interacted with the website. All which gave us important insights on the UX of the website. However I still missed qualitative research with target audience to really get what they wanted from a website like this. This would be especially important for the Meme creator which is one of the more important aspects of the website.
