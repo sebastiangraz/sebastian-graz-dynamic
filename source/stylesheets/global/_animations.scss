@@ -1,12 +1,10 @@
-@keyframes fadeInZoom {
-0% {
-  opacity: 0;
-
-}
-100% {
-  opacity: 1;
-
-	}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInDown {
@@ -17,56 +15,6 @@
   opacity: 1;
   transform: none;
 	}
-}
-
-@keyframes fadeInDownDelay {
-0% {
-  opacity: 0;
-  transform: translate3d(0, -32px, 0); }
-100% {
-  opacity: 1;
-  transform: none;
-	}
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.scene {
-	.scene_element {
-		  animation-duration: .5s;
-			animation-fill-mode: both;
-			animation-timing-function: linear;
-      -webkit-animation-fill-mode: both; //fixes safari flicker
-      animation-fill-mode: both; //fixes safari flicker
-			&--fadeIn {
-				  animation-name: fadeIn;
-			}
-			&--fadeInZoom {
-				  animation-name: fadeInZoom;
-			}
-			&--fadeInDownDelayDelay {
-        animation-duration: .7s;
-				animation-name: fadeInDownDelay;
-				animation-timing-function: cubic-bezier(.03,.82,.34,.99);
-			}
-			&--fadeInDownDelay {
-				animation-name: fadeInDownDelay;
-        animation-duration: .5s;
-				animation-timing-function: cubic-bezier(.03,.82,.34,.99);
-			}
-		}
-		&.is-exiting {
-			.scene_element {
-				  animation-direction: alternate-reverse;
-			}
-		}
 }
 
 @keyframes dash {
@@ -83,4 +31,32 @@
 	    stroke-dasharray: 330;
 	    stroke-dashoffset: 40;
 	}
+}
+
+.scene {
+	.scene_element {
+		  animation-duration: .5s;
+			animation-fill-mode: both;
+			animation-timing-function: linear;
+      -webkit-animation-fill-mode: both; //fixes safari flicker
+      animation-fill-mode: both; //fixes safari flicker
+			&--fadeIn {
+				  animation-name: fadeIn;
+			}
+      &--fadeInDown {
+				animation-name: fadeInDown;
+        animation-duration: .5s;
+				animation-timing-function: $bezier;
+			}
+			&--fadeInDownDelay {
+        animation-duration: .7s;
+				animation-name: fadeInDown;
+				animation-timing-function: $bezier;
+			}
+		}
+		&.is-exiting {
+			.scene_element {
+				  animation-direction: alternate-reverse;
+			}
+		}
 }

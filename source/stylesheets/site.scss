@@ -232,7 +232,7 @@ a.cta {
 
 .cases .loadme{
 	img {
-		transition: 1s cubic-bezier(.03,.82,.34,.99) all;
+		transition: 1s $bezier all;
 		opacity: 0;
 		transform: scale(0.88);
 	}
@@ -263,7 +263,7 @@ a.cta {
 .case-section-image.loadme {
 	background: rgba(0,0,0,0.06);
 	img {
-		transition: 1s cubic-bezier(.03,.82,.34,.99) all;
+		transition: 1s $bezier all;
 		opacity: 0;
 	}
 	&.image-loaded {
@@ -361,7 +361,7 @@ a.cta {
 
 .case-array {
 	padding: 2rem 0;
-	transition: 2s cubic-bezier(.03,.82,.34,.99) all;
+	transition: 2s $bezier all;
 	display: inline-block;
 	width: 100%;
 	h3 {
