@@ -34,7 +34,7 @@ end
     source: ".tmp",
     latency: 1
 
-  # activate :asset_hash
+  activate :asset_hash
   # activate :asset_host,
   #   host: "//cdn.cloudfront.net",
   #   rewrite_ignore: ["*.js"]
