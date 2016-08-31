@@ -4,12 +4,20 @@ date: 2016-07-17 13:21 UTC
 tags:
 ---
 
-When I started the redesign of my portfolio I had troubles finding documented cases for technology stacks when developing a new website. Whats the current best practice in terms of development for creating a top-tier portfolio?
+#### A simple disclosure of technologies
 
-![alt text](images/thepoetryhour/search.jpg)
+When I started re-designing my portfolio I knew from the start that it would be
+defined by the tech stack I would choose. Had I chosen something more conventional
+like Wordpress or Drupal that would mean I would be constrained to their conventions
+in terms of code and layout. That didn't fly well with me
 
-As a fairly new developer it would have been immensely useful to have that information at hand when I started. Unfortunately Google did no yield any worthwhile results at that time.
+For this portfolio I used [Middleman][df29b96c] because I was comfortable using it
+since previous rapid prototyping projects. With Middleman each page loads instantly
+and that sat well with me.
 
-That said I'm going to fully disclose how this website is built.
+Because Middleman is based on Rails I had the power to do some complex looping to
+keep my code as [DRY][f7eacd16] as possible
 
-Testing remote uploading
+
+  [f7eacd16]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself "DRY"
+  [df29b96c]: https://middlemanapp.com/ "Middleman"
