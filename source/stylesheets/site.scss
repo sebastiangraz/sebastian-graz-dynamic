@@ -395,6 +395,16 @@ a.cta {
 	}
 }
 
+.highlight {
+	padding: 2rem;
+	display: inline-block;
+	width: 100%;
+	overflow: auto;
+	code {
+		white-space: pre;
+	}
+}
+
 svg {
 	width: 100%;
 }

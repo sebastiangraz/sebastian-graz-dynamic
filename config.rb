@@ -66,6 +66,9 @@ activate :google_analytics do |ga|
 end
 
 
+activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true, auto_ids: false
 
 # https://github.com/fredjean/middleman-s3_sync
 # activate :s3_sync do |s3|

@@ -3,6 +3,8 @@ source "https://rubygems.org"
 gem "middleman", "~> 4.0"
 gem "middleman-minify-html", "~> 3.4"
 gem 'middleman-blog'
+gem "middleman-syntax"
+gem "redcarpet"
 
 gem 'ffi', git: 'git://github.com/ffi/ffi.git', branch: :elcapt
 
