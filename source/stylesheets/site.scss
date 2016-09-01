@@ -48,6 +48,7 @@
 
 .row.blog {
 	max-width: $max-width / 2;
+	margin-bottom: 8rem;
 	.blog-case {
 		margin-bottom: 5rem;
 	}
@@ -398,8 +399,12 @@ a.cta {
 .highlight {
 	padding: 2rem;
 	display: inline-block;
-	width: 100%;
 	overflow: auto;
+	width: 100%;
+	@include mq(md) {
+		width: calc(100% + 6rem);
+		margin: 1rem 0rem 1rem -3rem;
+	}
 	code {
 		white-space: pre;
 	}

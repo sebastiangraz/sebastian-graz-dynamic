@@ -15,5 +15,5 @@ title: Verbose
             - time = article.date
             %sup= time.strftime("%b #{time.day.ordinalize}")
 
-          %p= Nokogiri::HTML(article.summary(500)).text
+          %p= Nokogiri::HTML(article.summary(240)).text
           %a= link_to 'Read more &rarr;', article.url
