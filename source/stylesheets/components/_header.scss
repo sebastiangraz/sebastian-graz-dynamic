@@ -1,13 +1,18 @@
 header {
-	position: relative;
+	position: fixed;
+	background: #fff;
 	top:0;
 	left: 0;
 	width: 100%;
 	height: $header-height;
 	z-index: 2;
 	transition: 1s $bezier all;
+	@include mq(md) {
+		position: relative;
+	}
 	@include mq(lg) {
-		margin-top: $header-height;
+		margin-top: 3rem;
+		margin-bottom: 1rem;
 	}
 	.row {
 		height: $header-height;

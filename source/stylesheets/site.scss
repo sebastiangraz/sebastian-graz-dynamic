@@ -422,6 +422,13 @@ a.cta {
 	}
 }
 
+body {
+	margin-top: $header-height;
+	@include mq(md) {
+		margin-top: 0;
+	}
+}
+
 svg {
 	width: 100%;
 }
