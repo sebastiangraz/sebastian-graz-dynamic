@@ -17,7 +17,7 @@
 	width: 100%;
 	@include mq(md) {
 		transform: translateY(-16%);
-		margin-bottom: -12%;
+    margin-bottom: -8rem;
 	}
 	.hero-computer {
 		width: 100%;
@@ -30,7 +30,7 @@
 	.hero-phone {
 		position: absolute;
 		width: 20%;
-		transform: translateY(45%) translateX(-100%);
+		transform: translateY(30%) translateX(-100%);
 		top: 0px;
 		left: 0px;
 		display:none;
