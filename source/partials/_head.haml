@@ -1,5 +1,5 @@
 !!!
-%html
+%html.no-js
   %head
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:charset => "utf-8"}/
@@ -11,4 +11,6 @@
     = javascript_include_tag :all, :async => true
     %link{:href => "/images/favicon/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
     %link{:href => "/images/favicon/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %script
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
   %body

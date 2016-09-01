@@ -245,6 +245,18 @@ a.cta {
 	}
 }
 
+.no-js {
+	.case-section-image.loadme {
+		background: transparent;
+		img {
+			opacity: 1;
+		}
+	}
+	.cases .case-bg img {
+		opacity: 1;
+	}
+}
+
 .is-broken {
 	&:after {
 		content: 'Image broken 🙈';
@@ -414,6 +426,7 @@ svg {
 	width: 100%;
 }
 
+
 sup {
 	font-family: 'NeueHaasUnica-medium', sans-serif;
 	font-size: 0.75rem;
@@ -423,10 +436,6 @@ sup {
 img {
 	width: 100%;
 	display: block;
-}
-
-body {
-	margin: $header-height 0 0 0;
 }
 
 * {
