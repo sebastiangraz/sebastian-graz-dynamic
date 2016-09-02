@@ -17,7 +17,7 @@
 	width: 100%;
 	@include mq(md) {
 		transform: translateY(-16%);
-    margin-bottom: -8rem;
+		margin-bottom: -8rem;
 	}
 	.hero-computer {
 		width: 100%;
@@ -212,6 +212,22 @@ a.cta {
 	margin-bottom: 1rem;
 	@include mq(md) {
 		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+	padding: 0 1rem;
+	p {
+		margin: 0 0 1rem 0;
+	}
+}
+
+.case-section .tw {
+	lost-center: $max-width / 2;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	@include mq(md) {
+		margin-top: 3rem;
 		margin-bottom: 6rem;
 	}
 	padding: 0 1rem;
@@ -302,6 +318,12 @@ a.cta {
 		object-fit: contain;
 		height: 100%;
 	}
+}
+p.caption {
+	position: absolute;
+	bottom: 12px;
+	left: 32px;
+  right: 32px;
 }
 .sq {
 	padding-bottom: 100%;

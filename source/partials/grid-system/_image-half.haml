@@ -2,4 +2,4 @@
   .sq{ :style => 'background-color:' + locals[:color]}
     .case-content
       %image{:src => locals[:imageFirst], :style => 'transform:translateX(' + locals[:X1] + ')' + ' translateY(' + locals[:Y1] + ')' + ' rotate(' + locals[:R1] + 'deg' + ')' + ' scale(' + locals[:S1] + ')' }
-  %p= locals[:caption]
+    %p.caption.small= locals[:caption]

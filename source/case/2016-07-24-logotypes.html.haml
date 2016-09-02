@@ -15,20 +15,25 @@ image: '/images/logotypes/case-logotypes.png'
 = partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :fontcolor=> current_page.data.fontcolor, :color=> current_page.data.color })
 
 .row
-  :markdown
-    ### Personal logos
+  .tw
+    :markdown
+      ### Personal logos
+
+      Below are some logotypes I designer for personal projects
 .row
   .grid.half
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/flex.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/graz.svg', :caption=>'Personal Branding', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/heyplace.svg', :caption=>'HeyPlace logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
 .row
-  :markdown
-    ### The Poetry Hour
+  .tw
+    :markdown
+      ### The Poetry Hour
+      I got the opportunity to design a logotype for The Poetry Hour &mdash; below you'll find some of the variations on the logotype
 .row
   .grid.half
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph1.svg', :caption=>'', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
-    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph2.svg', :caption=>'', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph2.svg', :caption=>'Choosen by the client', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph3.svg', :caption=>'', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph4.svg', :caption=>'', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
     = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph5.svg', :caption=>'', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
