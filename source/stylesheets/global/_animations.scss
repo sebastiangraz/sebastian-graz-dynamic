@@ -17,6 +17,17 @@
 	}
 }
 
+@keyframes case {
+0% {
+  transform-origin: center;
+  transform: scale(0.9);
+}
+100% {
+  transform-origin: center;
+  transform: scale(1);
+	}
+}
+
 @keyframes dash {
 	0% {
 	    stroke-dasharray: 330;
@@ -51,6 +62,11 @@
 			&--fadeInDownDelay {
         animation-duration: .7s;
 				animation-name: fadeInDown;
+				animation-timing-function: $bezier;
+			}
+      &--case {
+        animation-duration: .7s;
+				animation-name: case;
 				animation-timing-function: $bezier;
 			}
 		}

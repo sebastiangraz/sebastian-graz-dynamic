@@ -18,5 +18,17 @@ image: '/images/logotypes/case-logotypes.png'
   :markdown
     ### Personal logos
 .row
-  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/flex.svg', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :X2=>'0', :Y2=>'0', :R2=>'0', :S2=>'0.2',  :imageSecond=>'/images/logotypes/heyplace.svg', :captionFirst=>'Full Flex – HTML template logo', :captionSecond=>'Heyplace app logo', :color=> current_page.data.color})
-  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/graz.svg', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :X2=>'0', :Y2=>'0', :R2=>'0', :S2=>'0.2',  :imageSecond=>'', :captionFirst=>'Personal Logo', :captionSecond=>'The Poetry Hour variation logo', :color=> current_page.data.color})
+  .grid.half
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/flex.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/graz.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/heyplace.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
+.row
+  :markdown
+    ### The Poetry Hour
+.row
+  .grid.half
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph1.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph2.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph3.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph4.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
+    = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/tph5.svg', :caption=>'Full Flex – HTML template logo', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :color=> current_page.data.color})
