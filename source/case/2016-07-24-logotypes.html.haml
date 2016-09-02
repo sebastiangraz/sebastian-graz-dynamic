@@ -12,5 +12,11 @@ role:
 image: '/images/logotypes/case-logotypes.png'
 ---
 
-
 = partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :fontcolor=> current_page.data.fontcolor, :color=> current_page.data.color })
+
+.row
+  :markdown
+    ### Personal logos
+.row
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/flex.svg', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :X2=>'0', :Y2=>'0', :R2=>'0', :S2=>'0.2',  :imageSecond=>'/images/logotypes/heyplace.svg', :captionFirst=>'Full Flex – HTML template logo', :captionSecond=>'Heyplace app logo', :color=> current_page.data.color})
+  = partial(:'partials/grid-system/_image-half', :locals => {:imageFirst=> '/images/logotypes/graz.svg', :X1=>'0%', :Y1=>'0%', :R1=>'0', :S1=>'0.2', :X2=>'0', :Y2=>'0', :R2=>'0', :S2=>'0.2',  :imageSecond=>'', :captionFirst=>'Personal Logo', :captionSecond=>'The Poetry Hour variation logo', :color=> current_page.data.color})
