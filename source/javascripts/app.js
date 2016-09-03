@@ -115,6 +115,18 @@ var app = {};
           })
         }
       });
+    },
+    blogPreview: function () {
+      $(".blog-case h3 a").on("mouseenter", function () {
+        var attachedContainer = $(this).data('id');
+        var color = $(this).data('color');
+        $('.blog-image-container').removeClass('active');
+        $("." + attachedContainer).addClass('active');
+
+        $('.blog-image').css({
+          'background-color': color
+        })
+      });
     }
   };
 
@@ -132,6 +144,7 @@ var app = {};
     app.initImagesLoaded();
     app.parallax();
     app.caseArray();
+    app.blogPreview();
   });
 
 })(jQuery);

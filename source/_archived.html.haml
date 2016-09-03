@@ -1,0 +1,19 @@
+---
+title: Verbose
+---
+
+.row.blog
+  .scene_element.scene_element--fadeInDown
+    .intro
+      %h3 Verbose is where I will write about design, development and other ramblings 🖊
+    .blog-cases
+      - blog('verbose').articles[0...5].each do |article|
+        .blog-case
+          %h3
+            %a{:href => article.url}
+              = article.title
+            - time = article.date
+            %sup= time.strftime("%b #{time.day.ordinalize}")
+
+          %p= Nokogiri::HTML(article.summary(240)).text
+          %a= link_to 'Read more &rarr;', article.url

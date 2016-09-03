@@ -2,6 +2,9 @@
 title: Portfolio re-design 2016
 date: 2016-07-17 13:21 UTC
 tags:
+image: '/images/blog/graz.png'
+color: '#f7ffed'
+id: '1'
 ---
 
 #### The new website is live! In this post I will disclose some of the technologies I've used to create this website
