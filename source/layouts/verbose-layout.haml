@@ -5,8 +5,8 @@
     .scene_element.scene_element--fadeInDown
       .row.blog
         .intro
-          %h3
-            = current_page.data.title
+          %h1
+            = current_page.data.title.titleize
             - time = current_page.date
             %sup= time.strftime("%b #{time.day.ordinalize}")
           %a.back{ :href=> '/verbose' }

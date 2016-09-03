@@ -12,7 +12,7 @@ title: Verbose
                 %a{:href => article.url, :'data-id' => 'item' + article.data.id}
                   - time = article.date
                   %p.small= time.strftime("%b #{time.day.ordinalize}")
-                  = article.title
+                  = article.title.titleize
 
     .blog-image
       .blog-image-wrapper

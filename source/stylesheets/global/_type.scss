@@ -12,14 +12,14 @@
 
 
 body, html {
-	font-family: 'NeueHaasUnica-regular', sans-serif;
+  font-family: 'NeueHaasUnica-regular', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   font-weight: normal;
   font-size: 14px;
-	@include mq(md) {
-		  font-size: 16px;
-	}
+  @include mq(md) {
+    font-size: 16px;
+  }
 }
 
 h1,h2,h3,h4 {
@@ -30,31 +30,31 @@ h1,h2,h3,h4 {
 h1 {
   font-size: 36px;
   line-height: 1.2;
-  margin-top: 0;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 2.5rem;
   line-height: 1.4;
-  margin-top: 0;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.75rem;
-  margin-top: 0;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 h4 {
-    font-size: 1.25rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 p {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 .small {
@@ -62,7 +62,7 @@ p {
 }
 
 a {
-	color: $color;
+  color: $color;
   text-decoration: none;
   cursor: pointer;
   &:hover {

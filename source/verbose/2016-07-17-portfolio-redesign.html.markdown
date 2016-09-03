@@ -1,5 +1,5 @@
 ---
-title: Portfolio re-design 2016
+title: Portfolio redesign 2016
 date: 2016-07-17 13:21 UTC
 tags:
 image: '/images/blog/graz.png'
@@ -8,15 +8,30 @@ id: '1'
 order: '1'
 ---
 
-#### The new website is live! In this post I will disclose some of the technologies I've used to create this website
+#### The new website is live! In this post I will disclose some of thoughts and technologies I've used to create this website.
 
-For this portfolio I used [Middleman][df29b96c] because I was comfortable using it
-since previous rapid prototyping projects. Middleman comes with insane speed,
-ability to use versioning, its easy to build upon if you need something more complex, and comes with the power of Ruby!
+It's been roughly 3 years since I launched my previous portfolio. While my old
+site received a great deal of positive feedback and won various features and awards, I still wanted a new portfolio to reflect my current me.
 
+
+#### From absolute scratch
+
+I knew from the inception of the project that this website had to be written from scratch
+so that I could have 100% control over it. And do the things I wanted to do, such as;
+
+- Improving page load speeds.
+- Github versioning.
+- Control from the command line 🤓
+- Use whichever technologies (HAML, SCSS, CoffeeScript)
+- Easy to host and update
+
+For this portfolio I used [Middleman][df29b96c] which is a static site generator written in Ruby🔻 which spits out static pages that are ready to be deployed. Because the pages are static the website becomes very lightweight and reliable.  
+
+
+#### Development
 
 Because Middleman is based on Rails I had the power to do some complex looping to
-keep my code as [DRY][f7eacd16] as possible. Below is a simplified version of my portfolio loop
+keep my code as [DRY][f7eacd16] as possible. Below is a simplified version of my portfolio loop:
 
 ```haml
 - blog('case').articles.each do |article|
@@ -26,13 +41,11 @@ keep my code as [DRY][f7eacd16] as possible. Below is a simplified version of my
     %p.small = article.data.description
 ```
 
-It's worth noting in the loop that I'm using HAML. In Middleman it's as easy as replacing `.html` with `.haml` at the end of the markup files and Middleman will do the rest for you
+It's worth noting in the loop that I'm using HAML. In Middleman it's as easy as replacing `.html` with `.haml` at the end of the markup files and Middleman will do the rest for you.
 
-#### Layout
-I used SCSS to layout the webpage sprinkled with [PostCSS][d28f6d0d] plugins, notably the [LostGrid][fb5b2234] which was very useful
-for layout.
+I used SCSS to layout the webpage sprinkled with [PostCSS][d28f6d0d] plugins, notably the [LostGrid][fb5b2234] which is a very useful grid system to keep the layouts on point.
 
-With LostGrid I could do, which would divide the content into four equal columns with a 32px gap
+With LostGrid I could do complex css calculations using a simplified language. Below you'll find a code snippet which divides the content into 4 equal columns with a 32px gap. Using this approach for layout kept my markup files uncluttered with `.col-` classes — a breath of fresh air.
 
 ```scss
 @lost flexbox flex;
@@ -46,6 +59,39 @@ With LostGrid I could do, which would divide the content into four equal columns
 }
 ```
 
+#### Animation
+
+As a UX designer I knew UI animations is an integral part of the design experience. It gives context to movement and helps the user understand what is going on when completing actions. With that in my mind I set of to research different options and stumbled upon [SmoothState.js][91b67779] which had support for `history.pushState` coupled with CSS animations.
+
+Wait what?
+
+Smoothstate injects content into a predefined container. That is all. That means the page never reloads when you click on a link — now with that comes:
+
+- Sweet sweet animations
+- prefetching content on hover for perceived faster loading
+- removal of click delays on touch devices
+- cached pages for instant loading.
+
+I'll be honest — When I managed to get Middleman play nice with Smoothstate I was a very happy man.
+
+#### Design
+
+I wanted to the design to be very sharp, sans gimmicks. To just display the elements you really need to see.
+I targeted design-interested people with desktops — therefore I put extra care catering the desktop experience of the site — making sure it looked as good as possible. As you can see there are no mobile screens on the early design sketches below.
+
+![ design sketches](/images/blog/design.png)
+
+While some might scream — MOBILE FIRST, yes I agree. However I felt there was no need to design the mobile breakpoints first, because like I said earlier; the website must be simple. So no complex breakpoint actions were needed.
+
+
+#### Closure
+
+I recently discovered a fairly new static site generator called [Hugo][64ff41fe] which is pretty much the same as Middleman but it's written in the language Go — And yes it's developed by Google. It's main selling point it's speed and extensive documentation. That said I'm positive I will try Hugo in some future projects of mine. But I regret not finding Hugo earlier when I was building this website. Just a little.
+
+Regardless I'm fairly happy how this website turned out, I'm hoping to add more cases soon so it doesn't look too empty 😶
+
+  [64ff41fe]: https://gohugo.io/ "Hugo"
+  [91b67779]: https://github.com/miguel-perez/smoothState.js "Smoothstate"
   [fb5b2234]: https://github.com/peterramsing/lost "LostGrid"
   [d28f6d0d]: https://github.com/postcss "PostCSS"
   [f7eacd16]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself "DRY"
