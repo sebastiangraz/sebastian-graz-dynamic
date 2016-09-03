@@ -23,9 +23,12 @@
 
 	}
 	a {
-		padding: 2.5rem 16% 2.5rem 0;
+		padding: 2.5rem 0 2.5rem 0;
 		display: inline-block;
 		width: 100%;
+		@include mq(sm) {
+			padding: 2.5rem 16% 2.5rem 0;
+		}
 	}
 	p {
 		font-family: 'NeueHaasUnica-medium', sans-serif;
@@ -37,6 +40,9 @@
 	float: left;
 	width: 100%;
 	@include mq(sm) {
+		width: 60%;
+	}
+	@include mq(md) {
 		width: 40%;
 	}
 }
@@ -50,8 +56,11 @@
 	width: 0%;
 	display: none;
 	@include mq(sm) {
-		width: 60%;
+		width: 40%;
 		display: block;
+	}
+	@include mq(md) {
+		width: 60%;
 	}
 }
 
@@ -358,6 +367,20 @@ a.cta {
 }
 
 .case-section-image.loadme {
+	background: rgba(0,0,0,0.06);
+	img {
+		transition: 1s $bezier all;
+		opacity: 0;
+	}
+	&.image-loaded {
+		background: transparent;
+		img {
+			opacity: 1;
+		}
+	}
+}
+
+.blog-image-container.loadme {
 	background: rgba(0,0,0,0.06);
 	img {
 		transition: 1s $bezier all;

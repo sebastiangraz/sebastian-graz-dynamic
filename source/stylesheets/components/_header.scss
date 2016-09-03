@@ -28,6 +28,13 @@ header {
 		display: inline-block;
 		max-width: 24px;
 		height: 100%;
+		&:hover {
+			svg {
+				path {
+					stroke-width: 4px;
+				}
+			}
+		}
 		@include mq(md) {
 			max-width: 32px;
 		}
