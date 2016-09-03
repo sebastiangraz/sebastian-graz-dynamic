@@ -10,9 +10,10 @@ title: Verbose
             .blog-case
               %h3
                 %a{:href => article.url, :'data-id' => 'item' + article.data.id}
+                  - time = article.date
+                  %p.small= time.strftime("%b #{time.day.ordinalize}")
                   = article.title
-                - time = article.date
-                %sup= time.strftime("%b #{time.day.ordinalize}")
+
     .blog-image
       .blog-image-wrapper
         - blog('verbose').articles.each_with_index do |article, index|

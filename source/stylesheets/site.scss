@@ -14,19 +14,45 @@
 	height: 100%;
 
 }
+
+.blog-case {
+	h3 {
+		margin-bottom: 0;
+	}
+	&:first-child {
+
+	}
+	a {
+		padding: 2.5rem 16% 2.5rem 0;
+		display: inline-block;
+		width: 100%;
+	}
+	p {
+		font-family: 'NeueHaasUnica-medium', sans-serif;
+		margin: 0;
+	}
+}
+
 .blog-sidebar {
-	float: right;
-	width: 50%;
-	padding: 5rem 0rem 0 5rem;
+	float: left;
+	width: 100%;
+	@include mq(sm) {
+		width: 40%;
+	}
 }
 
 .blog-image {
 	background: #eee;
 	position: fixed;
 	top:0;
+	right: 0;
 	height: 100%;
-	width: 50%;
-	float:left
+	width: 0%;
+	display: none;
+	@include mq(sm) {
+		width: 60%;
+		display: block;
+	}
 }
 
 .blog-image-wrapper {
@@ -58,9 +84,6 @@
 		transition: 1s $bezier all;
 		padding: 3rem 0 3rem 3rem;
 		height: 100vh;
-		@include mq(lg) {
-	    left: -20%;
-		}
 	}
 }
 
@@ -106,9 +129,6 @@ html, body {
 .row.blog {
 	max-width: $max-width / 2;
 	margin-bottom: 8rem;
-	.blog-case {
-		margin-bottom: 5rem;
-	}
 	img {
 		width: 100%;
 		margin: 0;
