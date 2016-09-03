@@ -5,6 +5,7 @@ tags:
 image: '/images/blog/graz.png'
 color: '#f7ffed'
 id: '1'
+order: '1'
 ---
 
 #### The new website is live! In this post I will disclose some of the technologies I've used to create this website

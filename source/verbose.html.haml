@@ -16,4 +16,5 @@ title: Verbose
     .blog-image
       .blog-image-wrapper
         - blog('verbose').articles.each_with_index do |article, index|
-          .blog-image-container{:class => "#{ "active" if index == 0 }" + ' item' + article.data.id, :style => 'background-image:' + 'url(' + article.data.image + ');' + 'background-color:' + article.data.color }
+          .blog-image-container.scene_element.scene_element--blog{:class => "#{ "active" if index == 0 }" + ' item' + article.data.id, :style => 'background-color:' + article.data.color }
+            %img.loadme{:src => article.data.image}
