@@ -1,6 +1,6 @@
 = partial 'partials/head'
-#main.scene
-  %div{:class => page_classes}
+#barba-wrapper
+  .barba-container{:class => page_classes, :'data-namespace' => 'homepage'}
     = partial 'partials/header'
     .scene_element.scene_element--fadeIn
       = yield

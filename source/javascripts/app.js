@@ -126,13 +126,34 @@ var app = {};
           'background-color': color
         })
       });
+    },
+    barba: function () {
+      var Homepage = Barba.BaseView.extend({
+        namespace: 'homepage',
+        onEnter: function() {
+          console.log('onenter');
+
+        },
+        onEnterCompleted: function() {
+          console.log('onentercomplete');
+        },
+        onLeave: function() {
+          console.log('onleave');
+        },
+        onLeaveCompleted: function() {
+          console.log('onleavecomplete');
+          app.initImagesLoaded();
+        }
+      });
+      Homepage.init();
+      Barba.Pjax.start();
     }
   };
 
   /** [3] */
   $doc.ready(function() {
     console.log('Initial Document Ready');
-    app.initSmoothState();
+    app.barba();
     $.readyFn.execute();
   });
 

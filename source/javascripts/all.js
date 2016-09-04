@@ -1,4 +1,4 @@
 global.jQuery = require('jquery');
-require('smoothstate');
+global.Barba = require('barba.js');
 require('imagesloaded');
 require('app');
