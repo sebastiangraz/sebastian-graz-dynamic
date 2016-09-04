@@ -12,7 +12,6 @@
 
 .blog-wrap {
 	height: 100%;
-
 }
 
 .blog-case {
@@ -99,6 +98,25 @@
 html, body {
 	height: 100%;
 }
+
+.verbose-shape {
+    position: absolute;
+    z-index: -1;
+    transform: skew(60deg, -30deg) scaley(0.66667);
+    width: 100%;
+    margin-top: -20rem;
+    max-width: 640px;
+    left: -40%;
+		img {
+	    left: -45%;
+	    position: relative;
+	    transform: translateY(-22%);
+			filter:drop-shadow(-28px 32px 18px rgba(0,0,0,0.1));
+	    object-fit: contain;
+    	max-height: 510px;
+		}
+}
+
 .hero-devices {
 	overflow: hidden;
 	z-index: 1;
@@ -138,12 +156,19 @@ html, body {
 .row.blog {
 	max-width: $max-width / 2;
 	margin-bottom: 8rem;
+	position: relative;
+	margin-top: 12rem;
 	img {
 		width: 100%;
 		margin: 0;
 		@include mq(md) {
 			width: calc(100% + 6rem);
 			margin: 4rem 0rem 4rem -3rem;
+		}
+	}
+	ul {
+		li {
+			margin-bottom: 1rem;
 		}
 	}
 }
@@ -518,14 +543,6 @@ p.caption {
 	}
 }
 
-.verbose {
-	ul {
-		li {
-			margin-bottom: 1rem;
-		}
-	}
-}
-
 .highlight {
 	padding: 2rem;
 	display: inline-block;
@@ -552,10 +569,10 @@ svg {
 }
 code {
 	font-family: monospace, serif;
-  font-size: 1em;
-  background: rgba(45,45,45,0.12);
-  padding: 2px 6px;
-  border-radius: 2px;
+	font-size: 1em;
+	background: rgba(45,45,45,0.12);
+	padding: 2px 6px;
+	border-radius: 2px;
 }
 
 blockquote {
@@ -572,19 +589,19 @@ blockquote {
 }
 
 kbd {
-    display: inline-block;
-    margin: 0 2px;
-    padding: 4px 12px;
-    font-family: sans-serif;
-    line-height: 1;
-    color: #ffffff;
-    background: linear-gradient(#323435, #252525);
-    border: 1px solid #444444;
-    border-radius: 2px;
-    box-shadow: 1px 1px 4px rgba(46, 48, 49, 0.5), 0 0 0 1px #000 inset, 0px 2px 0 0 rgba(255,255,255,0.05) inset;
-    white-space: nowrap;
-    text-rendering: geometricPrecision;
-    text-shadow: 0px 0px 6px rgba(168, 199, 251, 0.24);
+	display: inline-block;
+	margin: 0 2px;
+	padding: 4px 12px;
+	font-family: sans-serif;
+	line-height: 1;
+	color: #ffffff;
+	background: linear-gradient(#323435, #252525);
+	border: 1px solid #444444;
+	border-radius: 2px;
+	box-shadow: 1px 1px 4px rgba(46, 48, 49, 0.5), 0 0 0 1px #000 inset, 0px 2px 0 0 rgba(255,255,255,0.05) inset;
+	white-space: nowrap;
+	text-rendering: geometricPrecision;
+	text-shadow: 0px 0px 6px rgba(168, 199, 251, 0.24);
 }
 sup {
 	font-family: 'NeueHaasUnica-medium', sans-serif;

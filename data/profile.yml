@@ -51,7 +51,7 @@ designtools:
 devtools:
   - HTML/HAML/JADE
   - CSS/SCSS/PostCSS
-  - Javascript JQuery
+  - Javascript/JQuery
   - Git
   - Ruby on Rails
   - Middleman

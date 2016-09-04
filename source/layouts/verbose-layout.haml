@@ -4,6 +4,8 @@
     = partial 'partials/header'
     .scene_element.scene_element--fadeInDown
       .row.blog
+        .verbose-shape{:style => 'background-color:' + current_page.data.color}
+          %img{:src => current_page.data.image}
         .intro
           %h1
             = current_page.data.title.titleize
