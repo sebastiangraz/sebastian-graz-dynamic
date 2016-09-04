@@ -1,6 +1,6 @@
 ---
-title: Portfolio redesign 2016
-date: 2016-07-17 13:21 UTC
+title: New Portfolio 2016
+date: 2016-09-04 11:52 UTC
 tags:
 image: '/images/blog/graz.png'
 color: '#f7ffed'

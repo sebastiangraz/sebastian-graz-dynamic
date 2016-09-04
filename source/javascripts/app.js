@@ -122,7 +122,6 @@ var app = {};
         var color = $(this).data('color');
         $('.blog-image-container').removeClass('active');
         $("." + attachedContainer).addClass('active');
-
         $('.blog-image').css({
           'background-color': color
         })

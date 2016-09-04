@@ -14,8 +14,8 @@ header {
 		position: relative;	background: transparent;
 	}
 	@include mq(lg) {
-		margin-top: 3rem;
-		margin-bottom: 1rem;
+		top: 3rem;
+		margin-bottom: 4rem;
 	}
 	.row {
 		height: $header-height;
