@@ -7,10 +7,10 @@
         .verbose-shape{:style => 'background-color:' + current_page.data.color}
           %img{:src => current_page.data.image}
         .intro
+          - time = current_page.date
+          %span= time.strftime("%b #{time.day.ordinalize}")
           %h1
             = current_page.data.title.titleize
-            - time = current_page.date
-            %sup= time.strftime("%b #{time.day.ordinalize}")
           %a.back{ :href=> '/verbose' }
             &larr; Back
         = yield
