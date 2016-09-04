@@ -1,0 +1,13 @@
+.case-array.ct{:style => 'background-color:' + current_article.data.color}
+  :markdown
+    ### Discover more articles
+  .case-array-content.row
+    - blog('verbose').articles[0...4].delete_if{|item| item == current_article}.reverse.each do |article|
+      %a.case-array-content-item{:href => article.url, :'data-color' => article.data.color}
+        .loadme
+          %img{:src => article.data.image}
+        %h4
+          = article.title
+        %p.small
+          - time = article.date
+          = time.strftime("%b #{time.day.ordinalize}")
