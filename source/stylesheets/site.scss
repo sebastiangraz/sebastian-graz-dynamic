@@ -551,6 +551,9 @@ p.caption {
 			max-height: 110px;
 			object-fit: contain;
 		}
+		&:only-child {
+			margin: auto;
+		}
 	}
 }
 
