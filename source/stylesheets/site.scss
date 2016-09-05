@@ -101,25 +101,35 @@ html, body {
 }
 
 .verbose-shape {
-    position: absolute;
-    z-index: -1;
-    transform: skew(60deg, -30deg) scaley(0.66667);
-    width: 100%;
-    margin-top: -20rem;
-    max-width: 640px;
-    left: -40%;
-		display:none;
-		@include mq(sm) {
-			display: block;
-		}
-		img {
-	    left: -45%;
-	    position: relative;
-	    transform: translateY(-28%);
+	position: relative;
+	z-index: -1;
+	transform: none;
+	padding: 2rem;
+	margin-top: 0;
+	width: 100%;
+	max-width: 640px;
+	@include mq(sm) {
+		margin-top: -12rem;
+	}
+	@include mq(md) {
+		transform: skew(60deg, -30deg) scaley(0.66667);
+		left: -40%;
+		margin-top: -20rem;
+		position: absolute;
+		display: block;
+	}
+
+	img {
+		@include mq(md) {
+			left: -45%;
+			position: relative;
+			transform: translateY(-28%);
 			filter:drop-shadow(-28px 32px 18px rgba(0,0,0,0.1));
-	    object-fit: contain;
-    	max-height: 480px;
+			object-fit: contain;
+			max-height: 480px;
 		}
+
+	}
 }
 
 .hero-devices {
@@ -162,7 +172,7 @@ html, body {
 	max-width: $max-width / 2;
 	margin-bottom: 8rem;
 	position: relative;
-	margin-top: 1rem;
+	margin-top: 0;
 	@include mq (sm) {
 		margin-top: 12rem;
 	}
