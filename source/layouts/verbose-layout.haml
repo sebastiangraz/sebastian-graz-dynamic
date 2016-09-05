@@ -1,6 +1,6 @@
 = partial 'partials/head'
 #main.scene
-  %div{:class => page_classes}
+  %div{:class => 'main-wrapper ' + page_classes}
     = partial 'partials/header'
     .scene_element.scene_element--fadeInDown
       .row.blog
@@ -15,4 +15,3 @@
             &larr; Back
         = yield
       = partial 'partials/blog-footer'
-= partial 'partials/footer'

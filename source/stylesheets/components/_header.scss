@@ -28,6 +28,9 @@ header {
 		display: inline-block;
 		max-width: 24px;
 		height: 100%;
+		svg {
+			width: 100%;
+		}
 		&:hover {
 			svg {
 				path {
