@@ -632,22 +632,23 @@ kbd {
 	text-shadow: 0px 0px 6px rgba(168, 199, 251, 0.24);
 }
 
-a {
-	.icon svg {
-		fill: $color;
-		&:hover {
-			fill: #000;
-		}
-	}
-}
 .icon {
 	svg {
+		fill: $color;
 		height: 16px;
 		display: inline-block;
 		vertical-align: middle;
 	}
 	p {
 		display: inline-block;
+		vertical-align: middle;
+		padding-left:0.25rem;
+	}
+	&:hover {
+		svg {
+			fill: #000;
+			color: #000;
+		}
 	}
 }
 
