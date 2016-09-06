@@ -661,27 +661,39 @@ kbd {
 
 
 .cv {
+	
+	ul {
+		padding: 0;
+		list-style: inside;
+	}
 	&-wrapper {
 		lost-center: $max-width;
+		margin-top: 4rem;
 	}
 	h2 {margin-bottom:0;}
-	h4 {margin-top:0; margin-bottom: 3rem;}
-	&-row {
-		padding:1.5rem 0;
-		h4 {
-			float: left;
-			margin: 0;
-		}
-		p {
-
-			margin: 0 0 0 120px;
-		}
-	}
+	h4 {margin-top:0;}
 	&-main {
 		lost-column: 2/3 3 60px;
+		.cv-row {
+			padding-bottom:3rem;
+			h4 {
+				float: left;
+				margin: 0;
+			}
+			p {
+
+				margin: 0 0 0 120px;
+			}
+		}
 	}
 	&-side {
 		lost-column: 1/3 3 60px;
+		h4 {
+			margin-top: 3rem;
+			&:first-child {
+				margin-top:0;
+			}
+		}
 	}
 }
 
