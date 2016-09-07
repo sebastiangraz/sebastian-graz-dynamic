@@ -126,6 +126,22 @@ var app = {};
           'background-color': color
         })
       });
+    },
+    weather: function () {
+      const DARKSKY_APIKEY = 'd8044f3e42338203b270b3e6f2d4f83b';
+      const LATITUDE = '51';
+      const LONGITUDE = '0';
+      const UNIT = 'imperial';
+      const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
+
+      $.get(DARKSKY_URL, function(response) {
+        $('#weather-description').text(response.currently.summary);
+        if (response.currently.icon === 'clear-day') {
+          $('span.weather').html('☀️');
+        } else {
+          $('span.weather').html('☔');
+        }
+      }, "jsonp");
     }
   };
 
@@ -144,6 +160,7 @@ var app = {};
     app.parallax();
     app.caseArray();
     app.blogPreview();
+    app.weather();
   });
 
 })(jQuery);
