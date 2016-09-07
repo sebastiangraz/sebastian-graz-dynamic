@@ -128,10 +128,10 @@ var app = {};
       });
     },
     weather: function () {
+      // https://github.com/AryanJ-NYC/local-weather/blob/gh-pages/weather.js#L6
       const DARKSKY_APIKEY = 'd8044f3e42338203b270b3e6f2d4f83b';
       const LATITUDE = '51';
       const LONGITUDE = '0';
-      const UNIT = 'imperial';
       const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
 
       $.get(DARKSKY_URL, function(response) {

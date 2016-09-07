@@ -661,10 +661,18 @@ kbd {
 
 
 .cv {
-	
+	h4 {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 12px;
+	}
 	ul {
 		padding: 0;
 		list-style: inside;
+		li {
+			list-style: none;
+			margin-bottom: 1rem;
+		}
 	}
 	&-wrapper {
 		lost-center: $max-width;
@@ -679,10 +687,11 @@ kbd {
 			h4 {
 				float: left;
 				margin: 0;
+				max-width: 120px;
 			}
 			p {
 
-				margin: 0 0 0 120px;
+				margin: 0 0 16px 120px;
 			}
 		}
 	}
