@@ -1,3 +1,32 @@
 @media print {
+  @page {
+    size: auto;   /* auto is the initial value */
+    margin: 2cm;  /* this affects the margin in the printer settings */
+    position: relative;
+  }
+  @bottom-right {
+    content: normal;
+    margin: 0;
+  }
+
+  @bottom-left {
+    content: normal;
+    margin: 0;
+  }
+
   body #main {margin-top:0;}
+  body {
+    font-size: 8pt;
+    box-sizing: border-box;
+  }
+  p { font-size: inherit;}
+  @bottom-right {
+    content: normal;
+    margin: 0;
+  }
+  @page:left{
+    @bottom-left {
+      content: "Page " counter(page) " of " counter(pages);
+    }
+  }
 }

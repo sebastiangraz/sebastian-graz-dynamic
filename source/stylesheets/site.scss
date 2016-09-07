@@ -659,12 +659,14 @@ kbd {
 	}
 }
 
-
 .cv {
+	.row {
+		position: relative;
+	}
 	h4 {
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		font-size: 12px;
+		font-size: 8pt;
 	}
 	ul {
 		padding: 0;
@@ -678,12 +680,20 @@ kbd {
 		lost-center: $max-width;
 		margin-top: 4rem;
 	}
+	&-logo {
+		position: absolute;
+		top: 0.5cm;
+		right: 0;
+		svg {
+			height: 0.5cm;
+		}
+	}
 	h2 {margin-bottom:0;}
 	h4 {margin-top:0;}
 	&-main {
 		lost-column: 2/3 3 60px;
 		.cv-row {
-			padding-bottom:3rem;
+			padding-bottom:0.25cm;
 			h4 {
 				float: left;
 				margin: 0;
@@ -707,9 +717,9 @@ kbd {
 }
 
 hr {
-background-color: #ccc;
-height: 1px;
-border:0;
+	background-color: #ccc;
+	height: 1px;
+	border:0;
 }
 
 sup {
