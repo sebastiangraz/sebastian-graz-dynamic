@@ -4,8 +4,12 @@
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name => "viewport"}/
+    %meta{:content => "Portfolio of Sebastian Graz, Senior UI designer + Front-end developer", :name => "description"}/
+    %meta{:content => "Design, UI, UX, Front-end", :name => "keywords"}/
+    %meta{:content => "Sebastian Graz", :name => "author"}/
+
     / Use title if it's in the page YAML frontmatter
-    %title= current_page.data.title || "Middleman"
+    %title= current_page.data.title
     = stylesheet_link_tag :site
     = javascript_include_tag :all, :async => true
     %link{:href => "/images/favicon/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
