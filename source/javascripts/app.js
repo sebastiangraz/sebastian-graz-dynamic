@@ -130,16 +130,31 @@ var app = {};
     weather: function () {
       // https://github.com/AryanJ-NYC/local-weather/blob/gh-pages/weather.js#L6
       const DARKSKY_APIKEY = 'd8044f3e42338203b270b3e6f2d4f83b';
-      const LATITUDE = '51';
-      const LONGITUDE = '0';
+      const LATITUDE = '51.52';
+      const LONGITUDE = '0.08';
       const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
 
       $.get(DARKSKY_URL, function(response) {
-        $('#weather-description').text(response.currently.summary);
-        if (response.currently.icon === 'clear-day') {
-          $('span.weather').html('☀️');
-        } else {
-          $('span.weather').html('☔');
+        switch (response.currently.icon) {
+            case 'clear-day':
+                $('span.weather').html('☀️');
+                break;
+            case 'partly-cloudy-day':
+                $('span.weather').html('⛅');
+                break;
+            case 'cloudy':
+                $('span.weather').html('☁️');
+                break;
+            case 'snow':
+                $('span.weather').html('🌨');
+                break;
+            case 'clear-night':
+            case 'partly-cloudy-night':
+                $('span.weather').html('🌙');
+                break;
+            case 'rain':
+            default:
+                $('span.weather').html('☔');
         }
       }, "jsonp");
     }
