@@ -135,26 +135,27 @@ var app = {};
       const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
 
       $.get(DARKSKY_URL, function(response) {
+        var weatherIcon = $('span.weather').hide().fadeIn();
         switch (response.currently.icon) {
             case 'clear-day':
-                $('span.weather').html('☀️');
+                $(weatherIcon).html('☀️');
                 break;
             case 'partly-cloudy-day':
-                $('span.weather').html('⛅');
+                $(weatherIcon).html('⛅');
                 break;
             case 'cloudy':
-                $('span.weather').html('☁️');
+                $(weatherIcon).html('☁️');
                 break;
             case 'snow':
-                $('span.weather').html('🌨');
+                $(weatherIcon).html('🌨');
                 break;
             case 'clear-night':
             case 'partly-cloudy-night':
-                $('span.weather').html('🌙');
+                $(weatherIcon).html('🌙');
                 break;
             case 'rain':
             default:
-                $('span.weather').html('☔');
+                $(weatherIcon).html('☔');
         }
       }, "jsonp");
     }
