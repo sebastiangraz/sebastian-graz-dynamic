@@ -1,9 +1,11 @@
 .row
   .case-top-wrapper
     .case-top-content.scene_element.scene_element--fadeInDownDelay
+      %span
+        = locals[:year]
       %h1
         = locals[:h1]
-        %sup= locals[:year]
+
       .case-meta
         .case-tags
           %ul
