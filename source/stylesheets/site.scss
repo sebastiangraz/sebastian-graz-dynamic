@@ -137,9 +137,11 @@ html, body {
 	z-index: 1;
 	position: relative;
 	width: 100%;
-	@include mq(md) {
-		transform: translateY(-16%);
-		margin-bottom: -8rem;
+	transform: none;
+	margin-bottom: 0;
+	@include mq(lg) {
+		transform: translateY(-20%);
+		margin-bottom: -10rem;
 	}
 	.hero-computer {
 		width: 100%;

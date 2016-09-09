@@ -1,7 +1,7 @@
 .row
-  .case-top.scene_element.scene_element--fadeInDown
-    .case-top-content{ :style => 'background-color:' + locals[:color] + ';' + 'color:' + locals[:fontcolor], }
-      %h1.scene_element.scene_element--fadeInDownDelay
+  .case-top-wrapper
+    .case-top-content.scene_element.scene_element--fadeInDownDelay
+      %h1
         = locals[:h1]
         %sup= locals[:year]
       .case-meta
@@ -17,3 +17,4 @@
             - current_page.data.role.each do |f|
               %li
                 %p= f
+    .case-top-background{ :style => 'background-color:' + locals[:color] + ';' + 'color:' + locals[:fontcolor], }
