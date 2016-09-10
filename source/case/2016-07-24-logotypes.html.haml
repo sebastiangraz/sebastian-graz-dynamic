@@ -13,6 +13,13 @@ image: '/images/logotypes/case-logotypes.png'
 ---
 
 = partial(:'partials/_case-meta', :locals => {:roles=> current_page.data.role, :tags=> current_page.data.tags, :h1=> current_page.title, :year=> current_page.data.year, :fontcolor=> current_page.data.fontcolor, :color=> current_page.data.color })
+.hero-devices
+  .hero-device-wrapper.row
+    .hero-computer
+      .case-section-image.loadme
+        %img(src='/images/logotypes/logo-case.svg')
+
+
 
 .row
   .tw

@@ -20,7 +20,7 @@ title: Sebastian Grąz
     - blog('case').articles.reverse.each do |article|
       %a.case{:href => article.url, :class => article.title.delete(' ').downcase}
         .case-image-wrapper.loadme
-          .case-bg{:style => 'background-color:' + article.data.color}
+          .case-bg.scene_element.scene_element--case{:style => 'background-color:' + article.data.color}
           %img{:src => article.data.image}
         %h4
           = article.title

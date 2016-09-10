@@ -51,7 +51,7 @@
     }
   }
   .case-top-background {
-    transform: skew(-60deg,30deg) scaley(.66667) translate3d(0,0,0);
+    @include isometric();
     left: -52%;
     position: absolute;
     padding-bottom: 40%;

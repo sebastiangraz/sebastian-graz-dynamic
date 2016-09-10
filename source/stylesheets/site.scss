@@ -112,7 +112,7 @@ html, body {
 		margin-top: -12rem;
 	}
 	@include mq(md) {
-		transform: skew(60deg, -30deg) scaley(0.66667);
+    @include isometric($inverted: false);
 		left: -40%;
 		margin-top: -20rem;
 		position: absolute;
@@ -369,22 +369,12 @@ a.cta {
 }
 
 .cases .loadme{
-	.case-bg {
-		transition: 1.5s $bezier width;
-		width: 0;
-	}
-
 	img {
 		transition: 1s $bezier all;
 		opacity: 0;
-		transform-origin: left;
-		transform: scale(0.88);
+		transform: translateY(-32px);
 	}
 	&.image-loaded {
-		.case-bg {
-			width: 100%;
-		}
-
 		img {
 			opacity: 1;
 			transform: none;
