@@ -131,7 +131,9 @@ html, body {
 
 	}
 }
-
+.case_logotypes .hero-devices .hero-computer img {
+	max-width: 560px;
+}
 .hero-devices {
 	overflow: hidden;
 	z-index: 1;
@@ -503,7 +505,7 @@ p.caption {
 			}
 			&.husqvarna {
 				.case-bg {
-					padding-bottom: 160%;
+					padding-bottom: 140%;
 				}
 			}
 		}
