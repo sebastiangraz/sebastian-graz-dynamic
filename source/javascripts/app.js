@@ -142,22 +142,36 @@ var app = {};
         });
       }
       getWeather(function (data) {
+ // https://github.com/AryanJ-NYC/local-weather/blob/gh-pages/weather.js#L6
+      const DARKSKY_APIKEY = '42c0b99f752f85b715fe11d76658f0e4';
+      const LATITUDE = '51.52';
+      const LONGITUDE = '0.08';
+      const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
+
+      $.get(DARKSKY_URL, function(response) {
         var weatherIcon = $('span.weather').hide().fadeIn();
-        console.log(data.list[0].weather[0].main);
-        switch (data.list[0].weather[0].main) {
-            case 'Clear':
+        switch (response.currently.icon) {
+            case 'clear-day':
                 $(weatherIcon).html('☀️');
                 break;
-            case 'Clouds':
+            case 'partly-cloudy-day':
+                $(weatherIcon).html('⛅');
+                break;
+            case 'cloudy':
                 $(weatherIcon).html('☁️');
                 break;
-            case 'Snow':
+            case 'snow':
                 $(weatherIcon).html('🌨');
                 break;
-            case 'Rain':
+            case 'clear-night':
+            case 'partly-cloudy-night':
+                $(weatherIcon).html('🌙');
+                break;
+            case 'rain':
             default:
                 $(weatherIcon).html('☔');
         }
+      }, "jsonp");
       });
 
     }
