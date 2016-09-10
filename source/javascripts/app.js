@@ -127,30 +127,10 @@ var app = {};
         })
       });
     },
-    weather: function () {
-      function getWeather(callback) {
-        $.ajax({
-          type: 'GET',
-          dataType: 'jsonp',
-          url: 'http://api.openweathermap.org/data/2.5/forecast',
-          data: {
-            q: 'London', //london
-            units: 'metric',
-            appid: '58b6f7c78582bffab3936dac99c31b25'
-          },
-          success: callback
-        });
-      }
-      getWeather(function (data) {
- // https://github.com/AryanJ-NYC/local-weather/blob/gh-pages/weather.js#L6
-      const DARKSKY_APIKEY = '42c0b99f752f85b715fe11d76658f0e4';
-      const LATITUDE = '51.52';
-      const LONGITUDE = '0.08';
-      const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
-
-      $.get(DARKSKY_URL, function(response) {
+    changeWeatherIcon: function () {
+        var storedResponse = sessionStorage.getItem('weatherStored');
         var weatherIcon = $('span.weather').hide().fadeIn();
-        switch (response.currently.icon) {
+        switch (storedResponse) {
             case 'clear-day':
                 $(weatherIcon).html('☀️');
                 break;
@@ -171,9 +151,19 @@ var app = {};
             default:
                 $(weatherIcon).html('☔');
         }
-      }, "jsonp");
-      });
+    },
+    getWeatherOnce: function () {
 
+      // https://github.com/AryanJ-NYC/local-weather/blob/gh-pages/weather.js#L6
+      const DARKSKY_APIKEY = '42c0b99f752f85b715fe11d76658f0e4';
+      const LATITUDE = '51.52';
+      const LONGITUDE = '0.08';
+      const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
+
+      $.get(DARKSKY_URL, function(response) {
+        var weatherResponse = response.currently.icon;
+        sessionStorage.setItem('weatherStored', weatherResponse);
+      }, "jsonp");
     }
   };
 
@@ -181,7 +171,9 @@ var app = {};
   $doc.ready(function() {
     console.log('Initial Document Ready');
     app.initSmoothState();
+    app.getWeatherOnce();
     $.readyFn.execute();
+
   });
 
   /** [4] */
@@ -192,7 +184,7 @@ var app = {};
     app.parallax();
     app.caseArray();
     app.blogPreview();
-    app.weather();
+    app.changeWeatherIcon();
   });
 
 })(jQuery);
