@@ -131,8 +131,8 @@ var app = {};
       function getWeather(callback) {
         $.ajax({
           type: 'GET',
-          dataType: 'json',
-          url: 'http://api.openweathermap.org/data/2.5/forecast/daily',
+          dataType: 'jsonp',
+          url: 'http://api.openweathermap.org/data/2.5/forecast',
           data: {
             q: 'London', //london
             units: 'metric',
