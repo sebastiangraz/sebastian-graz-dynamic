@@ -139,10 +139,6 @@ html, body {
 	width: 100%;
 	transform: none;
 	margin-bottom: 0;
-	@include mq(lg) {
-		transform: translateY(-18%);
-    margin-bottom: -8rem;
-	}
 	.hero-computer {
 		width: 100%;
 		max-width: 90rem;
