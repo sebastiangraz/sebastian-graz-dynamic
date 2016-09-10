@@ -34,25 +34,27 @@ image: '/images/volvo/case-volvo.png'
 
         Volvos own mission is to be the world’s most progressive and desired luxury car brand. So we created a concept design that puts Volvo Cars in that position.
 
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Home
+        ## Home
 
         A simple grid of Volvos range of cars presented in a aesthetic way
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/homepage.jpg'})
 
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
     .tw
       :markdown
-        ### Iconography
+        ## Iconography
 
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/volvo/iconography.png'})
 
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Car configurator
+        ## Car configurator
 
         The website, fully responsive is packed with bits of configurators that the user can interact with, such as changing the paint, rims, interior upholstery, entertainment systems, and engine specifications on the go as the user is scrolling down the module-based design.
 
@@ -61,7 +63,7 @@ image: '/images/volvo/case-volvo.png'
   .case-section
     .tw
       :markdown
-        ### Closing thoughts
+        ## Closing thoughts
         The pitch-work we did for Volvo never made it through concept stage, but it started a lot of conversations on what a car brand's web experience could be in the future – we certainly learned a lot during the creation of this design, certainly about pushing boundaries and creating something exciting and bold.
 
         Even if these synonyms should rarely be associated with a car brand whose main catalyst is safety, it was a fun exercise regardless.

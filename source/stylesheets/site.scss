@@ -443,10 +443,14 @@ a.cta {
 .case-section {
 	lost-center: $max-width;
 	padding: 0 5vw;
+	position: relative;
 	margin-bottom: 2rem;
 	.case-section-image {
 		width: 100%;
 		margin-bottom: 5vw;
+		img {
+			filter: drop-shadow(20px 30px 30px rgba(0, 0, 0, 0.1));
+		}
 	}
 }
 
@@ -592,16 +596,28 @@ p.caption {
 }
 
 #main {
-	margin-top: $header-height;
+	margin-top: $header-height();
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	.main-wrapper {
 		flex: 1 0 auto;
+		&.case {
+			overflow-x: hidden;
+		}
 	}
 	@include mq(md) {
 		margin-top: 0;
 	}
+}
+
+.case-shape {
+	@include isometric();
+	height: 880px;
+	width: 100%;
+	position: absolute;
+	background: #f00;
+	z-index: -1;
 }
 
 code {

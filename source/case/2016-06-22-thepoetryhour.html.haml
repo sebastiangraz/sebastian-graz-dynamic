@@ -38,14 +38,15 @@ image: '/images/thepoetryhour/case-poetry.png'
       :markdown
         ### Poetry in a digital world gets another chance
 
-        #### Brief: Create a poetry platform for a wider audience
+        #### Create a poetry platform for a wider audience
 
         Indulging into the world of poetry can be quite daunting especially for an audience with increasingly short web-attention. At This Place we came up with a fresh way to introduce poetry for a new audience - through Memes. In other words, a hand-picked poem verse pasted onto an image. With the idea of it being shared online
 .row
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Home
+        ## Home
 
         The home page is adorned with a content slider, featuring a random poetry verse matched with Memes that correspond with the verse displayed. It's a smart way to show what the website is about at a glance. Reading poetry or explore memes.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/home.jpg'})
@@ -53,59 +54,65 @@ image: '/images/thepoetryhour/case-poetry.png'
   .row
     .tw
       :markdown
-        ### Meme creator
+        ## The selling point
 
         The user can create their own Memes through the website with the ability to customise the font, text colour, font size, and text position. The website does some minor hand holding in terms of Meme image aesthetics to ensure the Memes look pleasant. For instance the user may only choose colours that suit the average colour of the image that the user has chosen.
   .image-pull-left
     = partial(:'partials/_image', :locals => {:image=> '/images/thepoetryhour/isometric-thepoetryhour.jpg'})
 
 .row
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Meme creator
+        ## Meme creator
 
         The idea is to engage a younger audience as well as people with little or no prior interest in poetry. A poem verse or excerpt on top of an image is easier to digest initially - rather than being presented with a whole usually complex poem.
 
         The Meme would also act as a mini advert for The Poetry Hour. Seeded through social media and when seen outside the context of the website the link associated with the Meme would bring in extra traffic.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/meme-creator.jpg'})
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Poem page
+        ## Poem page
 
         The poem page was designed to achieve two things: reading poetry and creating Memes. The user may create a Meme by either selecting the text, or be guided into creating a meme by clicking the create Meme button, which will automatically select the first verse.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/poem.jpg'})
 
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Search
+        ## Search
 
         The search function on the website was created with all the different content types in mind. When searching the user is presented with all the results at first, but is then able to further filter the different content types to find their desired term faster.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/search.jpg'})
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Narrators
+        ## Narrators
 
         Another big part of the website is the famed narrators. Celebrities and artists read their favourite poems out loud recorded on video or audio.
 
         Some of the celebrities include Roger Moore, Ralph Fiennes, Charles Dance, Kelly Reilly and many more.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/narrators.jpg'})
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Styleguide
+        ## Styleguide
 
         As a sole designer on the project I had free reins on the process. I quickly decided that there was no need for pixel perfect designs for every page and breakpoint because the website did not have many pages to begin with. But also because I felt comfortable designing in the browser, which in my mind is the true canvas for web design rather than static images.
 
         So I created a live style guide inside the browser, where I laid out all the re-usable components to get a nice overview of the design direction of the website, but also to help the consistency throughout the website.
     = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/thepoetryhour/styleguide.jpg'})
-  .case-section{ :style => 'background-color:' + current_page.data.color }
+  .case-section
+    .case-shape{ :style => 'background-color:' + current_page.data.color }
     .tw
       :markdown
-        ### Iconography
+        ## Iconography
 
         The iconography set for poetry was created to be as legible as possible from a size of 16x16 pixels and sometimes smaller. That meant that each icon had to be thoughtfully crafted on a 16x16 pixel grid to avoid rendering issues on lower-resolution screens
 
@@ -113,7 +120,7 @@ image: '/images/thepoetryhour/case-poetry.png'
   .case-section
     .tw
       :markdown
-        ### Closing thoughts
+        ## Closing thoughts
 
         The many responsibilities I had for this project made the project very fun and challenging. Having an significant role in each area of the design process made me a happy camper.
 
