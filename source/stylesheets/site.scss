@@ -371,12 +371,22 @@ a.cta {
 }
 
 .cases .loadme{
+	.case-bg {
+		transition: 1.5s $bezier width;
+		width: 0;
+	}
+
 	img {
 		transition: 1s $bezier all;
 		opacity: 0;
+		transform-origin: left;
 		transform: scale(0.88);
 	}
 	&.image-loaded {
+		.case-bg {
+			width: 100%;
+		}
+
 		img {
 			opacity: 1;
 			transform: none;
@@ -477,8 +487,19 @@ p.caption {
 
 .cases {
 	lost-center: $max-width;
+	.case-image-wrapper {
+		position: relative;
+		img {
+			position: absolute;
+			top:0;
+			left: 0;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
 	.case {
 		lost-column: 12/12;
+		position: relative;
 		margin-bottom: 3rem;
 		color: #000;
 		@include mq(sm) {

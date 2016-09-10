@@ -1,4 +1,4 @@
 = partial 'partials/head'
-#main
-  %div{:class => 'main-wrapper ' + page_classes}
+#main.scene
+  %div.scene_element.scene_element--fadeInDown{:class => 'main-wrapper ' + page_classes}
     = yield
