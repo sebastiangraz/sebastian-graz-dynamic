@@ -127,10 +127,24 @@ var app = {};
         })
       });
     },
+    getWeatherOnce: function () {
+      console.log('getWeatherOnce ran');
+      // https://github.com/AryanJ-NYC/local-weather/blob/gh-pages/weather.js#L6
+      const DARKSKY_APIKEY = '42c0b99f752f85b715fe11d76658f0e4';
+      const LATITUDE = '51.52';
+      const LONGITUDE = '0.08';
+      const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
+
+      $.get(DARKSKY_URL, function(response) {
+        var weatherResponse = response.currently.icon;
+        sessionStorage.setItem('weatherStored', weatherResponse);
+        app.changeWeatherIcon();
+      }, "jsonp");
+    },
     changeWeatherIcon: function () {
-        var storedResponse = sessionStorage.getItem('weatherStored');
+
         var weatherIcon = $('span.weather').hide().fadeIn();
-        switch (storedResponse) {
+        switch (sessionStorage.getItem('weatherStored')) {
             case 'clear-day':
                 $(weatherIcon).html('☀️');
                 break;
@@ -150,20 +164,8 @@ var app = {};
             case 'rain':
             default:
                 $(weatherIcon).html('☔');
+            console.log('getIcon ran');
         }
-    },
-    getWeatherOnce: function () {
-
-      // https://github.com/AryanJ-NYC/local-weather/blob/gh-pages/weather.js#L6
-      const DARKSKY_APIKEY = '42c0b99f752f85b715fe11d76658f0e4';
-      const LATITUDE = '51.52';
-      const LONGITUDE = '0.08';
-      const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
-
-      $.get(DARKSKY_URL, function(response) {
-        var weatherResponse = response.currently.icon;
-        sessionStorage.setItem('weatherStored', weatherResponse);
-      }, "jsonp");
     }
   };
 

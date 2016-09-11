@@ -1,6 +1,6 @@
 .case-array.ct{:style => 'background-color:' + current_article.data.color}
   :markdown
-    ### Discover more cases
+    #### Discover more cases
   .case-array-content.row
     - blog('case').articles[0...4].delete_if{|item| item == current_article}.reverse.each do |article|
       %a.case-array-content-item{:href => article.url, :'data-color' => article.data.color}

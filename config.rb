@@ -63,6 +63,7 @@ end
 
 activate :google_analytics do |ga|
   ga.tracking_id = 'UA-82393962-1' # Replace with your property ID.
+  ga.debug = true
 end
 
 

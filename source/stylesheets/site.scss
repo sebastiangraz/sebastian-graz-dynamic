@@ -613,11 +613,16 @@ p.caption {
 
 .case-shape {
 	@include isometric();
+	margin-top: -10rem;
 	height: 880px;
 	width: 100%;
 	position: absolute;
 	background: #f00;
 	z-index: -1;
+	@include mq(md) {
+		margin-top: 4rem;
+
+	}
 }
 
 code {
