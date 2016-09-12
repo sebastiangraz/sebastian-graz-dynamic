@@ -3,10 +3,13 @@
 @import 'global/_animations.scss';
 @import 'global/_mq.scss';
 @import 'global/_type.scss';
-@import 'highlighting.css';
 @import 'global/_print.scss';
+@import 'global/_elements.scss';
+@import 'global/highlighting.css';
+
 @import 'components/_case-top.scss';
 @import 'components/_header.scss';
+@import 'components/_cv.scss';
 
 @lost flexbox flex;
 @lost gutter 32px;
@@ -96,9 +99,6 @@
 	}
 }
 
-html, body {
-	height: 100%;
-}
 
 .verbose-shape {
 	position: relative;
@@ -625,52 +625,6 @@ p.caption {
 	}
 }
 
-code {
-	font-family: monospace, serif;
-	font-size: 1em;
-	background: rgba(45,45,45,0.12);
-	padding: 2px 6px;
-	border-radius: 2px;
-}
-
-blockquote {
-	border: 1px solid #eee;
-	padding: 0 1rem;
-}
-
-.highlight {
-	text-rendering: geometricPrecision;
-	code {
-		background: none;
-		padding: 0;
-	}
-}
-
-footer {
-	.row {
-		padding: 3rem 0;
-	}
-	.icon {
-		margin-right: 1rem;
-	}
-}
-
-kbd {
-	display: inline-block;
-	margin: 0 2px;
-	padding: 4px 12px;
-	font-family: sans-serif;
-	line-height: 1;
-	color: #ffffff;
-	background: linear-gradient(#323435, #252525);
-	border: 1px solid #444444;
-	border-radius: 2px;
-	box-shadow: 1px 1px 4px rgba(46, 48, 49, 0.5), 0 0 0 1px #000 inset, 0px 2px 0 0 rgba(255,255,255,0.05) inset;
-	white-space: nowrap;
-	text-rendering: geometricPrecision;
-	text-shadow: 0px 0px 6px rgba(168, 199, 251, 0.24);
-}
-
 .icon {
 	svg {
 		fill: $color;
@@ -691,79 +645,10 @@ kbd {
 	}
 }
 
-.cv {
-	.row {
-		position: relative;
-	}
-	h4 {
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-size: 8pt;
-	}
-	ul {
+.highlight {
+	text-rendering: geometricPrecision;
+	code {
+		background: none;
 		padding: 0;
-		list-style: inside;
-		li {
-			list-style: none;
-			margin-bottom: 1rem;
-		}
 	}
-	&-wrapper {
-		lost-center: $max-width;
-		margin-top: 4rem;
-	}
-	&-logo {
-		position: absolute;
-		top: 0.5cm;
-		right: 0;
-		svg {
-			height: 0.5cm;
-		}
-	}
-	h2 {margin-bottom:0;}
-	h4 {margin-top:0;}
-	&-main {
-		lost-column: 2/3 3 60px;
-		.cv-row {
-			padding-bottom:0.25cm;
-			h4 {
-				float: left;
-				margin: 0;
-				max-width: 120px;
-			}
-			p {
-
-				margin: 0 0 16px 120px;
-			}
-		}
-	}
-	&-side {
-		lost-column: 1/3 3 60px;
-		h4 {
-			margin-top: 3rem;
-			&:first-child {
-				margin-top:0;
-			}
-		}
-	}
-}
-
-hr {
-	background-color: #ccc;
-	height: 1px;
-	border:0;
-}
-
-sup {
-	font-family: 'NeueHaasUnica-medium', sans-serif;
-	font-size: 12px;
-}
-
-img {
-	width: 100%;
-	display: block;
-}
-
-* {
-	box-sizing: border-box;
 }
