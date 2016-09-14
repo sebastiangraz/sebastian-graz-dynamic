@@ -112,7 +112,7 @@
 		margin-top: -12rem;
 	}
 	@include mq(md) {
-    @include isometric($inverted: false);
+		@include isometric($inverted: false);
 		left: -40%;
 		margin-top: -20rem;
 		position: absolute;
@@ -496,7 +496,18 @@ p.caption {
 		position: relative;
 		margin-bottom: 3rem;
 		color: #000;
+
 		@include mq(sm) {
+			& {
+				lost-column: 1/2;
+			}
+			&.husqvarna {
+				.case-bg {
+					padding-bottom: 140%;
+				}
+			}
+		}
+		@include mq(lg) {
 			lost-column: 3/12 0;
 			&.thepoetryhour {
 				lost-column: 6/12 0;
@@ -509,17 +520,25 @@ p.caption {
 			}
 			&.husqvarna {
 				.case-bg {
-					padding-bottom: 140%;
+					padding-bottom: 180%;
 				}
 			}
 		}
-		h4 {
-			margin-top: 1rem;
-			margin-bottom: 0.25rem;
-			font-family: 'NeueHaasUnica-medium', sans-serif;
+
+		h2 {
+			text-align: center;
+			z-index: 1;
+			width: 100%;
+			padding: 0;
+			word-break: break-word;
+			display: inline-block;
+			top: -45px;
+			position: relative;
+			margin-bottom: 0;
 		}
 		p {
-			margin-top: 0;
+			margin-top: -40px;
+			text-align: center;
 		}
 		&:hover {
 			img {

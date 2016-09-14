@@ -4,8 +4,10 @@ title: Sebastian Grąz
 .row
   .scene_element.scene_element--fadeInDown{:class => page_classes}
     .intro.ingress
+      %h1
+        Sebastian Graz
       %h3
-        Sebastian Graz &mdash; interaction designer and a front-end developer based in London
+        Interaction designer and a front-end developer based in London
         %span.weather
       %a.cta(href='/profile') Read full profile
     -#
@@ -13,16 +15,13 @@ title: Sebastian Grąz
     -#   %a{:href => article.url}= article.title
     -#   %img{:src => article.data.image}
 
-
-
-  %h4.ct Selected works
   .cases
     - blog('case').articles.reverse.each do |article|
       %a.case{:href => article.url, :class => article.title.delete(' ').downcase}
         .case-image-wrapper.loadme
           .case-bg.scene_element.scene_element--case{:style => 'background-color:' + article.data.color}
           %img{:src => article.data.image}
-        %h4
+        %h2
           = article.title
         %p.small
           = article.data.description

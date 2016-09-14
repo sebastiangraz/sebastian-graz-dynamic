@@ -10,6 +10,12 @@
   src: url('/fonts/NeueHaasUnicaW1G-Light.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'NeueHaasUnica-black';
+  font-display: swap;
+  src: url('/fonts/NeueHaasUnicaW1G-Black.woff') format('woff');
+}
+
 
 body, html {
   font-family: 'NeueHaasUnica-regular', sans-serif;
@@ -22,12 +28,15 @@ body, html {
   }
 }
 
-h1,h2,h3,h4 {
+h2,h3,h4 {
   font-weight: normal;
   font-family: 'NeueHaasUnica-light', sans-serif;
 }
 
 h1 {
+  font-family: 'NeueHaasUnica-black', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
   font-size: 2.75rem;
   line-height: 1.4;
   margin-top: 1rem;
@@ -38,6 +47,9 @@ h1 {
 }
 
 h2 {
+  font-family: 'NeueHaasUnica-black', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
   font-size: 2.5rem;
   line-height: 1.4;
   margin-top: 1rem;
