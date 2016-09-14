@@ -6,8 +6,9 @@ image: '/images/blog/graz.png'
 color: '#f7ffed'
 id: '3'
 order: '3'
+published: false
 ---
 
 #### With the increasing support for the emoji Unicode, as well as Oxford Dictionaries announcing the teary-eyed emoji, (😂) word of the year 2015—tells us it's time to get with the times.
 
-## More coming soon
+Now getting with the times means creating a custom emoji weather widget with Javascript and JQuery!
