@@ -6,6 +6,7 @@ image: '/images/blog/graz.png'
 color: '#f7ffed'
 id: '1'
 order: '1'
+published: true
 ---
 
 #### The new website is live! In this post I will disclose some of thoughts and technologies I've used to create this website.

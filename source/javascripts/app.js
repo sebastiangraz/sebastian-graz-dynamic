@@ -117,7 +117,8 @@ var app = {};
       });
     },
     blogPreview: function () {
-      $(".blog-case h3 a").on("mouseenter", function () {
+      $(".blog-case h2 a").on("mouseenter", function () {
+        console.log('test')
         var attachedContainer = $(this).data('id');
         var color = $(this).data('color');
         $('.blog-image-container').removeClass('active');

@@ -6,6 +6,7 @@ image: '/images/blog/syntax.png'
 color: '#dbf6ff'
 id: '2'
 order: '2'
+published: true
 ---
 
 #### Adding syntax highlighting to your code blocks is the new swag. Here's how to do it in a Middleman project

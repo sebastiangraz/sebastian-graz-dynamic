@@ -2,11 +2,42 @@
 title: Draft
 date: 2016-09-13 18:55 UTC
 tags:
-image: '/images/blog/graz.png'
+image: '/images/blog/Aa.png'
 color: '#ddd'
 id: '3'
 order: '3'
 published: false
 ---
 
-During my design career I have never written much about my thoughts or design processes or anything really.
+#### During my design career I have never written much about design. I can't really put my finger on why, it's probably a result of always being forced to write about topics I don't really care about. Every once in awhile I will write about design for the company I work for to document things. But never for myself. And I guess that's where I realized that I need to start writing, but covering topics I do care about.
+
+So you don't really have to keep reading. It's just an exercise. For me.
+
+### Why I decided to write more
+
+- Keeps your brain sharp. This was a big hurdle for myself — When I started my journey to write more, my brain felt sluggish and couldn't find the words that I wanted without googling synonyms every 5 minutes. Writing begets writing, after a while I could find words I haven't thought of in years.
+
+- Solidifies your thoughts and musings. Your knowledge will be etched into your memory if you write it down. Making it easier to discuss design and enhancing your communication skills.
+
+- Improving your writing triggers the desire to read. Reading will improve the ability to write better — But the real win is that it will get you reading. Win-win!
+
+- Writing helps you be more creative. A bit clickbait-esque point but when you really don't know how to proceed with a design decision start writing down your thoughts instead. Writing puts your brain into power-mode making it easier to think more clearly
+
+- Sharing your thoughts with the community. Sharing your knowledge with other designers helps you become a more prominent design figure. If you really get going you might become design-famous!
+
+- Its a great way to get to know yourself better. Writing has the ability to enable you to introspect. When you are freely typing away at your keyboard you start thinking about stuff you didn't think about.
+
+### How did I start writing?
+
+- I know Im not a very good writer so I knew I had to tackle this new skill head-on. I didn't hesitate to write bad stuff just to improve it later
+
+- Writing is all about editing the text until its acceptable.
+
+- I drafted my text pieces as quick as possible. A bit like a wireframe. If a wireframe is solid then the end-product will benefit from that. Writing works the same way.
+
+- Set goals. My current lame goal is to write a new blog post every month. Gotta start slow. Bit like quitting smoking. Cold-turkey never works. I hope your goals are more ambitious than mine.
+
+
+### Aren't there like 1000 articles about these subjects already?
+
+Certainly, but this one is mine.
