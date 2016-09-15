@@ -14,17 +14,4 @@
           %a.back{ :href=> '/verbose' }
             &larr; Back
         = yield
-        %form{:action => "https://api.staticman.net/v1/entry/umbriel/sebastian-graz-dynamic/master", :method => "POST"}
-          / e.g. "2016-01-02-this-is-a-post"
-          %input{:name => "options[slug]", :type => "hidden", :value => ""}/
-          %label
-            %input{:name => "fields[name]", :type => "text"}>/
-            Name
-          %label
-            %input{:name => "fields[email]", :type => "email"}>/
-            E-mail
-          %label
-            %textarea{:name => "fields[message]"}>
-            Message
-          %button{:type => "submit"} Go!
       = partial 'partials/blog-footer'
