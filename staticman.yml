@@ -1,0 +1,5 @@
+allowedFields: ['name', 'email', 'comment']
+branch: 'master'
+format: 'yaml'
+moderation: false
+path: _data/posts/{options.post-slug}

@@ -317,7 +317,7 @@ a.cta {
 		margin: 0 auto;
 		padding: 0 1.5rem;
 	}
-	@include mq(md) {
+	@include mq(sm) {
 		padding: 6rem 0;
 	}
 }
@@ -537,7 +537,7 @@ p.caption {
 			margin-bottom: 0;
 		}
 		p {
-			margin-top: -40px;
+			margin-top: -2rem;
 			text-align: center;
 		}
 		&:hover {
