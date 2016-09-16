@@ -118,7 +118,6 @@ var app = {};
     },
     blogPreview: function () {
       $(".blog-case h2 a").on("mouseenter", function () {
-        console.log('test')
         var attachedContainer = $(this).data('id');
         var color = $(this).data('color');
         $('.blog-image-container').removeClass('active');
@@ -181,7 +180,7 @@ var app = {};
       var light = new FontFaceObserver('NeueHaasUnica-light');
 
       Promise.all([black.load(), regular.load(), light.load()]).then(function () {
-        document.body.className += 'font-loaded';
+        document.body.className = 'font-loaded';
       });
     }
   };
@@ -191,7 +190,6 @@ var app = {};
     console.log('Initial Document Ready');
     app.initSmoothState();
     app.getWeatherOnce();
-    app.fontLoad();
     $.readyFn.execute();
 
   });
@@ -204,6 +202,7 @@ var app = {};
     app.parallax();
     app.caseArray();
     app.blogPreview();
+    app.fontLoad();
     app.changeWeatherIcon();
   });
 
