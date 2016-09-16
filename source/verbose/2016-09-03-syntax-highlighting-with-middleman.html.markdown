@@ -1,5 +1,5 @@
 ---
-title: Syntax highlighting with Middleman
+title: Syntax high​lighting with Middle​man
 date: 2016-09-03 10:45 UTC
 tags:
 image: '/images/blog/syntax.png'

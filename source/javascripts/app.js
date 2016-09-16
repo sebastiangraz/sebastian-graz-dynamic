@@ -167,6 +167,22 @@ var app = {};
                 $(weatherIcon).html('☔');
             console.log('getIcon ran');
         }
+    },
+    fontLoad: function() {
+      // document.fonts.load('1em NeueHaasUnica-black')
+    	// .then(function() {
+    	// 	var docEl = document.documentElement;
+    	// 	document.body.className += ' font-loaded';
+    	// });
+      var FontFaceObserver = require('fontfaceobserver');
+
+      var black = new FontFaceObserver('NeueHaasUnica-black');
+      var regular = new FontFaceObserver('NeueHaasUnica-regular');
+      var light = new FontFaceObserver('NeueHaasUnica-light');
+
+      Promise.all([black.load(), regular.load(), light.load()]).then(function () {
+        document.body.className += 'font-loaded';
+      });
     }
   };
 
@@ -175,6 +191,7 @@ var app = {};
     console.log('Initial Document Ready');
     app.initSmoothState();
     app.getWeatherOnce();
+    app.fontLoad();
     $.readyFn.execute();
 
   });

@@ -16,9 +16,14 @@
   src: url('/fonts/NeueHaasUnicaW1G-Black.woff') format('woff');
 }
 
+body {
+   font-family: sans-serif;
+}
+.fonts-loaded body {
+   font-family: 'NeueHaasUnica-regular', sans-serif;
+}
 
-body, html {
-  font-family: 'NeueHaasUnica-regular', sans-serif;
+body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   font-weight: normal;
