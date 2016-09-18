@@ -2,14 +2,15 @@
 title: Sebastian Grąz
 ---
 .row
-  .scene_element.scene_element--fadeInDown{:class => page_classes}
-    .intro.ingress
-      %h1
-        Seba​stian Graz
-      %h3
-        Interaction designer and a front-end developer based in London
-        %span.weather
-      %a.cta(href='/profile') Read full profile
+  .scene_element.scene_element--fadeInDown
+    .intro.ingress-index
+      %div
+        %h1
+          Seba​stian Graz
+        %h3
+          Interaction designer and a front-end developer based in London
+          %span.weather
+        %a.cta(href='/profile') Read full profile
     -#
     -# - blog('case').articles[0...5].each do |article|
     -#   %a{:href => article.url}= article.title
@@ -17,7 +18,7 @@ title: Sebastian Grąz
 
   .cases
     - blog('case').articles.reverse.each do |article|
-      %a.case{:href => article.url, :class => article.title.delete(' ').downcase}
+      %a.case{:href => article.url, :class => article.title.delete(' ').downcase, :'data-color' => article.data.color}
         .case-image-wrapper.loadme
           .case-bg.scene_element.scene_element--case{:style => 'background-color:' + article.data.color}
           %img{:src => article.data.image}
@@ -25,3 +26,8 @@ title: Sebastian Grąz
           = article.title
         %p.small
           = article.data.description
+  -# .index-shape
+  -#   %svg{:height => "920px", :version => "1.1", :viewbox => "0 0 800 920", :width => "800px", :preserveaspectratio => "xMinYMid slice", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink"}
+  -#     %g{:fill => "none", "fill-rule" => "evenodd", :stroke => "none", "stroke-width" => "1"}
+  -#       %g{:fill => "#fff"}
+  -#         %polygon{:points => "5.68434189e-14 0 5.68434189e-14 925.677382 800 925.677382 800 400.002254"}

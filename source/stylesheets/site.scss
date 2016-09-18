@@ -12,7 +12,7 @@
 @import 'components/_cv.scss';
 
 @lost flexbox flex;
-@lost gutter 32px;
+@lost gutter 40px;
 
 .blog-wrap {
 	height: 100%;
@@ -71,6 +71,23 @@
 	height: 100%;
 	position: relative;
 	overflow:hidden;
+}
+
+.index-shape {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0%;
+	z-index: -1;
+	overflow: hidden;
+	svg {
+		width: 100%;
+		height: 100%;
+		g {
+			transition: 2s $bezier all;
+		}
+	}
 }
 
 
@@ -322,6 +339,27 @@ a.cta {
 	}
 }
 
+.ingress-index {
+	lost-center:$max-width;
+	padding: 4rem 0 4rem 0;
+	@include mq(lg) {
+		padding: 6rem 0 16rem 0;
+	}
+	div {
+		lost-column: 1/1;
+		lost-move: 0;
+		@include mq(md) {
+
+			lost-column: 3/6;
+			lost-move: 3/6;
+		}
+		@include mq(lg) {
+			lost-column: 4/12 0px 0;
+			lost-move: 6/12;
+		}
+	}
+}
+
 .ingress {
 	h3 {
 		font-size: 1.5rem;
@@ -362,7 +400,7 @@ a.cta {
 .grid.half {
 	lost-center: $max-width;
 	& > * {
-		margin-bottom: 2rem;
+		margin-bottom: 2.5rem;
 		lost-column: 1/1;
 		@include mq(md) {
 			lost-column: 1/2;
@@ -496,7 +534,11 @@ p.caption {
 		position: relative;
 		margin-bottom: 3rem;
 		color: #000;
-
+		&.thepoetryhour {
+			img {
+				margin-top:-2rem;
+			}
+		}
 		@include mq(sm) {
 			& {
 				lost-column: 1/2;
@@ -510,17 +552,20 @@ p.caption {
 		@include mq(lg) {
 			lost-column: 3/12 0;
 			&.thepoetryhour {
+				margin-top:-16rem;
 				lost-column: 6/12 0;
 			}
 			&.volvo {
+				margin-top:6rem;
 				lost-column: 3/12 1;
 			}
 			&.logotypes {
 				lost-column: 5/12;
+				margin-top:-12rem;
 			}
 			&.husqvarna {
 				.case-bg {
-					padding-bottom: 180%;
+					padding-bottom: 200%;
 				}
 			}
 		}
@@ -542,17 +587,17 @@ p.caption {
 		}
 		&:hover {
 			img {
-				opacity: 0.7;
+				transform:translateY(-8px);
 			}
 		}
 		&:focus {
 			img {
-				opacity: 0.4;
+				transform:translateY(-8px);
 			}
 		}
 	}
 	.case-bg {
-		padding-bottom: 80%;
+		padding-bottom: 100%;
 		position: relative;
 		img {
 			position: absolute;
@@ -621,6 +666,7 @@ p.caption {
 	height: 100vh;
 	.main-wrapper {
 		flex: 1 0 auto;
+		position: relative;
 		&.case {
 			overflow-x: hidden;
 		}

@@ -115,6 +115,20 @@ var app = {};
           })
         }
       });
+      $(".cases .case").on({
+        mouseenter: function () {
+          var color = $(this).data('color');
+          var indexShape = $('.index-shape').find('g').addClass('test')
+          $(indexShape).css({
+            'fill': color
+          })
+        }, mouseleave: function() {
+          var indexShape = $('.index-shape').find('g').addClass('test')
+          $(indexShape).css({
+            'fill': '#fff'
+          })
+        }
+      });
     },
     blogPreview: function () {
       $(".blog-case h2 a").on("mouseenter", function () {
