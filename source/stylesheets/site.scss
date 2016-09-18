@@ -341,7 +341,7 @@ a.cta {
 
 .ingress-index {
 	lost-center:$max-width;
-	padding: 4rem 0 4rem 0;
+	padding: 1.5rem 0 4rem 0;
 	@include mq(lg) {
 		padding: 6rem 0 16rem 0;
 	}
