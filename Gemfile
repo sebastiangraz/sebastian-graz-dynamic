@@ -6,7 +6,7 @@ gem 'middleman-blog'
 gem "middleman-syntax"
 gem "redcarpet"
 
-# gem 'ffi', git: 'git://github.com/ffi/ffi.git', branch: :elcapt
+gem 'ffi', git: 'git://github.com/ffi/ffi.git', branch: :elcapt
 
 # https://rubygems.org/gems/sassc
 gem "sassc", "~> 1.8"
