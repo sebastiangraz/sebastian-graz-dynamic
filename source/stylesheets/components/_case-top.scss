@@ -32,16 +32,6 @@
           display: inline-block;
           margin: 0;
           opacity: 1;
-          &:after {
-            content: ',';
-          }
-        }
-        &:last-child {
-          p {
-            &:after {
-              content: '';
-            }
-          }
         }
       }
       @include mq(md) {

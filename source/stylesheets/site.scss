@@ -34,7 +34,6 @@
 		}
 	}
 	p {
-		font-family: 'NeueHaasUnica-medium', sans-serif;
 		margin: 0;
 	}
 }
@@ -51,7 +50,7 @@
 }
 
 .blog-image {
-	background: #eee;
+	background: $gray;
 	position: fixed;
 	top:0;
 	right: 0;
@@ -141,7 +140,7 @@
 			left: -45%;
 			position: relative;
 			transform: translateY(-28%);
-			filter:drop-shadow(-28px 32px 18px rgba(0,0,0,0.1));
+			filter:drop-shadow(-28px 32px 18px $gray);
 			object-fit: contain;
 			max-height: 480px;
 		}
@@ -265,7 +264,7 @@
 	lost-center:$max-width;
 }
 .profile-section {
-	border-top: 1px solid rgba(0,0,0,0.1);
+	border-top: 1px solid $gray;
 	padding:1rem 0;
 	width: 100%;
 	@include mq(sm) {
@@ -451,7 +450,7 @@ a.cta {
 }
 
 .case-section-image.loadme {
-	background: rgba(0,0,0,0.06);
+	background: $gray;
 	img {
 		transition: 1s $bezier all;
 		opacity: 0;
@@ -465,7 +464,7 @@ a.cta {
 }
 
 .blog-image-container.loadme {
-	background: rgba(0,0,0,0.06);
+	background: $gray;
 	img {
 		transition: 1s $bezier all;
 		opacity: 0;
@@ -487,7 +486,7 @@ a.cta {
 		width: 100%;
 		margin-bottom: 5vw;
 		img {
-			filter: drop-shadow(20px 30px 30px rgba(0, 0, 0, 0.1));
+			filter: drop-shadow(20px 30px 30px $gray);
 		}
 	}
 }
@@ -682,7 +681,6 @@ p.caption {
 	height: 880px;
 	width: 100%;
 	position: absolute;
-	background: #f00;
 	z-index: -1;
 	@include mq(md) {
 		margin-top: 4rem;
@@ -713,7 +711,7 @@ p.caption {
 .highlight {
 	text-rendering: geometricPrecision;
 	code {
-		background: none;
+		background: transparent;
 		padding: 0;
 	}
 }
