@@ -134,7 +134,10 @@ linters:
 
   PropertySpelling:
     enabled: true
-    extra_properties: []
+    extra_properties:
+      - lost-center
+      - lost-column
+      - lost-move
     disabled_properties: []
 
   PropertyUnits:
