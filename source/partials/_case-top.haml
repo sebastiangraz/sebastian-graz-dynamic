@@ -9,10 +9,10 @@
       .case-meta
         .case-tags
           %ul
-            %p Tags
+            %p.small Tags
             %span= current_page.data.tags.to_sentence(last_word_connector: ' and ')
         .case-role
           %ul
-            %p Roles
+            %p.small Roles
             %span= current_page.data.role.to_sentence(last_word_connector: ' and ')
     .case-top-background{ :style => 'background-color:' + locals[:color] + ';' + 'color:' + locals[:fontcolor], }

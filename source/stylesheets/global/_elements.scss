@@ -3,10 +3,11 @@ html, body {
 	height: 100%;
 }
 
-
+ul {
+	padding: 0;
+}
 code {
 	font-family: monospace, serif;
-	font-size: 1em;
 	background: $gray;
 	padding: 2px 6px;
 	border-radius: 2px;
@@ -22,7 +23,7 @@ footer {
 		padding: 3rem 0;
 	}
 	.icon {
-		margin-right: 1rem;
+		margin-right: 1.5rem;
 	}
 }
 
@@ -46,10 +47,6 @@ hr {
 	background-color: #ccc;
 	height: 1px;
 	border:0;
-}
-
-sup {
-	font-size: 12px;
 }
 
 img {

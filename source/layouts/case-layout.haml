@@ -3,5 +3,6 @@
   %div{:class => 'main-wrapper ' + page_classes}
     = partial 'partials/header'
     .scene_element.scene_element--fadeIn
+      = partial(:'partials/_case-top', :locals => {:h1=> current_page.title, :year=> current_page.data.year, :color=> current_page.data.color, :fontcolor=> current_page.data.fontcolor })
       = yield
       = partial 'partials/case-footer'

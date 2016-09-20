@@ -7,11 +7,9 @@ header {
 	height: $header-height;
 	z-index: 2;
 	transition: 1s $bezier all;
-	@include mq(sm) {
-
-	}
 	@include mq(md) {
-		position: relative;	background: transparent;
+		position: relative;
+		background: transparent;
 	}
 	@include mq(lg) {
 		top: 3rem;
@@ -20,9 +18,6 @@ header {
 	.row {
 		height: $header-height;
 		justify-content: space-between;
-	}
-	h4 {
-		display: inline-block;
 	}
 	#logo {
 		display: inline-block;
@@ -44,9 +39,6 @@ header {
 		svg {
 			height: 100%;
 		}
-		path {
-			stroke-width: 3px;
-		}
 		&.is-loading {
 			path {
 				stroke-dasharray: 400;
@@ -56,9 +48,7 @@ header {
 		}
 	}
 	ul {
-		padding: 0;
 		li {
-
 			float: left;
 			list-style: none;
 			&.active {
@@ -67,9 +57,9 @@ header {
 				}
 			}
 			a {
-				margin-left: 24px;
+				margin-left: 1.5rem;
 				@include mq(sm) {
-					margin-left: 40px;
+					margin-left: 2.5rem;
 				}
 			}
 			&:first-child {
