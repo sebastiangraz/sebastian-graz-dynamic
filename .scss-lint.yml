@@ -138,6 +138,7 @@ linters:
       - lost-center
       - lost-column
       - lost-move
+      - font-display
     disabled_properties: []
 
   PropertyUnits:

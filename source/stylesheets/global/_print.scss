@@ -14,20 +14,17 @@
     margin: 0;
   }
 
-  #main {margin-top:0;}
+  @bottom-right {
+    content: normal;
+    margin: 0;
+  }
+
+  #main {margin-top: 0;}
 
   body {
     font-size: 8pt;
   }
 
   p { font-size: inherit;}
-  @bottom-right {
-    content: normal;
-    margin: 0;
-  }
-  @page:left{
-    @bottom-left {
-      content: 'Page ' counter(page) ' of ' counter(pages);
-    }
-  }
+
 }

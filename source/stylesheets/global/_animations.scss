@@ -9,22 +9,27 @@
 
 @keyframes fadeInDown {
   0% {
+    transform: translate3d(0, -32px, 0);
     opacity: 0;
-    transform: translate3d(0, -32px, 0); }
-    100% {
-      opacity: 1;
-      transform: none;
-    }
   }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
 
 @keyframes case {
   0% {
-    transform-origin: top;
     transform: scaleY(0);
-  }
-  100% {
     transform-origin: top;
+
+  }
+
+  100% {
     transform: scaleY(1);
+    transform-origin: top;
+
   }
 }
 
@@ -32,6 +37,7 @@
   0% {
     transform: translateY(-40px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -47,6 +53,7 @@
     stroke-dasharray: 16;
     stroke-dashoffset: 0;
   }
+
   100% {
     stroke-dasharray: 330;
     stroke-dashoffset: 40;
@@ -56,35 +63,39 @@
 .scene {
   .scene_element {
     animation-duration: .5s;
-    animation-fill-mode: both;
     animation-timing-function: linear;
-    -webkit-animation-fill-mode: both; //fixes safari flicker
-    animation-fill-mode: both; //fixes safari flicker
+    animation-fill-mode: both;
+
     &--fadeIn {
       animation-name: fadeIn;
     }
+
     &--fadeInDown {
       animation-name: fadeInDown;
       animation-duration: .5s;
       animation-timing-function: $bezier;
     }
+
     &--fadeInDownDelay {
-      animation-duration: .7s;
       animation-name: fadeInDown;
+      animation-duration: .7s;
       animation-timing-function: $bezier;
     }
+
     &--case {
-      animation-duration: 1.5s;
-      animation-delay: 0.1s;
       animation-name: case;
+      animation-duration: 1.5s;
       animation-timing-function: $bezier;
+      animation-delay: .1s;
     }
+
     &--blog {
-      animation-duration: 1s;
       animation-name: blog;
+      animation-duration: 1s;
       animation-timing-function: $bezier;
     }
   }
+
   &.is-exiting {
     .scene_element {
       animation-direction: alternate-reverse;

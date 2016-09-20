@@ -1,4 +1,7 @@
-= partial 'partials/head'
-#main.scene
-  %div.scene_element.scene_element--fadeInDown{:class => 'main-wrapper ' + page_classes}
-    = yield
+!!!
+%html.no-js
+  = partial 'partials/head'
+  %body
+    #main.scene
+      %div.scene_element.scene_element--fadeInDown{:class => 'main-wrapper ' + page_classes}
+        = yield

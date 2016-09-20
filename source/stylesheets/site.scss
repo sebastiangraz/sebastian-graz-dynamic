@@ -569,12 +569,6 @@
     color: $black;
     lost-column: 12/12;
 
-    &.thepoetryhour {
-      img {
-        margin-top: -2rem;
-      }
-    }
-
     @include mq(sm) {
       lost-column: 1/2;
 
@@ -624,6 +618,12 @@
 
     p {
       margin-top: -2rem;
+    }
+
+    &.thepoetryhour {
+      img {
+        margin-top: -2rem;
+      }
     }
 
     &:hover {

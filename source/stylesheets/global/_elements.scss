@@ -1,10 +1,11 @@
-
-html, body {
+html,
+body {
   height: 100%;
 }
 
 ul {
   padding: 0;
+
   li {
     p {
       margin: 0;
@@ -13,10 +14,10 @@ ul {
 }
 
 code {
-  font-family: monospace, serif;
+  border-radius: 2px;
   background: $gray;
   padding: 2px 6px;
-  border-radius: 2px;
+  font-family: monospace, serif;
 }
 
 blockquote {
@@ -28,6 +29,7 @@ footer {
   .row {
     padding: 3rem 0;
   }
+
   .icon {
     margin-right: 1.5rem;
   }
@@ -36,28 +38,28 @@ footer {
 kbd {
   display: inline-block;
   margin: 0 2px;
-  padding: 4px 12px;
-  font-family: sans-serif;
-  line-height: 1;
-  color: #ffffff;
-  background: linear-gradient(#323435, #252525);
   border: 1px solid #444444;
   border-radius: 2px;
-  box-shadow: 1px 1px 4px rgba(46, 48, 49, 0.5), 0 0 0 1px #000 inset, 0px 2px 0 0 rgba(255,255,255,0.05) inset;
-  white-space: nowrap;
+  box-shadow: 1px 1px 4px rgba(46, 48, 49, 0.5), 0 0 0 1px $black inset, 0px 2px 0 0 rgba(255,255,255,0.05) inset;
+  background: linear-gradient(#323435, #252525);
+  padding: 4px 12px;
   text-rendering: geometricPrecision;
-  text-shadow: 0px 0px 6px rgba(168, 199, 251, 0.24);
+  line-height: 1;
+  color: #ffffff;
+  white-space: nowrap;
+  text-shadow: 0 0 6px rgba(168, 199, 251, .24);
+  font-family: sans-serif;
 }
 
 hr {
+  border: 0;
   background-color: #ccc;
   height: 1px;
-  border:0;
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 * {

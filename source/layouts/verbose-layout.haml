@@ -1,17 +1,20 @@
-= partial 'partials/head'
-#main.scene
-  %div{:class => 'main-wrapper ' + page_classes}
-    = partial 'partials/header'
-    .scene_element.scene_element--fadeInDown
-      .row.blog
-        .verbose-shape{:style => 'background-color:' + current_page.data.color}
-          %img{:src => current_page.data.image}
-        .intro
-          - time = current_page.date
-          %span= time.strftime("%b #{time.day.ordinalize}")
-          %h1
-            = current_page.data.title.titleize
-          %a.back{ :href=> '/verbose' }
-            &larr; Back
-        = yield
-      = partial 'partials/blog-footer'
+!!!
+%html.no-js
+  = partial 'partials/head'
+  %body
+    #main.scene
+      %div{:class => 'main-wrapper ' + page_classes}
+        = partial 'partials/header'
+        .scene_element.scene_element--fadeInDown
+          .row.blog
+            .verbose-shape{:style => 'background-color:' + current_page.data.color}
+              %img{:src => current_page.data.image}
+            .intro
+              - time = current_page.date
+              %span= time.strftime("%b #{time.day.ordinalize}")
+              %h1
+                = current_page.data.title.titleize
+              %a.back{ :href=> '/verbose' }
+                &larr; Back
+            = yield
+          = partial 'partials/blog-footer'
