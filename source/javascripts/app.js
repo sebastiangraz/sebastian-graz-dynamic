@@ -147,7 +147,7 @@ var app = {};
       const DARKSKY_APIKEY = '42c0b99f752f85b715fe11d76658f0e4';
       const LATITUDE = '51.52';
       const LONGITUDE = '0.08';
-      const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
+      const DARKSKY_URL = `https://api.darksky.net/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
 
       $.get(DARKSKY_URL, function(response) {
         var weatherResponse = response.currently.icon;
