@@ -18,25 +18,32 @@
   height: 100%;
 }
 
-.blog-case {
-  h3 {
-    margin: 0;
-  }
+.blog-cases {
 
-  a {
-    display: inline-block;
+  article {
     padding: 2.5rem 0;
-    width: 100%;
 
     @include mq(sm) {
       padding: 2.5rem 16% 2.5rem 0;
     }
-  }
 
-  p {
-    margin: 0;
+    h2 {
+      margin: 0;
+      color: $black;
+      word-break: break-word;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 }
+
 
 .blog-sidebar {
   float: left;
@@ -608,16 +615,20 @@
     h2 {
       display: inline-block;
       position: relative;
-      top: -2.5rem;
       z-index: 1;
       margin-bottom: 0;
       padding: 0;
       width: 100%;
       word-break: break-word;
+			@include mq(lg) {
+				top: -2.5rem;
+			}
     }
 
     p {
-      margin-top: -2rem;
+			@include mq(lg) {
+				margin-top: -2rem;
+			}
     }
 
     &.thepoetryhour {
@@ -653,7 +664,7 @@
   }
 }
 
-.case-array {
+.case-footer {
   display: inline-block;
   transition: 2s $bezier all;
   padding: 2rem 0;
@@ -669,7 +680,7 @@
   }
 }
 
-.case-array-content {
+.case-footer-content {
   padding: 2rem 0;
   lost-center: $max-width;
 
@@ -688,6 +699,14 @@
     img {
       max-height: 110px;
       object-fit: contain;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+
+      @include mq(md) {
+        font-size: 2rem;
+      }
     }
 
     &:only-child {
