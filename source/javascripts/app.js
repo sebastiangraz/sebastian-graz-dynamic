@@ -106,10 +106,10 @@ var app = {};
       });
     },
     caseArray: function () {
-      $(".case-array-content-item").on({
+      $(".case-footer-content-item").on({
         mouseenter: function () {
           var color = $(this).data('color');
-          var caseArray = $(this).parents('.case-array')
+          var caseArray = $(this).parents('.case-footer')
           $(caseArray).css({
             'background-color': color
           })
