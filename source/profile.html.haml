@@ -58,11 +58,11 @@ title: Profile
       %h4 Web presence
       %ul
         %li
-          %a{:href => "http://vsco.co/sgraz/images/1", :target => "_blank"}
+          %a{:href => "http://vsco.co/#{data.social.vsco[0]}/images/1", :target => "_blank"}
             = partial(:'partials/icon', :locals => {:image => 'vsco', :label => 'VSCO'})
         %li
-          %a{:href => "http://dribbble.com/grazsebastian", :target => "_blank"}
+          %a{:href => "http://dribbble.com/#{data.social.dribbble[0]}", :target => "_blank"}
             = partial(:'partials/icon', :locals => {:image => 'dribbble', :label => 'Dribbble'})
         %li
-          %a{:href => "https://twitter.com/grazsebastian", :target => "_blank"}
+          %a{:href => "https://twitter.com/#{data.social.twitter[0]}", :target => "_blank"}
             = partial(:'partials/icon', :locals => {:image => 'twitter', :label => 'Twitter'})
