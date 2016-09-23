@@ -106,10 +106,10 @@ var app = {};
       });
     },
     caseArray: function () {
-      $(".case-array-content-item").on({
+      $(".case-footer-content-item").on({
         mouseenter: function () {
           var color = $(this).data('color');
-          var caseArray = $(this).parents('.case-array')
+          var caseArray = $(this).parents('.case-footer')
           $(caseArray).css({
             'background-color': color
           })
@@ -131,7 +131,7 @@ var app = {};
       });
     },
     blogPreview: function () {
-      $(".blog-case h2 a").on("mouseenter", function () {
+      $(".blog-cases article").on("mouseenter", function () {
         var attachedContainer = $(this).data('id');
         var color = $(this).data('color');
         $('.blog-image-container').removeClass('active');
@@ -147,7 +147,7 @@ var app = {};
       const DARKSKY_APIKEY = '42c0b99f752f85b715fe11d76658f0e4';
       const LATITUDE = '51.52';
       const LONGITUDE = '0.08';
-      const DARKSKY_URL = `https://api.forecast.io/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
+      const DARKSKY_URL = `https://api.darksky.net/forecast/${DARKSKY_APIKEY}/${LATITUDE},${LONGITUDE}`;
 
       $.get(DARKSKY_URL, function(response) {
         var weatherResponse = response.currently.icon;

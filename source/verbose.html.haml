@@ -2,17 +2,16 @@
 title: Verbose
 ---
 .scene_element
-  .blog-wrap
-    .row
-      .blog-sidebar
-        .blog-cases.scene_element.scene_element--fadeInDown
-          - blog('verbose').articles.each do |article|
-            .blog-case
+  .blog-wrap.row
+    .blog-sidebar
+      .blog-cases.scene_element.scene_element--fadeInDown
+        - blog('verbose').articles.each do |article|
+          %article{:'data-id' => 'item' + article.data.id}
+            %a{:href => article.url}
+              - time = article.date
+              %p.small= time.strftime("%b #{time.day.ordinalize}")
               %h2
-                %a{:href => article.url, :'data-id' => 'item' + article.data.id}
-                  - time = article.date
-                  %p.small= time.strftime("%b #{time.day.ordinalize}")
-                  = article.title.titleize
+                = article.title.titleize
 
     .blog-image
       .blog-image-wrapper
