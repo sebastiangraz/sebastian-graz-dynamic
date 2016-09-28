@@ -213,8 +213,12 @@
 
 .row {
   margin: 0 auto;
-  width: 92%;
+  width: 84%;
   max-width: $max-width;
+
+  @include mq (md) {
+    width: 92%;
+  }
 
   &.blog {
     position: relative;
@@ -413,7 +417,7 @@
 .tw {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding: 0 1rem;
+  padding: 0;
   width: 100%;
   flex-direction: column;
   lost-center: $max-width / 2;
@@ -421,10 +425,12 @@
   @include mq(md) {
     margin-top: 3rem;
     margin-bottom: 3rem;
+    padding: 0 1rem;
   }
 
   p {
     margin: 0 0 1rem;
+    width: 100%;
   }
 }
 
@@ -498,8 +504,12 @@
 .case-section {
   position: relative;
   margin-bottom: 2rem;
-  padding: 0 5vw;
+  padding: 0;
   lost-center: $max-width;
+
+  @include mq(md) {
+    padding: 0 5vw;
+  }
 
   .case-section-image {
     margin-bottom: 5vw;
@@ -702,10 +712,10 @@
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1rem;
 
       @include mq(md) {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
 
