@@ -419,8 +419,8 @@
   margin-bottom: 2rem;
   padding: 0;
   width: 100%;
-  flex-direction: column;
   lost-center: $max-width / 2;
+  flex-direction: column;
 
   @include mq(md) {
     margin-top: 3rem;
@@ -430,7 +430,6 @@
 
   p {
     margin: 0 0 1rem;
-    width: 100%;
   }
 }
 
@@ -601,18 +600,25 @@
       lost-column: 3/12 0;
 
       &.thepoetryhour {
-        margin-top: -16rem;
+        top: -16rem;
         lost-column: 6/12 0;
       }
 
-      &.volvo {
-        margin-top: 6rem;
-        lost-column: 3/12 1;
+      &.heyplace {
+        top: -14rem;
+        lost-column: 4/12 0;
+        lost-move: 2/12;
+        .case-image-wrapper {
+          overflow: hidden;
+        }
+        img {
+          margin-top: 2rem;
+        }
       }
 
-      &.logotypes {
-        margin-top: -12rem;
-        lost-column: 5/12;
+      &.volvo {
+        top: 6rem;
+        lost-column: 3/12 1;
       }
 
       &.husqvarna {

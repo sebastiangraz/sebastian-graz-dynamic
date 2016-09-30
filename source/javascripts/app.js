@@ -111,7 +111,7 @@ var app = {};
           var color = $(this).data('color');
           var caseArray = $(this).parents('.case-footer')
           $(caseArray).css({
-            'background-color': color
+            'background': color
           })
         }
       });

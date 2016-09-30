@@ -1,0 +1,132 @@
+---
+title: heyplace
+description: Geo-content iPhone app design
+date: 2016-09-28 21:55 UTC
+year: 2015
+color: '#efe9f4'
+fontcolor: '#000'
+tags:
+- 'Personal'
+role:
+- 'Designer'
+published: true
+image: '/images/heyplace/case-image.png'
+---
+
+.hero-devices
+  .hero-device-wrapper.row
+    .hero-computer
+      .case-section-image.loadme
+        %img(src='/images/heyplace/main-image.png')
+      .hero-phone
+        .case-section-image.loadme
+          %img(src='/images/heyplace/second-image.png')
+.row
+  .case-section
+    .tw
+      :markdown
+        ### Geo-content
+
+        #### Unlock your friends photos or videos if you happen to be in that exact same spot where they took it
+
+        With the rise of ephemeral apps such as Snapchat. Me and a couple of friends
+        decided to tackle another similar idea of but having geo-location dictating the content
+
+  .case-section
+    .case-shape{ :style => 'background:' + current_page.data.color }
+    .tw
+      :markdown
+        ## Login
+
+        The login logic was stripped down to be as simple as possible. We realised we could combine the most common user-scenarios into one screen.
+        Simply enter your email. If the system doesn't find you you will have to register to continue. Else you'll be asked to enter your password. Et voilà
+
+      :code
+        # lang: javascript
+          if ( user.email = null ) {
+            load.registerPage();
+          } else {
+            load.loginPage();
+          }
+          // 54% accurate code
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/heyplace/login.png'})
+
+  .case-section
+    .case-shape{ :style => 'background:' + current_page.data.color }
+    .tw
+      :markdown
+        ## Home screens
+
+        The user is presented with a overview of the latest photos or videos in their current area. The user may change to map view or nearby view to see which content is in their vincinity.
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/heyplace/home.png'})
+
+  .case-section
+    .tw
+      :markdown
+        ## A Hack
+
+        The HeyPlace app was a result of a 12-hour Hackathon which took place in a dark old vault in Gothenburg, Sweden
+
+        The app was planned weeks ahead the event so when the time came we had a pretty solid scaffold that we could work from. We had the servers set up and ready to send requests to and from our app, the HTML scaffold was build, even a basic design groundwork was put together. To put it short, we had a MVP version working before the event even started. But we still had to put the pieces together in mere 12 hours
+
+  .case-section
+    .case-shape{ :style => 'background:' + current_page.data.color }
+    .tw
+      :markdown
+        ## Account + Comments
+
+        Because you can't see other peoples content unless you are in the geo-tagged area. We had to display a map instead of an array of photos/videos.
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/heyplace/account.png'})
+
+  .case-section
+    .case-shape{ :style => 'background:' + current_page.data.color }
+    .tw
+      :markdown
+        ## Camera
+
+        The user may swipe through from a selection of filters to enchance the images that they took.
+        Nothing fancy.
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/heyplace/camera.png'})
+
+  .case-section
+    .tw
+      :markdown
+        ## Hackathon success 🌟
+
+        After some positive reviews from the jury of the Hackathon we decided quickly that we wanted to proceed with the idea and create something beyond a prototype. Also the idea of having created your own iPhone application was very exciting and a good exercise we started having secret meetings after work to continue developing the application.
+
+
+  .case-section
+    .case-shape{ :style => 'background:' + current_page.data.color }
+    .tw
+      :markdown
+        ## Settings
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/heyplace/settings.png'})
+
+  .case-section
+    .case-shape{ :style => 'background:' + current_page.data.color }
+    .tw
+      :markdown
+        ## Iconography
+
+        The iconography was designed to be elegant and simple. But we took it a step further.
+        To inject some emotion into the iconography we went the anthropomorphic (I just want to use that word) route
+        and added a friendly face to the heart icon. The icon could work nicely as a mascot
+        for the brand in the future.
+
+    = partial(:'partials/grid-system/_image-full', :locals => {:image=> '/images/heyplace/iconography.png'})
+
+
+  .case-section
+    .tw
+      :markdown
+        ## Closing thoughts
+
+        We never anticipated how hard it is to create a social app that actually works.
+        The learnings on how to design a real iOS application was very valuable. It's very different from
+        web-responsive design.
+
+        The app itself obviously didn't gain any traction because the lack funds for marketing.
+        Regardless it feels good to have an app in the App Store.
+
+        The design that you are seeing is a visual update of the current app. Functionality intact.
