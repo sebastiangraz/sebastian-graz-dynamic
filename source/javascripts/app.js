@@ -171,6 +171,12 @@ var app = {};
             case 'snow':
                 $(weatherIcon).html('🌨');
                 break;
+            case 'wind':
+                $(weatherIcon).html('🍃 ');
+                break;
+            case 'fog':
+                $(weatherIcon).html('🌫');
+                break;
             case 'clear-night':
             case 'partly-cloudy-night':
                 $(weatherIcon).html('🌙');

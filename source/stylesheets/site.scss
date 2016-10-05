@@ -146,38 +146,24 @@
   }
 }
 
-.verbose-shape {
+.verbose-header {
   position: relative;
-  transform: none;
-  z-index: -1;
-  margin-top: 0;
-  padding: 2rem;
-  width: 100%;
-  max-width: 640px;
 
-  @include mq(sm) {
-    margin-top: -12rem;
-  }
-
-  @include mq(md) {
-    @include isometric($inverted: false);
-    display: block;
+  .verbose-shape {
+    @include isometric();
     position: absolute;
-    left: -40%;
-    margin-top: -20rem;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
   }
 
   img {
-    @include mq(md) {
-      position: relative;
-      left: -45%;
-      transform: translateY(-28%);
-      max-height: 480px;
-      filter: drop-shadow(-28px 32px 18px $gray);
-      object-fit: contain;
-    }
+    max-height: 20rem;
+    object-fit: contain;
   }
 }
+
 
 .hero-devices {
   position: relative;
@@ -227,10 +213,12 @@
     max-width: $max-width / 2;
 
     @include mq (sm) {
-      margin-top: 12rem;
+      margin-top: $header-height;
     }
 
-    img {
+    img,
+    video,
+    .highlight {
       margin: 0;
       width: 100%;
 
@@ -760,6 +748,7 @@
   margin-top: -10rem;
   width: 100%;
   height: 880px;
+  filter: blur(100px);
 
   @include mq(md) {
     margin-top: 4rem;
@@ -795,12 +784,6 @@
   width: 100%;
   overflow: auto;
   text-rendering: geometricPrecision;
-
-  @include mq(md) {
-    margin: 1rem 0 1rem -3rem;
-    width: calc(100% + 6rem);
-  }
-
   code {
     background: transparent;
     padding: 0;

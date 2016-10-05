@@ -6,10 +6,12 @@
       %div{:class => 'main-wrapper ' + page_classes}
         = partial 'partials/header'
         .scene_element.scene_element--fadeInDown
-          .row.blog
-            .verbose-shape{:style => 'background-color:' + current_page.data.color}
+          .row
+            .verbose-header
+              .verbose-shape{:style => 'background-color:' + current_page.data.color}
               %img{:src => current_page.data.image}
-            .intro
+          .row.blog
+            .tw
               - time = current_page.date
               %span= time.strftime("%b #{time.day.ordinalize}")
               %h1

@@ -35,14 +35,15 @@ Breakdown time:
 
 - `:fenced_code_blocks` allows to use tripple backticks &#x60;&#x60;&#x60;
 in your code or markdown files to indicate where the code-block begins.
-- `:smartypants` Is a typographic tool which converts punctuation characters into the correct entity such as quotes. <kbd>''</kbd> turns into <kbd>&rsquo;&rsquo;</kbd>
-- `auto_ids` This runs automatic id generation on titles, so if you have a title named `### Heading` that div will get an id of `id="#heading"` — which is rarely useful.
 
-```ruby
-​​​​```
-%div{:class => "#{ "active" if index == 0 }"}
+```haml
+​​​​```haml
+#tripplebacktick
 ​​​​```
 ```
+
+- `:smartypants` Is a typographic tool which converts punctuation characters into the correct entity such as quotes. <kbd>''</kbd> turns into <kbd>&rsquo;&rsquo;</kbd>
+- `auto_ids` This runs automatic id generation on titles, so if you have a title named `### Heading` that div will get an id of `id="#heading"` — which is rarely useful.
 
 >Note to do the above rending I had to use a `Zero Width Space` to render the backticks
 
@@ -91,7 +92,7 @@ Then use the code fencing like so:
 
 >Notice the <code>```haml</code> which you can replace with almost any language you want, full list here — [list of supported languages][467c66d3]
 
-```ruby
+```haml
 ​​​​```haml
 %header
   .row.center-v
