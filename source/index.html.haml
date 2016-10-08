@@ -18,7 +18,7 @@ title: Sebastian Grąz
 
   .cases
     - blog('case').articles.reverse.each do |article|
-      %a.case.ct{:href => article.url, :class => article.title.delete(' ').downcase, :'data-color' => article.data.color}
+      %a.case{:href => article.url, :class => article.title.delete(' ').downcase, :'data-color' => article.data.color}
         .case-image-wrapper.loadme
           .case-bg.scene_element.scene_element--case{:style => 'background:' + article.data.color}
           %img{:src => article.data.image}

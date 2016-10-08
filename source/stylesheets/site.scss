@@ -624,15 +624,6 @@
       padding: 0;
       width: 100%;
       word-break: break-word;
-			@include mq(lg) {
-				top: -2.5rem;
-			}
-    }
-
-    p {
-			@include mq(lg) {
-				margin-top: -2rem;
-			}
     }
 
     &.thepoetryhour {
