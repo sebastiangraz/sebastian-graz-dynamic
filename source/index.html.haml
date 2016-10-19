@@ -18,7 +18,12 @@ title: Sebastian Grąz
 
   .cases
     - blog('case').articles.reverse.each do |article|
-      %a.case{:href => article.url, :class => article.title.delete(' ').downcase, :'data-color' => article.data.color}
+
+      -# article.title is being stripped from html entities
+      - zwsp = Nokogiri::HTML('&#8203;').text
+      - stripped_class = article.title.gsub(zwsp, "").delete(' ').downcase
+      
+      %a.case{:href => article.url, :class => stripped_class, :'data-color' => article.data.color}
         .case-image-wrapper.loadme
           .case-bg.scene_element.scene_element--case{:style => 'background:' + article.data.color}
           %img{:src => article.data.image}

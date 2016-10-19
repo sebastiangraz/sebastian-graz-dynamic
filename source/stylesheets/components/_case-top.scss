@@ -44,6 +44,10 @@
     padding-bottom: 40%;
     width: 100%;
     height: 100%;
-    filter: blur(100px);
+    filter: blur(20px);
+
+    @include mq(sm) {
+      filter: blur(100px);
+    }
   }
 }
