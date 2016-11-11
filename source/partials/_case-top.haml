@@ -1,18 +1,16 @@
-.row
-  .case-top-wrapper
-    .case-top-content.scene_element.scene_element--fadeInDownDelay
-      %span
-        = locals[:year]
-      %h1
-        = locals[:h1]
+.case-top-wrapper.row{ :style => 'background:' + locals[:color] + ';' + 'color:' + locals[:fontcolor] }
+  .row.case-top-content.scene_element.scene_element--fadeInDownDelay
+    %span
+      = locals[:year]
+    %h1
+      = locals[:h1]
 
-      .case-meta
-        .case-tags
-          %ul
-            %p.small Tags
-            %span= current_page.data.tags.to_sentence(last_word_connector: ' and ')
-        .case-role
-          %ul
-            %p.small Roles
-            %span= current_page.data.role.to_sentence(last_word_connector: ' and ')
-    .case-top-background{ :style => 'background:' + locals[:color] + ';' + 'color:' + locals[:fontcolor], }
+    .case-meta
+      .case-tags
+        %ul
+          %p.small Tags
+          %span= current_page.data.tags.to_sentence(last_word_connector: ' and ')
+      .case-role
+        %ul
+          %p.small Roles
+          %span= current_page.data.role.to_sentence(last_word_connector: ' and ')

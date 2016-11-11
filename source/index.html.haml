@@ -8,7 +8,7 @@ title: Sebastian Grąz
         %h1
           Seba​stian Graz
         %h3
-          Interaction designer and a front-end developer based in London
+          Freelance interaction designer and a front-end developer based in London
           %span.weather
         %a.cta(href='/profile') Read full profile
     -#
@@ -22,7 +22,7 @@ title: Sebastian Grąz
       -# article.title is being stripped from html entities
       - zwsp = Nokogiri::HTML('&#8203;').text
       - stripped_class = article.title.gsub(zwsp, "").delete(' ').downcase
-      
+
       %a.case{:href => article.url, :class => stripped_class, :'data-color' => article.data.color}
         .case-image-wrapper.loadme
           .case-bg.scene_element.scene_element--case{:style => 'background:' + article.data.color}
